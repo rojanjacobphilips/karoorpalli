@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+:root {
+  --maroon: #6b1d2a;
+  --maroon-deep: #3f1018;
+  --maroon-soft: #8b3340;
+  --gold: #c9a227;
+  --gold-light: #e8c96a;
+  --ivory: #f7f1e8;
+  --ivory-deep: #efe4d4;
+  --charcoal: #1c1917;
+  --muted: #5c534c;
+  --card: #fffcf8;
+  --ring: #c9a227;
+  --shadow: 0 12px 40px rgba(63, 16, 24, 0.08);
+}
+
+@theme inline {
+  --color-maroon: var(--maroon);
+  --color-maroon-deep: var(--maroon-deep);
+  --color-maroon-soft: var(--maroon-soft);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-ivory: var(--ivory);
+  --color-ivory-deep: var(--ivory-deep);
+  --color-charcoal: var(--charcoal);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+  --font-ml: var(--font-manjari);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: var(--font-inter), "Noto Sans Malayalam", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.font-ml,
+html[lang="ml"] body {
+  font-family: var(--font-manjari), var(--font-inter), sans-serif;
+  line-height: 1.85;
+}
+
+h1,
+h2,
+h3,
+.font-serif {
+  font-family: var(--font-playfair), "Noto Serif", serif;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 80;
+  border-radius: 999px;
+  background: var(--maroon);
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.ticker {
+  animation: ticker 42s linear infinite;
+}
+
+.ticker:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.kenburns {
+  animation: kenburns 14s ease-in-out infinite alternate;
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.reveal {
+  animation: reveal 0.8s ease both;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.cross-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34 8h4v56h-4zM18 24h36v4H18zM26 16h20v4H26z' fill='%23c9a227' fill-opacity='0.07'/%3E%3C/svg%3E");
+}
+
+.masonry {
+  columns: 1;
+  column-gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .masonry {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry {
+    columns: 3;
+  }
+}
+
+.masonry > * {
+  margin-bottom: 1rem;
+  break-inside: avoid;
+  width: 100%;
+}
+
+.masonry img {
+  width: 100%;
+  border-radius: 1rem;
+}
