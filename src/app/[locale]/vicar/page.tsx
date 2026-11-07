@@ -13,11 +13,29 @@ export default async function Page({ params }: PageProps<"/[locale]/vicar">) {
           <Image src={vicar.photo} alt={vicar.name} width={480} height={560} className="rounded-3xl object-cover" />
           <h2 className="mt-4 font-serif text-3xl text-maroon">{vicar.name}</h2>
           <p className="text-gold">{vicar.role[locale]}</p>
-          <p className="mt-3 text-muted">{vicar.bio[locale]}</p>
-          <p className="mt-3 text-sm">
-            {vicar.email}
+          {vicar.bio[locale].split("\n\n").map((paragraph) => (
+            <p key={paragraph.slice(0, 48)} className="mt-3 text-muted">
+              {paragraph}
+            </p>
+          ))}
+          {vicar.facts ? (
+            <dl className="mt-5 space-y-3">
+              {vicar.facts.map((fact) => (
+                <div key={fact.label.en}>
+                  <dt className="text-sm font-semibold text-maroon">{fact.label[locale]}</dt>
+                  <dd className="text-muted">{fact.value[locale]}</dd>
+                </div>
+              ))}
+            </dl>
+          ) : null}
+          <p className="mt-5 text-sm">
+            <a className="underline decoration-gold underline-offset-4" href={`mailto:${vicar.email}`}>
+              {vicar.email}
+            </a>
             <br />
-            {vicar.phone}
+            <a className="underline decoration-gold underline-offset-4" href="tel:+919495914746">
+              {vicar.phone}
+            </a>
           </p>
         </div>
         <div className="rounded-3xl bg-card p-6 shadow-[var(--shadow)]">

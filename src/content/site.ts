@@ -304,26 +304,48 @@ export const timings = {
 };
 
 export const vicar: Person = {
-  name: "Rev. Fr. Linu Babu",
+  name: "Rev. Fr. Linu M. Babu",
   role: { en: "Vicar", ml: "വികാരി" },
-  photo:
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=640&q=80",
+  photo: "/people/linu-babu.jpg",
   email: "vicar@karoorpalli.com",
-  phone: "+91 9XXXX XXXXX",
+  phone: "+91 94959 14746",
   bio: {
-    en: "Rev. Fr. Linu Babu serves as Parish Vicar of St. Peter’s Orthodox Church, Karoor. A fuller photograph, biography and pastoral message will be added here.",
-    ml: "റവ. ഫാ. ലിനു ബാബു സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ വികാരിയാണ്. ഫോട്ടോയും ജീവചരിത്രവും ഇടവകാ സന്ദേശവും ഇവിടെ ചേർക്കും.",
+    en: "Rev. Fr. Linu M. Babu serves as Parish Vicar of St. Peter’s Orthodox Church, Karoor.\n\nRev. Fr. Linu M. Babu is an ordained priest of the Malankara Orthodox Syrian Church serving actively within the Thumpamon Diocese.",
+    ml: "റവ. ഫാ. ലിനു എം. ബാബു സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ വികാരിയാണ്.\n\nറവ. ഫാ. ലിനു എം. ബാബു മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയിലെ അച്ചനാണ്. തുമ്പമൺ ഭദ്രാസനത്തിൽ സജീവമായി ശുശ്രൂഷ ചെയ്യുന്നു.",
   },
+  facts: [
+    {
+      label: { en: "Family / House", ml: "കുടുംബം / വീട്ടുപേര്" },
+      value: { en: "Mankottu House", ml: "മാങ്കോട്ട് വീട്" },
+    },
+    {
+      label: { en: "Address", ml: "വിലാസം" },
+      value: {
+        en: "Kumbazha P.O., Pathanamthitta, Kerala, India — 689653",
+        ml: "കുമ്പഴ പി.ഒ., പത്തനംതിട്ട, കേരളം, ഇന്ത്യ — 689653",
+      },
+    },
+    {
+      label: { en: "Diocese", ml: "ഭദ്രാസനം" },
+      value: { en: "Diocese of Thumpamon", ml: "തുമ്പമൺ ഭദ്രാസനം" },
+    },
+    {
+      label: { en: "Contact / Parish Affiliation", ml: "ബന്ധം / ഇടവകാ ബന്ധം" },
+      value: {
+        en: "Serving the spiritual flock under the ecclesiastical jurisdiction of the Thumpamon Diocese.",
+        ml: "തുമ്പമൺ ഭദ്രാസനത്തിന്റെ ആത്മീയ അധികാരപരിധിയിൽ വിശ്വാസികളെ ശുശ്രൂഷിക്കുന്നു.",
+      },
+    },
+  ],
 };
 
 export const metropolitan: Person = {
   name: "H.G. Dr. Abraham Mar Seraphim",
   role: { en: "Metropolitan of Thumpamon Diocese", ml: "തുമ്പമൺ ഭദ്രാസന മെത്രാപ്പോലീത്ത" },
-  photo:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=640&q=80",
+  photo: "/people/abraham-mar-seraphim.jpg",
   bio: {
-    en: "Karoor Palli is under the pastoral care of H.G. Dr. Abraham Mar Seraphim, Metropolitan of the Thumpamon Diocese of the Malankara Orthodox Syrian Church.",
-    ml: "കാരൂർ പള്ളി മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ തുമ്പമൺ ഭദ്രാസന മെത്രാപ്പോലീത്ത ഹി.ഗി. ഡോ. ഏബ്രഹാം മാർ സെറാഫിമിന്റെ ആത്മീയ മേൽനോട്ടത്തിലാണ്.",
+    en: "Karoor Palli is under the pastoral care of H.G. Dr. Abraham Mar Seraphim, Metropolitan of the Thumpamon Diocese of the Malankara Orthodox Syrian Church.\n\n**Dr. Abraham Mar Seraphim Metropolitan** is a prominent bishop of the Malankara Orthodox Syrian Church (Indian Orthodox Church). He serves as the **Metropolitan of the Thumpamon Diocese** (having taken charge as its diocesan metropolitan).\n\nBorn on December 28, 1969, to Mr. V. A. Mathews and Mrs. Annie Mathews, he belongs to St. George Valiyapally in Eram within the Thumpamon Diocese. He holds an extensive academic and theological background, including a Bachelor of Science from Mahatma Gandhi University, a Bachelor of Divinity from the Orthodox Theological Seminary in Kottayam, a Master of Theology from Dharmaram College in Bangalore, and a Doctor of Theology from the Chicago Theological Seminary.\n\nBefore taking charge of the Thumpamon Diocese, he served as the Metropolitan of the Bangalore Diocese starting in August 2010. Alongside his diocesan responsibilities, he has dedicated his ministry to youth leadership, spiritual formation, and counseling, serving in central church roles such as the President of the Mar Gregorios Orthodox Christian Movement (MGOCSM) and ARDRA, as well as being the former director of the Santhinilayam Counselling Centre.",
+    ml: "കാരൂർ പള്ളി മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ തുമ്പമൺ ഭദ്രാസന മെത്രാപ്പോലീത്ത ഹി.ഗി. ഡോ. ഏബ്രഹാം മാർ സെറാഫിമിന്റെ ആത്മീയ മേൽനോട്ടത്തിലാണ്.\n\n**ഡോ. ഏബ്രഹാം മാർ സെറാഫിം മെത്രാപ്പോലീത്ത** മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയിലെ (ഇന്ത്യൻ ഓർത്തഡോക്സ് സഭ) പ്രമുഖ മെത്രാനാണ്. അദ്ദേഹം **തുമ്പമൺ ഭദ്രാസന മെത്രാപ്പോലീത്ത**യായി ചുമതലയേറ്റ് സേവനം ചെയ്യുന്നു.\n\n1969 ഡിസംബർ 28-ന് ശ്രീ വി. എ. മാത്യൂസിന്റെയും ശ്രീമതി ആനി മാത്യൂസിന്റെയും മകനായി ജനിച്ച അദ്ദേഹം തുമ്പമൺ ഭദ്രാസനത്തിലെ ഇറം സെന്റ് ജോർജ് വലിയപള്ളി അംഗമാണ്. മഹാത്മാഗാന്ധി സർവകലാശാലയിൽ നിന്ന് ബാച്ചിലർ ഓഫ് സയൻസ്, കോട്ടയം ഓർത്തഡോക്സ് തിയോളജിക്കൽ സെമിനാരിയിൽ നിന്ന് ബാച്ചിലർ ഓഫ് ഡിവിനിറ്റി, ബെംഗളൂരു ധർമാരാം കോളേജിൽ നിന്ന് മാസ്റ്റർ ഓഫ് തിയോളജി, ഷിക്കാഗോ തിയോളജിക്കൽ സെമിനാരിയിൽ നിന്ന് ഡോക്ടർ ഓഫ് തിയോളജി എന്നിവ നേടിയിട്ടുണ്ട്.\n\nതുമ്പമൺ ഭദ്രാസനത്തിന്റെ ചുമതലയേൽക്കുന്നതിന് മുമ്പ് 2010 ആഗസ്റ്റ് മുതൽ ബെംഗളൂരു ഭദ്രാസന മെത്രാപ്പോലീത്തയായി സേവനമനുഷ്ഠിച്ചു. ഭദ്രാസന ഉത്തരവാദിത്തങ്ങൾക്കൊപ്പം യുവജന നേതൃത്വം, ആത്മീയ രൂപീകരണം, കൗൺസിലിംഗ് എന്നിവയ്ക്കായി ശുശ്രൂഷ സമർപ്പിച്ചിട്ടുണ്ട്. മാർ ഗ്രിഗോറിയോസ് ഓർത്തഡോക്സ് ക്രിസ്ത്യൻ മൂവ്‌മെന്റിന്റെയും (എം.ജി.ഒ.സി.എസ്.എം.) ആർ.ഡി.ആർ.എ.യുടെയും പ്രസിഡന്റ്, ശാന്തിനിലയം കൗൺസിലിംഗ് സെന്ററിന്റെ മുൻ ഡയറക്ടർ എന്നീ കേന്ദ്ര സഭാ ശുശ്രൂഷകളും വഹിച്ചിട്ടുണ്ട്.",
   },
 };
 

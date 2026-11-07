@@ -69,7 +69,7 @@ export function HomeSections({ locale }: { locale: Locale }) {
             <div>
               <p className="text-sm uppercase tracking-wide text-gold">{t(vicar.role)}</p>
               <h2 className="font-serif text-3xl text-maroon">{vicar.name}</h2>
-              <p className="mt-4 text-muted">{t(vicar.bio)}</p>
+              <p className="mt-4 text-muted">{t(vicar.bio).split("\n\n")[0]}</p>
               <Link
                 href={localizedPath(locale, "/vicar")}
                 className="mt-5 inline-flex rounded-full bg-maroon px-5 py-2 text-sm font-semibold text-ivory"

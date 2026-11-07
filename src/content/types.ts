@@ -88,4 +88,5 @@ export type Person = {
   photo: string;
   email?: string;
   phone?: string;
+  facts?: { label: Localized<string>; value: Localized<string> }[];
 };
