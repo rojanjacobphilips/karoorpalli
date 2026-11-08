@@ -448,6 +448,48 @@ export const news: NewsItem[] = [
 
 export const events: ParishEvent[] = [
   {
+    slug: "parumala-feast-evening-prayer",
+    title: {
+      en: "Feast of St. Gregorios of Parumala — Evening prayer",
+      ml: "പരിശുദ്ധ പരുമല തിരുമേനിയുടെ ഓർമ്മപ്പെരുന്നാൾ — സന്ധ്യാനമസ്കാരം",
+    },
+    date: "2026-11-07",
+    time: { en: "6:00 PM", ml: "വൈകിട്ട് 6:00" },
+    place: { en: "Karoor Palli", ml: "കാരൂർ പള്ളി" },
+    excerpt: {
+      en: "Evening prayer at 6:00 PM, led by Rev. Fr. Gregorios Kurisumoottil and Ulahannoor Markose Joseph.",
+      ml: "വൈകിട്ട് 6:00 ന് സന്ധ്യാനമസ്കാരം. വെറ. ഗ്രിഗോറിയോസ് കുരിശുമൂട്ടിൽ, ഉലഹന്നൂർ മാർക്കോസ് ജോസഫ്.",
+    },
+    image: "/events/parumala-feast.jpg",
+  },
+  {
+    slug: "parumala-feast-holy-qurbana",
+    title: {
+      en: "Feast of St. Gregorios of Parumala — Holy Qurbana",
+      ml: "പരിശുദ്ധ പരുമല തിരുമേനിയുടെ ഓർമ്മപ്പെരുന്നാൾ — വിശുദ്ധ കുർബാന",
+    },
+    date: "2026-11-08",
+    time: { en: "7:00 AM", ml: "രാവിലെ 7:00" },
+    place: { en: "Karoor Palli", ml: "കാരൂർ പള്ളി" },
+    excerpt: {
+      en: "Morning prayer and Holy Qurbana at 7:00 AM, followed by procession, blessing, and nercha vilamb.",
+      ml: "രാവിലെ 7:00 ന് പ്രഭാതനമസ്കാരവും വിശുദ്ധ കുർബാനയും. പ്രദക്ഷിണം, ആശിർവാദം, നേർച്ച വിളമ്പ്.",
+    },
+    image: "/events/parumala-feast.jpg",
+  },
+  {
+    slug: "prayer-meeting",
+    title: { en: "Prayer meeting", ml: "പ്രാർത്ഥനായോഗം" },
+    date: "2026-11-08",
+    time: { en: "After Holy Qurbana", ml: "വിശുദ്ധ കുർബാനയ്ക്ക് ശേഷം" },
+    place: { en: "Karoor Palli", ml: "കാരൂർ പള്ളി" },
+    excerpt: {
+      en: "A prayer meeting for the families of the parish, held in church after Holy Qurbana. All members are cordially informed.",
+      ml: "നമ്മുടെ ഇടവകയിലെ പ്രാർത്ഥനായോഗം. വിശുദ്ധ കുർബാനയ്ക്ക് ശേഷം പള്ളിയിൽ വച്ച് നടത്തുന്നതാണ്. എല്ലാ അംഗങ്ങളും സ്നേഹപൂർവ്വം അറിയിക്കുന്നു.",
+    },
+    image: "/events/prayer-meeting.jpg",
+  },
+  {
     slug: "holy-qurbana-sunday",
     title: { en: "Sunday Holy Qurbana", ml: "ഞായറാഴ്ച വിശുദ്ധ കുർബാന" },
     date: "2026-11-01",

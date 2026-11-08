@@ -40,6 +40,7 @@ export type ParishEvent = {
   time: Localized<string>;
   place: Localized<string>;
   excerpt: Localized<string>;
+  image?: string;
 };
 
 export type CommitteeMember = {

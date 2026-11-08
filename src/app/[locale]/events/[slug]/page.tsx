@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ParishForm } from "@/components/ParishForm";
 import { SimplePage } from "@/components/SimplePage";
@@ -16,6 +17,15 @@ export default async function Page({ params }: PageProps<"/[locale]/events/[slug
       <p className="text-gold">
         {item.date} · {item.time[locale]} · {item.place[locale]}
       </p>
+      {item.image ? (
+        <Image
+          src={item.image}
+          alt={item.title[locale]}
+          width={800}
+          height={1100}
+          className="my-6 h-auto w-full max-w-md rounded-3xl"
+        />
+      ) : null}
       <p className="mt-4 text-lg text-muted">{item.excerpt[locale]}</p>
       <a href={calendar} className="mt-6 inline-flex rounded-full bg-maroon px-5 py-2 text-sm font-semibold text-ivory">
         {ui.addCalendar[locale]}
