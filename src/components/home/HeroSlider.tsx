@@ -56,6 +56,7 @@ export function HeroSlider({ locale }: { locale: Locale }) {
             fill
             priority={i === 0}
             className={`object-cover ${i === index ? "kenburns" : ""}`}
+            style={{ objectPosition: item.imagePosition ?? "center" }}
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-maroon-deep/85 via-maroon-deep/55 to-maroon-deep/20" />

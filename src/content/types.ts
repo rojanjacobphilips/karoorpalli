@@ -17,6 +17,7 @@ export type HeroSlide = {
   id: string;
   image: string;
   imageAlt: Localized<string>;
+  imagePosition?: string;
   title: Localized<string>;
   caption: Localized<string>;
   cta: Localized<string>;

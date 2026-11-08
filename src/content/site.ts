@@ -87,11 +87,12 @@ export const navigation: NavItem[] = [
     href: "/administration",
     label: { en: "Administration", ml: "ഭരണം" },
     children: [
+      { href: "/administration/catholicos", label: { en: "Catholicos of the East", ml: "പൗരസ്ത്യ കാതോലിക്കോസ്" } },
       { href: "/administration", label: { en: "Diocesan Metropolitan", ml: "ഭദ്രാസന മെത്രാപ്പോലീത്ത" } },
-      { href: "/administration/officers", label: { en: "Trustee, Secretary & Treasurer", ml: "ട്രസ്റ്റി, സെക്രട്ടറി, ട്രഷറർ" } },
       { href: "/vicar", label: { en: "Vicar", ml: "വികാരി" } },
-      { href: "/administration/past-vicars", label: { en: "Past Vicars", ml: "മുൻ വികാരിമാർ" } },
+      { href: "/administration/officers", label: { en: "Trustee & Secretary", ml: "ട്രസ്റ്റിയും സെക്രട്ടറിയും" } },
       { href: "/committee", label: { en: "Managing Committee", ml: "ഭരണസമിതി" } },
+      { href: "/administration/past-vicars", label: { en: "Former Vicars", ml: "മുൻ വികാരിമാർ" } },
       { href: "/administration/reports", label: { en: "Annual Reports", ml: "വാർഷിക റിപ്പോർട്ടുകൾ" } },
     ],
   },
@@ -181,11 +182,11 @@ export const ui = {
 export const heroSlides: HeroSlide[] = [
   {
     id: "exterior",
-    image:
-      "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=1920&q=80",
+    image: "/church/right-side-day.jpg",
+    imagePosition: "center 45%",
     imageAlt: {
-      en: "Placeholder: church exterior at dusk (replace with Karoor Palli photograph)",
-      ml: "പ്ലേസ്‌ഹോൾഡർ: ദേവാലയത്തിന്റെ പുറം കാഴ്ച",
+      en: "St. Peter's Orthodox Church, Karoor, in daylight",
+      ml: "പകൽ വെളിച്ചത്തിൽ കാരൂർ പള്ളി",
     },
     title: { en: "Welcome to Karoor Palli", ml: "കാരൂർ പള്ളിയിലേക്ക് സ്വാഗതം" },
     caption: {
@@ -197,11 +198,11 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: "qurbana",
-    image:
-      "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1920&q=80",
+    image: "/church/front-moon.jpg",
+    imagePosition: "center 30%",
     imageAlt: {
-      en: "Placeholder: congregation at prayer during Holy Qurbana",
-      ml: "പ്ലേസ്‌ഹോൾഡർ: വിശുദ്ധ കുർബാന",
+      en: "The church tower at night, with the moon and palm trees",
+      ml: "ചന്ദ്രനും ഈന്തപ്പനകളും സഹിതം രാത്രിയിലെ പള്ളിഗോപുരം",
     },
     title: { en: "Holy Qurbana every Sunday", ml: "ഓരോ ഞായറാഴ്ചയും വിശുദ്ധ കുർബാന" },
     caption: {
@@ -213,9 +214,12 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: "feast",
-    image:
-      "https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&w=1920&q=80",
-    imageAlt: { en: "Placeholder: feast-day celebration", ml: "പ്ലേസ്‌ഹോൾഡർ: തിരുനാൾ" },
+    image: "/church/front-night.jpg",
+    imagePosition: "center 62%",
+    imageAlt: {
+      en: "The illuminated front of the church at night",
+      ml: "രാത്രിയിൽ പ്രകാശിതമായ പള്ളിയുടെ മുൻഭാഗം",
+    },
     title: { en: "Feast of St. Peter", ml: "വിശുദ്ധ പത്രോസിന്റെ തിരുനാൾ" },
     caption: {
       en: "Our patronal feast is kept with Holy Qurbana, procession and community agape.",
@@ -226,9 +230,12 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: "youth",
-    image:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1920&q=80",
-    imageAlt: { en: "Placeholder: youth gathering", ml: "പ്ലേസ്‌ഹോൾഡർ: യുവജനങ്ങൾ" },
+    image: "/church/right-side-cloud.jpg",
+    imagePosition: "center 40%",
+    imageAlt: {
+      en: "The church from the road under a cloudy sky",
+      ml: "മേഘാവൃതമായ ആകാശത്തിന് കീഴെ വഴിയിൽ നിന്നുള്ള പള്ളി",
+    },
     title: { en: "Youth in the life of the Church", ml: "സഭാ ജീവിതത്തിലെ യുവജനങ്ങൾ" },
     caption: {
       en: "OCYM invites young people into worship, fellowship and service.",
@@ -239,9 +246,12 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: "sunday-school",
-    image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80",
-    imageAlt: { en: "Placeholder: children in Sunday School", ml: "പ്ലേസ്‌ഹോൾഡർ: സൺഡേ സ്കൂൾ" },
+    image: "/church/right-side-day.jpg",
+    imagePosition: "center 55%",
+    imageAlt: {
+      en: "The parish church and bell tower in daylight",
+      ml: "പകൽ വെളിച്ചത്തിൽ ഇടവകാ ദേവാലയവും മണിമാളികയും",
+    },
     title: { en: "Sunday School", ml: "സൺഡേ സ്കൂൾ" },
     caption: {
       en: "Faith, Scripture and our Orthodox heritage for the children of the parish.",
@@ -252,9 +262,12 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: "community",
-    image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1920&q=80",
-    imageAlt: { en: "Placeholder: Kerala landscape near the parish", ml: "പ്ലേസ്‌ഹോൾഡർ: നാട്ടുകാഴ്ച" },
+    image: "/church/front-moon.jpg",
+    imagePosition: "center 70%",
+    imageAlt: {
+      en: "Palm trees beside the illuminated church",
+      ml: "പ്രകാശിതമായ പള്ളിയുടെ അരികിലെ ഈന്തപ്പനകൾ",
+    },
     title: { en: "A home for families near and far", ml: "അടുത്തും അകലെയുമുള്ള കുടുംബങ്ങൾക്ക് ഒരു വീട്" },
     caption: {
       en: "Parishioners in the Gulf, UK, US and Australia remain part of Karoor Palli.",
@@ -355,27 +368,31 @@ export const metropolitan: Person = {
   },
 };
 
+export const catholicos: Person = {
+  name: "H.H. Baselios Marthoma Mathews III",
+  role: {
+    en: "The Ninth Catholicos of the East in Malankara",
+    ml: "മലങ്കരയിലെ ഒൻപതാമത്തെ പൗരസ്ത്യ കാതോലിക്കോസ്",
+  },
+  photo: "/people/baselios-marthoma-mathews-iii.jpg",
+  bio: {
+    en: "His Holiness Baselios Marthoma Mathews III was enthroned as the Catholicos of the East & Malankara Metropolitan (the Supreme Head of the Malankara Orthodox Syrian Church of India) on Friday, 15th October 2021. His Holiness is the 92nd Primate on the Apostolic Throne of St. Thomas.\n\nHis Holiness was born on 12 February 1949 to Mr Cherian Anthrayos of Mattathil family, being a member of St Peters Church, Vazhoor. After his school education, he joined Kerala University and passed his BSc Chemistry. After his BSc, he joined Orthodox Seminary, Kottayam, and had his GST degree. His Holiness took his BD degree from the Serampore University and did his higher studies in Theology at Theological Academy, Leningrad, Russia. Thereupon he joined Oriental Institute, Rome, and took his MTh and PhD from there. His Holiness was ordained a deacon in 1976 and a priest in 1978 by HH Baselios Mathews I. His Holiness was escalated to the post of an Episcopa on 30 April 1991 at a function at Parumala, and metropolitan in 1993. He is a well-known teacher and a faculty member of the Orthodox Seminary, Kottayam. A philanthropist, he works relentlessly for the uplift of the poor, especially women. He has started many ventures to help give employment opportunities to women from the economically backward classes. His Holiness also served the Holy Episcopal Synod as its secretary.\n\nHis Holiness has authored a few devotional and contemplative books in Malayalam.",
+    ml: "ഹി.ഹി. ബസേലിയോസ് മാർത്തോമ്മ മാത്യൂസ് തൃതീയൻ 2021 ഒക്ടോബർ 15 വെള്ളിയാഴ്ച പൗരസ്ത്യ കാതോലിക്കോസും മലങ്കര മെത്രാപ്പോലീത്തയുമായി (ഇന്ത്യയിലെ മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ പരമാധ്യക്ഷൻ) അധിരൂഢനായി. വിശുദ്ധ തോമസിന്റെ അപ്പോസ്തോലിക സിംഹാസനത്തിലെ 92-ാമത്തെ പ്രഥമനാണ് അദ്ദേഹം.\n\n1949 ഫെബ്രുവരി 12-ന് വാഴൂർ സെന്റ് പീറ്റേഴ്‌സ് പള്ളി അംഗമായ മറ്റത്തിൽ കുടുംബത്തിലെ ശ്രീ ചെറിയാൻ ആന്ത്രയോസിന്റെ മകനായി ജനിച്ചു. സ്കൂൾ വിദ്യാഭ്യാസത്തിനു ശേഷം കേരള സർവകലാശാലയിൽ ചേർന്ന് ബി.എസ്.സി. കെമിസ്ട്രി പാസായി. തുടർന്ന് കോട്ടയം ഓർത്തഡോക്സ് സെമിനാരിയിൽ ചേർന്ന് ജി.എസ്.ടി. ബിരുദം നേടി. സെറാമ്പൂർ സർവകലാശാലയിൽ നിന്ന് ബി.ഡി. നേടുകയും റഷ്യയിലെ ലെനിൻഗ്രാഡ് തിയോളജിക്കൽ അക്കാദമിയിൽ ഉപരിപഠനം നടത്തുകയും ചെയ്തു. പിന്നീട് റോമിലെ ഓറിയന്റൽ ഇൻസ്റ്റിറ്റ്യൂട്ടിൽ ചേർന്ന് എം.തി.യും പി.എച്ച്.ഡി.യും നേടി. 1976-ൽ ഡീക്കനായും 1978-ൽ വൈദികനായും ഹി.ഹി. ബസേലിയോസ് മാത്യൂസ് ഒന്നാമൻ അഭിഷേകം ചെയ്തു. 1991 ഏപ്രിൽ 30-ന് പരുമലയിൽ നടന്ന ചടങ്ങിൽ എപ്പിസ്കോപ്പായും 1993-ൽ മെത്രാപ്പോലീത്തയായും ഉയർത്തപ്പെട്ടു. കോട്ടയം ഓർത്തഡോക്സ് സെമിനാരിയിലെ അറിയപ്പെടുന്ന അധ്യാപകനും ഫാക്കൽറ്റി അംഗവുമാണ്. ദരിദ്രരുടെ, പ്രത്യേകിച്ച് സ്ത്രീകളുടെ, ഉന്നമനത്തിനായി അശ്രാന്തം പ്രവർത്തിക്കുന്ന ജനസേവകനാണ്. സാമ്പത്തികമായി പിന്നോക്ക വിഭാഗങ്ങളിലെ സ്ത്രീകൾക്ക് തൊഴിൽ അവസരങ്ങൾ നൽകാൻ നിരവധി സംരംഭങ്ങൾ ആരംഭിച്ചിട്ടുണ്ട്. വിശുദ്ധ എപ്പിസ്കോപ്പൽ സുന്നഹദോസിന്റെ സെക്രട്ടറിയായും സേവനമനുഷ്ഠിച്ചിട്ടുണ്ട്.\n\nമലയാളത്തിൽ ഏതാനും ഭക്തിപരവും ധ്യാനാത്മകവുമായ പുസ്തകങ്ങൾ രചിച്ചിട്ടുണ്ട്.",
+  },
+};
+
 export const officers: Person[] = [
   {
-    name: "[Trustee Name]",
+    name: "Mr. Biju Thomas",
     role: { en: "Parish Trustee", ml: "ഇടവകാ ട്രസ്റ്റി" },
-    photo:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
-    bio: { en: "Placeholder officer profile.", ml: "പ്ലേസ്‌ഹോൾഡർ." },
+    photo: "/people/biju-thomas.jpg",
+    bio: { en: "Parish Trustee of St. Peter's Orthodox Church, Karoor.", ml: "സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ ഇടവകാ ട്രസ്റ്റി." },
   },
   {
-    name: "[Secretary Name]",
+    name: "Mr. Jinu Thomas",
     role: { en: "Secretary", ml: "സെക്രട്ടറി" },
-    photo:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80",
-    bio: { en: "Placeholder officer profile.", ml: "പ്ലേസ്‌ഹോൾഡർ." },
-  },
-  {
-    name: "[Treasurer Name]",
-    role: { en: "Treasurer", ml: "ട്രഷറർ" },
-    photo:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
-    bio: { en: "Placeholder officer profile.", ml: "പ്ലേസ്‌ഹോൾഡർ." },
+    photo: "/people/jinu-thomas.jpg",
+    bio: { en: "Secretary of St. Peter's Orthodox Church, Karoor.", ml: "സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ സെക്രട്ടറി." },
   },
 ];
 
@@ -1367,10 +1384,116 @@ export const visionPage = {
 export const pagesCopy = {
   about: {
     title: { en: "About the parish", ml: "ഇടവകയെക്കുറിച്ച്" },
-    body: {
+    lead: {
       en: "Welcome to the official web page of St. Peter’s Orthodox Church, Karoor. Located in the peaceful village of Elanthoor within the Pathanamthitta district of Kerala, our parish serves as a spiritual home for the local Orthodox Christian community under the pastoral guidance of the Malankara Orthodox Syrian Church (Thumpamon Diocese).\n\nWe gather for Holy Qurbana, teach the faith to our children, and care for families in Kerala and across the Gulf, UK, US and Australia.",
       ml: "സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ ഔദ്യോഗിക വെബ് പേജിലേക്ക് സ്വാഗതം. പത്തനംതിട്ട ജില്ലയിലെ ഇലന്തൂരിലെ ശാന്തമായ ഗ്രാമത്തിൽ സ്ഥിതി ചെയ്യുന്ന ഈ ഇടവക, മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ (തുമ്പമൺ ഭദ്രാസനം) ആത്മീയ മേൽനോട്ടത്തിൽ പ്രാദേശിക ഓർത്തഡോക്സ് വിശ്വാസികൾക്ക് ഒരു ആത്മീയ ഭവനമാണ്.\n\nവിശുദ്ധ കുർബാനയ്ക്കായി നാം ഒന്നിക്കുന്നു, കുട്ടികൾക്ക് വിശ്വാസം പഠിപ്പിക്കുന്നു, കേരളത്തിലും ഗൾഫ്, യുകെ, യുഎസ്, ഓസ്ട്രേലിയ എന്നിവിടങ്ങളിലുമുള്ള കുടുംബങ്ങളെ പരിപാലിക്കുന്നു.",
     },
+    sections: [
+      {
+        heading: { en: "Our History & Heritage", ml: "നമ്മുടെ ചരിത്രവും പൈതൃകവും" },
+        body: {
+          en: "Rooted in the ancient traditions of the Malankara Orthodox Syrian Church—traditionally believed to have been established by St. Thomas the Apostle in AD 52—St. Peter’s Orthodox Church, Karoor, has stood as a beacon of faith and fellowship in Elanthoor for generations. Over the decades, our parish has preserved the rich liturgical heritage, Syriac traditions, and spiritual discipline handed down by our forebears while growing dynamically to meet the needs of a modern congregation.",
+          ml: "മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ പൗരാണിക പാരമ്പര്യത്തിൽ — പരമ്പരാഗതമായി എ.ഡി. 52-ൽ പ്രേഷിതൻ വിശുദ്ധ തോമസ് സ്ഥാപിച്ചതെന്ന് വിശ്വസിക്കപ്പെടുന്നു — വേരൂന്നിയ സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂർ, തലമുറകളായി ഇലന്തൂരിൽ വിശ്വാസത്തിന്റെയും കൂട്ടായ്മയുടെയും വിളക്കായി നിലകൊള്ളുന്നു. ദശകങ്ങളായി നമ്മുടെ ഇടവക, പൂർവ്വികർ ഏൽപ്പിച്ച സമ്പന്നമായ ആരാധനാക്രമ പൈതൃകവും സുറിയാനി പാരമ്പര്യവും ആത്മീയ അച്ചടക്കവും കാത്തുസൂക്ഷിക്കുകയും ആധുനിക സമൂഹത്തിന്റെ ആവശ്യങ്ങൾ നിറവേറ്റാൻ ചലനാത്മകമായി വളരുകയും ചെയ്യുന്നു.",
+        },
+      },
+      {
+        heading: { en: "Spiritual Services & Schedule", ml: "ആത്മീയ ശുശ്രൂഷകളും സമയക്രമവും" },
+        points: [
+          {
+            label: { en: "Holy Qurbana", ml: "വിശുദ്ധ കുർബാന" },
+            text: {
+              en: "Celebrated regularly, bringing the faithful together in divine worship and Holy Communion. Sundays: Morning Prayers at 8:00 AM, followed by Holy Qurbana.",
+              ml: "ദൈവീക ആരാധനയിലും വിശുദ്ധ കുർബാനയിലും വിശ്വാസികളെ ഒന്നിപ്പിച്ച് പതിവായി അർപ്പിക്കുന്നു. ഞായറാഴ്ച: രാവിലെ 8:00 ന് പ്രഭാത പ്രാർത്ഥന, തുടർന്ന് വിശുദ്ധ കുർബാന.",
+            },
+          },
+          {
+            label: { en: "Feasts & Festivals", ml: "തിരുനാളുകളും ഉത്സവങ്ങളും" },
+            text: {
+              en: "Annual church feast celebrations honoring our patron saint, St. Peter, along with commemorations of church fathers and historical saints, drawing believers from across the region.",
+              ml: "മദ്ധ്യസ്ഥനായ വിശുദ്ധ പത്രോസിന്റെ വാർഷിക ഇടവകാ തിരുനാളും സഭാ പിതാക്കന്മാരുടെയും ചരിത്രപുണ്യവാളന്മാരുടെയും അനുസ്മരണങ്ങളും. പ്രദേശത്തുടനീളമുള്ള വിശ്വാസികളെ ഇത് ആകർഷിക്കുന്നു.",
+            },
+          },
+          {
+            label: { en: "Intercessory Prayers", ml: "മദ്ധ്യസ്ഥ പ്രാർത്ഥനകൾ" },
+            text: {
+              en: "Special novenas and prayer services dedicated to strengthening families and comforting those in need.",
+              ml: "കുടുംബങ്ങളെ ശക്തിപ്പെടുത്താനും ആവശ്യമുള്ളവരെ ആശ്വസിപ്പിക്കാനും സമർപ്പിതമായ നൊവേനകളും പ്രാർത്ഥനാ ശുശ്രൂഷകളും.",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "Parish Organizations & Ministries", ml: "ഇടവകാ സംഘടനകളും ശുശ്രൂഷകളും" },
+        body: {
+          en: "Our active spiritual organizations nurture faith and fellowship across all age groups.",
+          ml: "എല്ലാ പ്രായക്കാർക്കും വിശ്വാസവും കൂട്ടായ്മയും വളർത്തുന്ന സജീവ ആത്മീയ സംഘടനകളാണിവ.",
+        },
+        points: [
+          {
+            label: { en: "Sunday School", ml: "സൺഡേ സ്കൂൾ" },
+            href: "/organisations/sunday-school",
+            text: {
+              en: "Dedicated to imparting biblical knowledge, Orthodox theology, and moral values to the younger generation.",
+              ml: "യുവതലമുറയ്ക്ക് ബൈബിൾ അറിവും ഓർത്തഡോക്സ് ദൈവശാസ്ത്രവും ധാർമ്മിക മൂല്യങ്ങളും പകരുന്നു.",
+            },
+          },
+          {
+            label: { en: "Orthodox Christian Youth Movement (OCYM)", ml: "ഓർത്തഡോക്സ് ക്രിസ്ത്യൻ യുവജന പ്രസ്ഥാനം (ഒ.സി.വൈ.എം.)" },
+            href: "/organisations/ocym",
+            text: {
+              en: "Fostering leadership, spiritual growth, and social service among the youth.",
+              ml: "യുവജനങ്ങളിൽ നേതൃത്വവും ആത്മീയ വളർച്ചയും സാമൂഹിക സേവനവും വളർത്തുന്നു.",
+            },
+          },
+          {
+            label: { en: "Martha Mariam Vanitha Samajam", ml: "മാർത്താ മറിയം വനിതാ സമാജം" },
+            href: "/organisations/martha-mariam",
+            text: {
+              en: "A vibrant women's fellowship focused on prayer, charitable outreach, and family welfare.",
+              ml: "പ്രാർത്ഥന, ദാനധർമ്മം, കുടുംബക്ഷേമം എന്നിവയിൽ ശ്രദ്ധ കേന്ദ്രീകരിക്കുന്ന സജീവ വനിതാ കൂട്ടായ്മ.",
+            },
+          },
+          {
+            label: { en: "Balasamajam", ml: "ബാലസമാജം" },
+            href: "/organisations/balika-bala-samajam",
+            text: {
+              en: "Cultivating spiritual awareness, talents, and community bonding among children.",
+              ml: "കുട്ടികളിൽ ആത്മീയ ബോധവും കഴിവുകളും സമൂഹ ബന്ധവും വളർത്തുന്നു.",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "Global Diaspora & Community Care", ml: "ആഗോള പ്രവാസവും സമൂഹ പരിചരണവും" },
+        body: {
+          en: "While Elanthoor remains our spiritual anchor, the Karoor parish family extends far beyond the borders of Kerala. We take immense pride in supporting our members living and working across the globe—including the Gulf countries, the United Kingdom, the United States, and Australia. Through digital connectivity, regional prayer groups, and pastoral care, we ensure that every member, near or far, remains intrinsically connected to their home parish and roots.",
+          ml: "ഇലന്തൂർ നമ്മുടെ ആത്മീയ നങ്കൂരമായി തുടരുമ്പോൾ, കാരൂർ ഇടവകാ കുടുംബം കേരളത്തിന്റെ അതിരുകൾക്കപ്പുറത്തേക്ക് വ്യാപിക്കുന്നു. ഗൾഫ് രാജ്യങ്ങൾ, യുണൈറ്റഡ് കിംഗ്ഡം, അമേരിക്കൻ ഐക്യനാടുകൾ, ഓസ്ട്രേലിയ എന്നിവിടങ്ങളിൽ ജീവിക്കുകയും പ്രവർത്തിക്കുകയും ചെയ്യുന്ന അംഗങ്ങളെ പിന്തുണയ്ക്കുന്നതിൽ ഞങ്ങൾ അഭിമാനിക്കുന്നു. ഡിജിറ്റൽ ബന്ധം, പ്രാദേശിക പ്രാർത്ഥനാ ഗ്രൂപ്പുകൾ, ഇടയപരിചരണം എന്നിവയിലൂടെ അടുത്തും ദൂരെയുമുള്ള ഓരോ അംഗവും തങ്ങളുടെ മാതൃ ഇടവകയോടും വേരുകളോടും അഭേദ്യമായി ബന്ധപ്പെട്ടിരിക്കുന്നു.",
+        },
+      },
+      {
+        heading: { en: "Get Involved & Connect", ml: "പങ്കാളികളാകുക, ബന്ധപ്പെടുക" },
+        body: {
+          en: "Whether you are a local resident, returning to your ancestral home in Kerala, or visiting from abroad, you are warmly invited to join us in worship.",
+          ml: "പ്രാദേശിക നിവാസിയായാലും കേരളത്തിലെ പൂർവ്വിക ഭവനത്തിലേക്ക് മടങ്ങിയെത്തുന്നവരായാലും വിദേശത്തുനിന്ന് സന്ദർശിക്കുന്നവരായാലും ആരാധനയിൽ ഞങ്ങളോടൊപ്പം ചേരാൻ നിങ്ങളെ ഹൃദയപൂർവം ക്ഷണിക്കുന്നു.",
+        },
+        points: [
+          {
+            label: { en: "Location", ml: "സ്ഥലം" },
+            text: {
+              en: "Karoor, Elanthoor P.O., Pathanamthitta District, Kerala, India - 689643",
+              ml: "കാരൂർ, ഇലന്തൂർ പി.ഒ., പത്തനംതിട്ട ജില്ല, കേരളം, ഇന്ത്യ - 689643",
+            },
+          },
+          {
+            label: { en: "Diocese", ml: "ഭദ്രാസനം" },
+            text: {
+              en: "Thumpamon Diocese, Malankara Orthodox Syrian Church",
+              ml: "തുമ്പമൺ ഭദ്രാസനം, മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭ",
+            },
+          },
+        ],
+      },
+    ],
   },
   vision: {
     title: { en: "Vision and mission", ml: "ദർശനവും ദൗത്യവും" },

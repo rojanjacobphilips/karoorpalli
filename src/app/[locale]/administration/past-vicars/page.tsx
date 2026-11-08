@@ -10,9 +10,9 @@ export default async function Page({ params }: PageProps<"/[locale]/administrati
   return (
     <SimplePage
       locale={locale}
-      title={{ en: "Past vicars", ml: "മുൻ വികാരിമാർ" }}
+      title={{ en: "Former Vicars", ml: "മുൻ വികാരിമാർ" }}
       body={{
-        en: "Rev. Fr. Titus George served at the 1999 consecration. The complete list of past vicars, with years and photographs, will be added as records are confirmed.",
+        en: "Rev. Fr. Titus George served at the 1999 consecration. The complete list of former vicars, with years and photographs, will be added as records are confirmed.",
         ml: "സേവന കാലവും ഫോട്ടോകളും ഓഫീസ് നൽകും.",
       }}
     >

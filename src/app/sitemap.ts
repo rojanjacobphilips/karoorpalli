@@ -11,6 +11,7 @@ const paths = [
   "/about/cemetery",
   "/history",
   "/administration",
+  "/administration/catholicos",
   "/administration/officers",
   "/administration/past-vicars",
   "/administration/reports",
