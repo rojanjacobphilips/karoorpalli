@@ -219,7 +219,7 @@ export function HomeSections({ locale }: { locale: Locale }) {
             >
               <h3 className="font-serif text-2xl text-maroon">{t(org.name)}</h3>
               <p className="mt-2 text-sm text-muted">{t(org.summary)}</p>
-              <p className="mt-3 text-sm text-gold">{t(org.meeting)}</p>
+              {org.meeting ? <p className="mt-3 text-sm text-gold">{t(org.meeting)}</p> : null}
             </Link>
           ))}
         </div>

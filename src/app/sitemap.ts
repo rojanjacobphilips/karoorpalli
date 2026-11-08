@@ -6,6 +6,7 @@ const paths = [
   "/about",
   "/about/vision",
   "/about/patron",
+  "/about/feasts",
   "/about/architecture",
   "/about/cemetery",
   "/history",

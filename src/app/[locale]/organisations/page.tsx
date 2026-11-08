@@ -20,7 +20,7 @@ export default async function Page({ params }: PageProps<"/[locale]/organisation
           >
             <h2 className="font-serif text-2xl text-maroon">{org.name[locale]}</h2>
             <p className="mt-2 text-muted">{org.summary[locale]}</p>
-            <p className="mt-2 text-sm text-gold">{org.meeting[locale]}</p>
+            {org.meeting ? <p className="mt-2 text-sm text-gold">{org.meeting[locale]}</p> : null}
           </Link>
         ))}
       </div>

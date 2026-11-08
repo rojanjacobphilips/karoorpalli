@@ -76,7 +76,8 @@ export const navigation: NavItem[] = [
     children: [
       { href: "/about", label: { en: "Overview", ml: "അവലോകനം" } },
       { href: "/about/vision", label: { en: "Vision & Mission", ml: "ദർശനവും ദൗത്യവും" } },
-      { href: "/about/patron", label: { en: "Patron Saint & Feast", ml: "മദ്ധ്യസ്ഥനും തിരുനാളും" } },
+      { href: "/about/patron", label: { en: "Patron Saint", ml: "മദ്ധ്യസ്ഥൻ" } },
+      { href: "/about/feasts", label: { en: "Feasts", ml: "തിരുനാളുകൾ" } },
       { href: "/about/architecture", label: { en: "Church Building", ml: "ദേവാലയം" } },
       { href: "/about/cemetery", label: { en: "Cemetery", ml: "ശ്മശാനം" } },
       { href: "/history", label: { en: "History", ml: "ചരിത്രം" } },
@@ -99,13 +100,18 @@ export const navigation: NavItem[] = [
     label: { en: "Organisations", ml: "സംഘടനകൾ" },
     children: [
       { href: "/organisations/sunday-school", label: { en: "Sunday School", ml: "സൺഡേ സ്കൂൾ" } },
-      { href: "/organisations/mgocsm", label: { en: "MGOCSM", ml: "എം.ജി.ഒ.സി.എസ്.എം." } },
-      { href: "/organisations/martha-mariam", label: { en: "Martha Mariam Samajam", ml: "മാർത്താ മറിയം സമാജം" } },
+      { href: "/organisations/balika-bala-samajam", label: { en: "Balika Bala Samajam", ml: "ബാലികാ ബാല സമാജം" } },
       { href: "/organisations/ocym", label: { en: "OCYM", ml: "ഒ.സി.വൈ.എം." } },
+      { href: "/organisations/SDOF", label: { en: "SDOF", ml: "എസ്.ഡി.ഒ.എഫ്." } },
+      { href: "/organisations/SJOF", label: { en: "SJOF", ml: "എസ്.ജെ.ഒ.എഫ്." } },
+      {
+        href: "/organisations/martha-mariam",
+        label: { en: "Martha Marthiyam Vanitha Samajam", ml: "മാർത്താ മാർത്തിയം വനിതാ സമാജം" },
+      },
       { href: "/organisations/prayer-groups", label: { en: "Prayer Groups", ml: "പ്രാർത്ഥനാ യൂണിറ്റുകൾ" } },
       { href: "/organisations/choir", label: { en: "Choir", ml: "ഗായകസംഘം" } },
-      { href: "/organisations/altar-servers", label: { en: "Altar Servers", ml: "ശുശ്രൂഷകർ" } },
-      { href: "/organisations/seniors", label: { en: "Senior Citizens Forum", ml: "മുതിർന്ന പൗര സംഘം" } },
+      { href: "/organisations/altar-servers", label: { en: "AMOSS", ml: "എ.എം.ഒ.എസ്.എസ്." } },
+      { href: "/organisations/peters-hand", label: { en: "Peter's Hand", ml: "പത്രോസിന്റെ കൈ" } },
     ],
   },
   {
@@ -225,8 +231,8 @@ export const heroSlides: HeroSlide[] = [
     imageAlt: { en: "Placeholder: youth gathering", ml: "പ്ലേസ്‌ഹോൾഡർ: യുവജനങ്ങൾ" },
     title: { en: "Youth in the life of the Church", ml: "സഭാ ജീവിതത്തിലെ യുവജനങ്ങൾ" },
     caption: {
-      en: "OCYM and MGOCSM invite young people into worship, fellowship and service.",
-      ml: "ആരാധന, കൂട്ടായ്മ, സേവനം എന്നിവയിലേക്ക് ഒ.സി.വൈ.എം.യും എം.ജി.ഒ.സി.എസ്.എമ്മും യുവജനങ്ങളെ ക്ഷണിക്കുന്നു.",
+      en: "OCYM invites young people into worship, fellowship and service.",
+      ml: "ആരാധന, കൂട്ടായ്മ, സേവനം എന്നിവയിലേക്ക് ഒ.സി.വൈ.എം. യുവജനങ്ങളെ ക്ഷണിക്കുന്നു.",
     },
     cta: { en: "Join OCYM", ml: "ഒ.സി.വൈ.എം.യിൽ ചേരുക" },
     href: "/organisations/ocym",
@@ -465,46 +471,310 @@ export const organisations: Organisation[] = [
     slug: "sunday-school",
     name: { en: "Sunday School", ml: "സൺഡേ സ്കൂൾ" },
     summary: {
-      en: "Catechesis for children, OVBS and annual examinations of the Orthodox Sunday School.",
-      ml: "കുട്ടികൾക്കുള്ള വിശ്വാസപഠനം, ഒ.വി.ബി.എസ്., വാർഷിക പരീക്ഷ.",
+      en: "The Orthodox Syrian Sunday School Association of the East (OSSAE) nurtures children and youth in the faith, traditions and liturgical life of the Church.",
+      ml: "ഓർത്തഡോക്സ് സിറിയൻ സൺഡേ സ്കൂൾ അസോസിയേഷൻ ഓഫ് ദി ഈസ്റ്റ് (ഒ.എസ്.എസ്.എ.ഇ.) കുട്ടികളെയും യുവജനങ്ങളെയും വിശ്വാസത്തിലും പാരമ്പര്യങ്ങളിലും ആരാധനാക്രമ ജീവിതത്തിലും വളർത്തുന്നു.",
     },
     meeting: { en: "Sundays 9:30 AM", ml: "ഞായറാഴ്ച 9:30 AM" },
+    lead: {
+      en: "The Orthodox Syrian Sunday School Association of the East (OSSAE) is the official spiritual and educational wing of the Malankara Orthodox Syrian Church. Established with the vision of nurturing children and youth in the true faith, traditions, and liturgical life of the church, it plays a vital role in shaping the spiritual foundation of the younger generation.",
+      ml: "ഓർത്തഡോക്സ് സിറിയൻ സൺഡേ സ്കൂൾ അസോസിയേഷൻ ഓഫ് ദി ഈസ്റ്റ് (ഒ.എസ്.എസ്.എ.ഇ.) മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ ഔദ്യോഗിക ആത്മീയവും വിദ്യാഭ്യാസപരവുമായ വിഭാഗമാണ്. കുട്ടികളെയും യുവജനങ്ങളെയും യഥാർത്ഥ വിശ്വാസത്തിലും പാരമ്പര്യങ്ങളിലും സഭയുടെ ആരാധനാക്രമ ജീവിതത്തിലും വളർത്തുക എന്ന ദർശനത്തോടെ സ്ഥാപിതമായ ഇത് യുവതലമുറയുടെ ആത്മീയ അടിത്തറ രൂപപ്പെടുത്തുന്നതിൽ നിർണായക പങ്ക് വഹിക്കുന്നു.",
+    },
+    sections: [
+      {
+        heading: { en: "1. History and Vision", ml: "1. ചരിത്രവും ദർശനവും" },
+        points: [
+          {
+            label: { en: "Foundation", ml: "അടിത്തറ" },
+            text: {
+              en: "Recognizing the urgent need to impart biblical knowledge and church heritage to the youth, the Sunday School movement was officially organized under the guidance of the Holy Episcopal Synod of the Malankara Church. Over the decades, it has grown into one of the largest structured religious education networks in India and across the global diaspora.",
+              ml: "ബൈബിൾ അറിവും സഭാ പൈതൃകവും യുവജനങ്ങൾക്ക് പകർന്നുനൽകേണ്ട അടിയന്തര ആവശ്യം തിരിച്ചറിഞ്ഞ്, മലങ്കര സഭയുടെ വിശുദ്ധ എപ്പിസ്കോപ്പൽ സുന്നഹദോസിന്റെ മാർഗനിർദേശത്തിൽ സൺഡേ സ്കൂൾ പ്രസ്ഥാനം ഔദ്യോഗികമായി സംഘടിപ്പിക്കപ്പെട്ടു. പതിറ്റാണ്ടുകളായി ഇന്ത്യയിലും ലോകമെമ്പാടുമുള്ള പ്രവാസ സമൂഹങ്ങളിലും ഏറ്റവും വലിയ ക്രമീകൃത മതവിദ്യാഭ്യാസ ശൃംഖലകളിലൊന്നായി അത് വളർന്നു.",
+            },
+          },
+          {
+            label: { en: "Motto", ml: "മുദ്രാവാക്യം" },
+            text: {
+              en: "The overarching vision of OSSAE is encapsulated in guiding children to grow in “Wisdom, Stature, and in favor with God and man” (following the pattern of our Lord Jesus Christ in Luke 2:52).",
+              ml: "“ജ്ഞാനത്തിലും പ്രായത്തിലും ദൈവത്തിന്റെയും മനുഷ്യരുടെയും പ്രീതിയിലും” വളരാൻ കുട്ടികളെ നയിക്കുക എന്നതാണ് ഒ.എസ്.എസ്.എ.ഇ.യുടെ ദർശനം (ലൂക്കോസ് 2:52-ൽ നമ്മുടെ കർത്താവായ യേശുക്രിസ്തുവിന്റെ മാതൃക അനുസരിച്ച്).",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "2. Curriculum and Educational Structure", ml: "2. പാഠ്യപദ്ധതിയും വിദ്യാഭ്യാസ ഘടനയും" },
+        intro: {
+          en: "OSSAE provides a comprehensive syllabus tailored to different age groups, from kindergarten through higher secondary levels:",
+          ml: "കിന്റർഗാർട്ടൻ മുതൽ ഹയർ സെക്കൻഡറി വരെയുള്ള പ്രായക്കാർക്ക് അനുയോജ്യമായ സമഗ്ര പാഠ്യപദ്ധതി ഒ.എസ്.എസ്.എ.ഇ. നൽകുന്നു:",
+        },
+        points: [
+          {
+            label: { en: "Textbooks & Syllabus", ml: "പാഠപുസ്തകങ്ങളും പാഠ്യപദ്ധതിയും" },
+            text: {
+              en: "The curriculum covers a wide range of subjects, including Holy Bible studies (Old and New Testaments), Church History, Dogma and Theology, the Orthodox Badarakam (Sacraments), Liturgy, and Christian Ethics.",
+              ml: "വിശുദ്ധ ബൈബിൾ പഠനം (പഴയ നിയമവും പുതിയ നിയമവും), സഭാ ചരിത്രം, വിശ്വാസസിദ്ധാന്തവും ദൈവശാസ്ത്രവും, ഓർത്തഡോക്സ് കൂദാശകൾ, ആരാധനാക്രമം, ക്രൈസ്തവ നൈതികത എന്നിവ പാഠ്യപദ്ധതിയിൽ ഉൾപ്പെടുന്നു.",
+            },
+          },
+          {
+            label: { en: "Examinations", ml: "പരീക്ഷകൾ" },
+            text: {
+              en: "To encourage diligent study, the central association conducts standardized annual examinations at diocesan and general (parish-wide) levels. High-achieving students are recognized at the diocesan and central levels.",
+              ml: "ശ്രദ്ധയോടെയുള്ള പഠനം പ്രോത്സാഹിപ്പിക്കാൻ കേന്ദ്ര അസോസിയേഷൻ ഭദ്രാസന തലത്തിലും പൊതു (ഇടവകാ) തലത്തിലും ഏകീകൃത വാർഷിക പരീക്ഷകൾ നടത്തുന്നു. ഉയർന്ന നേട്ടം കൈവരിക്കുന്ന വിദ്യാർത്ഥികളെ ഭദ്രാസന തലത്തിലും കേന്ദ്ര തലത്തിലും അംഗീകരിക്കുന്നു.",
+            },
+          },
+          {
+            label: { en: "Teacher Training", ml: "അധ്യാപക പരിശീലനം" },
+            text: {
+              en: "Sunday school teachers (often referred to as Sunday school masters and mistresses) undergo spiritual training, retreats, and pedagogical workshops organized by diocesan Sunday School bodies to ensure sound teaching.",
+              ml: "സൺഡേ സ്കൂൾ അധ്യാപകർ ഭദ്രാസന സൺഡേ സ്കൂൾ സമിതികൾ സംഘടിപ്പിക്കുന്ന ആത്മീയ പരിശീലനം, ധ്യാനയോഗങ്ങൾ, അധ്യാപന ശിൽപശാലകൾ എന്നിവയിൽ പങ്കെടുക്കുന്നു.",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "3. Key Activities and Youth Engagement", ml: "3. പ്രധാന പ്രവർത്തനങ്ങളും യുവജന പങ്കാളിത്തവും" },
+        intro: {
+          en: "Beyond regular Sunday classes held right after or before the Holy Qurbana, OSSAE fosters community and spiritual growth through:",
+          ml: "വിശുദ്ധ കുർബാനയ്ക്ക് ശേഷമോ മുമ്പോ നടക്കുന്ന ഞായറാഴ്ച ക്ലാസുകൾക്കപ്പുറം, ഒ.എസ്.എസ്.എ.ഇ. ഇവയിലൂടെ കൂട്ടായ്മയും ആത്മീയ വളർച്ചയും വളർത്തുന്നു:",
+        },
+        points: [
+          {
+            label: { en: "Annual Competitions", ml: "വാർഷിക മത്സരങ്ങൾ" },
+            text: {
+              en: "Diocesan and regional art and literary competitions—such as Bible recitation, elocution, singing (church hymns), quiz competitions, and essay writing—encourage active participation among students.",
+              ml: "ബൈബിൾ ഓർത്തുചൊല്ലൽ, പ്രസംഗം, ഗാനം (സഭാ ഗീതങ്ങൾ), ക്വിസ്, ഉപന്യാസം എന്നിവയുൾപ്പെടെയുള്ള ഭദ്രാസന-പ്രാദേശിക കലാ-സാഹിത്യ മത്സരങ്ങൾ വിദ്യാർത്ഥികളുടെ സജീവ പങ്കാളിത്തം പ്രോത്സാഹിപ്പിക്കുന്നു.",
+            },
+          },
+          {
+            label: { en: "Youth Camps and Retreats", ml: "യുവജന ക്യാമ്പുകളും ധ്യാനയോഗങ്ങളും" },
+            text: {
+              en: "Spiritual camps, Orthodox Vacation Bible schools (OVBS), and leadership seminars are organized regularly to help youth build personal prayer lives, fellowship, and a deeper attachment to the church's sacraments.",
+              ml: "ആത്മീയ ക്യാമ്പുകൾ, ഓർത്തഡോക്സ് വെക്കേഷൻ ബൈബിൾ സ്കൂൾ (ഒ.വി.ബി.എസ്.), നേതൃത്വ സെമിനാറുകൾ എന്നിവ യുവജനങ്ങൾക്ക് വ്യക്തിഗത പ്രാർത്ഥനാ ജീവിതവും കൂട്ടായ്മയും കൂദാശകളോടുള്ള ആഴമേറിയ ബന്ധവും വളർത്താൻ സഹായിക്കുന്നു.",
+            },
+          },
+        ],
+      },
+    ],
+    note: {
+      en: "Mr. Saji Ninan is serving as the Head Master of our unit. More than 30 teaching and non-teaching staff work for the Sunday School.",
+      ml: "ശ്രീ സാജി നിനാൻ നമ്മുടെ യൂണിറ്റിന്റെ ഹെഡ് മാസ്റ്ററായി സേവനം ചെയ്യുന്നു. 30-ലധികം അധ്യാപകരും അനധ്യാപകരുമായ ജീവനക്കാർ സൺഡേ സ്കൂളിനായി പ്രവർത്തിക്കുന്നു.",
+    },
   },
   {
-    slug: "mgocsm",
-    name: { en: "MGOCSM", ml: "എം.ജി.ഒ.സി.എസ്.എം." },
+    slug: "balika-bala-samajam",
+    name: { en: "Balika Bala Samajam", ml: "ബാലികാ ബാല സമാജം" },
     summary: {
-      en: "Mar Gregorios Orthodox Christian Student Movement — campus and student ministry.",
-      ml: "മാർ ഗ്രീഗോറിയോസ് ഓർത്തഡോക്സ് ക്രൈസ്തവ വിദ്യാർത്ഥി പ്രസ്ഥാനം.",
+      en: "The children’s and student wing of the Church, nurturing faith and character from ages 5 to 15.",
+      ml: "5 മുതൽ 15 വയസ്സുവരെയുള്ള കുട്ടികളുടെ വിശ്വാസവും സ്വഭാവവും വളർത്തുന്ന സഭയുടെ ബാലവിഭാഗം.",
     },
-    meeting: { en: "Second Saturday 5:00 PM", ml: "രണ്ടാം ശനി 5:00 PM" },
+    lead: {
+      en: "The Akhila Malankara Balika Bala Samajam (commonly known as Bala Samajam) is the official children's and student wing of the Malankara Orthodox Syrian Church. It is a foundational spiritual organization designed to nurture the faith and character of the youngest members of the church community.",
+      ml: "അഖില മലങ്കര ബാലികാ ബാല സമാജം (സാധാരണയായി ബാല സമാജം എന്നറിയപ്പെടുന്നു) മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ കുട്ടികളുടെയും വിദ്യാർത്ഥികളുടെയും ഔദ്യോഗിക വിഭാഗമാണ്. സഭാ സമൂഹത്തിലെ ഏറ്റവും ഇളയ അംഗങ്ങളുടെ വിശ്വാസവും സ്വഭാവവും വളർത്തുന്ന അടിസ്ഥാന ആത്മീയ സംഘടനയാണിത്.",
+    },
+    sections: [
+      {
+        heading: { en: "Core Overview", ml: "പ്രധാന അവലോകനം" },
+        points: [
+          {
+            label: { en: "Target Audience", ml: "ലക്ഷ്യസമൂഹം" },
+            text: {
+              en: "The organization serves young boys and girls, typically between the ages of 5 and 15.",
+              ml: "സാധാരണയായി 5 മുതൽ 15 വയസ്സുവരെയുള്ള ആൺകുട്ടികളെയും പെൺകുട്ടികളെയും ഈ സംഘടന സേവിക്കുന്നു.",
+            },
+          },
+          {
+            label: { en: "Core Philosophy", ml: "മുഖ്യ ദർശനം" },
+            text: {
+              en: "Much like the OCYM, its main objectives revolve around Worship, Study, and Virtuous Life (or Service). It strives for the integrated, all-round personality development of children.",
+              ml: "ഒ.സി.വൈ.എമ്മിനെപ്പോലെ ആരാധന, പഠനം, സദാചാര ജീവിതം (അഥവാ സേവനം) എന്നിവയാണ് ഇതിന്റെ പ്രധാന ലക്ഷ്യങ്ങൾ. കുട്ടികളുടെ സമഗ്രമായ വ്യക്തിത്വ വികസനമാണ് ലക്ഷ്യം.",
+            },
+          },
+          {
+            label: { en: "History", ml: "ചരിത്രം" },
+            text: {
+              en: "While local units existed prior, the organization was formally structured on an all-Malankara (church-wide) basis in 1982.",
+              ml: "പ്രാദേശിക യൂണിറ്റുകൾ മുമ്പുണ്ടായിരുന്നെങ്കിലും 1982-ൽ അഖില മലങ്കര (സഭാമൊത്തം) അടിസ്ഥാനത്തിൽ ഈ സംഘടന ഔപചാരികമായി രൂപീകരിച്ചു.",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "Key Activities & Focus Areas", ml: "പ്രധാന പ്രവർത്തനങ്ങളും ശ്രദ്ധാകേന്ദ്രങ്ങളും" },
+        points: [
+          {
+            label: { en: "Spiritual Learning", ml: "ആത്മീയ പഠനം" },
+            text: {
+              en: "Children are encouraged to deeply study the Holy Bible, as well as the unique traditions, liturgy, and history of the Orthodox Church alongside their standard academic schooling.",
+              ml: "പാഠ്യപദ്ധതിയോടൊപ്പം വിശുദ്ധ ബൈബിളും ഓർത്തഡോക്സ് സഭയുടെ പ്രത്യേക പാരമ്പര്യങ്ങളും ആരാധനാക്രമവും ചരിത്രവും ആഴത്തിൽ പഠിക്കാൻ കുട്ടികളെ പ്രോത്സാഹിപ്പിക്കുന്നു.",
+            },
+          },
+          {
+            label: { en: "Moral Grounding", ml: "ധാർമ്മിക അടിത്തറ" },
+            text: {
+              en: "The Samajam presents the life stories and histories of Church Saints to help children cultivate spiritual habits, simplicity, prayer, and moral responsibility.",
+              ml: "ആത്മീയ ശീലങ്ങൾ, ലാളിത്യം, പ്രാർത്ഥന, ധാർമ്മിക ഉത്തരവാദിത്തം എന്നിവ വളർത്താൻ സഭാ പുണ്യവാളന്മാരുടെ ജീവിതവും ചരിത്രവും സമാജം അവതരിപ്പിക്കുന്നു.",
+            },
+          },
+          {
+            label: { en: "Parish Engagement", ml: "ഇടവകാ പങ്കാളിത്തം" },
+            text: {
+              en: "Local parish units host regular meetings featuring Bible readings, devotional singing, short speeches, and quizzes. Many units form dedicated Bala Samajam Choirs to actively participate in the Holy Qurbana and church functions.",
+              ml: "ബൈബിൾ വായന, ഭക്തിഗാനം, ഹ്രസ്വ പ്രസംഗങ്ങൾ, ക്വിസുകൾ എന്നിവയുള്ള യോഗങ്ങൾ പ്രാദേശിക ഇടവകാ യൂണിറ്റുകൾ പതിവായി നടത്തുന്നു. വിശുദ്ധ കുർബാനയിലും സഭാ പരിപാടികളിലും സജീവമായി പങ്കെടുക്കാൻ പല യൂണിറ്റുകളും പ്രത്യേക ബാല സമാജം ഗായകസംഘങ്ങൾ രൂപീകരിക്കുന്നു.",
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "peters-hand",
+    name: { en: "Peter's Hand", ml: "പത്രോസിന്റെ കൈ" },
+    summary: {
+      en: "The parish charity that offers medical help, family support and educational aid.",
+      ml: "രോഗികൾക്കും കുടുംബങ്ങൾക്കും വിദ്യാർത്ഥികൾക്കും സഹായം നൽകുന്ന ഇടവകാ ദാനധർമ്മം.",
+    },
+    lead: {
+      en: "Peter’s Hand has been at the forefront of our parish's charitable initiatives for many years, serving as a beacon of hope and compassion.\n\nThrough our continuous efforts, we extend a helping hand to those in need—providing critical medical assistance to underprivileged patients, financial support to struggling families, and educational aid to deserving students.",
+      ml: "പത്രോസിന്റെ കൈ വർഷങ്ങളായി നമ്മുടെ ഇടവകയുടെ ദാനധർമ്മ പ്രവർത്തനങ്ങളുടെ മുൻനിരയിലാണ്. പ്രത്യാശയുടെയും കരുണയുടെയും വിളക്കായി അത് നിലകൊള്ളുന്നു.\n\nതുടർച്ചയായ ശ്രമങ്ങളിലൂടെ ആവശ്യമുള്ളവർക്ക് ഞങ്ങൾ കൈനീട്ടുന്നു — ദരിദ്രരായ രോഗികൾക്ക് അത്യാവശ്യ വൈദ്യസഹായം, ബുദ്ധിമുട്ടുന്ന കുടുംബങ്ങൾക്ക് സാമ്പത്തിക സഹായം, അർഹരായ വിദ്യാർത്ഥികൾക്ക് വിദ്യാഭ്യാസ സഹായം.",
+    },
+    sections: [
+      {
+        heading: { en: "Office Bearers — 2026–27", ml: "ഭാരവാഹികൾ — 2026–27" },
+        points: [
+          {
+            label: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
+            text: { en: "Mrs. Shibi Laji", ml: "ശ്രീമതി ഷിബി ലാജി" },
+          },
+          {
+            label: { en: "Secretary", ml: "സെക്രട്ടറി" },
+            text: { en: "Mrs. Sheenu Sunil", ml: "ശ്രീമതി ഷീനു സുനിൽ" },
+          },
+          {
+            label: { en: "Joint Secretary", ml: "ജോയിന്റ് സെക്രട്ടറി" },
+            text: { en: "Mrs. Biji Saji", ml: "ശ്രീമതി ബിജി സാജി" },
+          },
+          {
+            label: { en: "Treasurer", ml: "ട്രഷറർ" },
+            text: { en: "Mrs. Nisha Elizabeth Babu", ml: "ശ്രീമതി നിഷ എലിസബത്ത് ബാബു" },
+          },
+          {
+            label: { en: "Auditor", ml: "ഓഡിറ്റർ" },
+            text: { en: "Mrs. Achamma Shiju", ml: "ശ്രീമതി അച്ചാമ്മ ഷിജു" },
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "martha-mariam",
-    name: { en: "Martha Mariam Samajam", ml: "മാർത്താ മറിയം സമാജം" },
+    name: { en: "Martha Marthiyam Vanitha Samajam", ml: "മാർത്താ മാർത്തിയം വനിതാ സമാജം" },
     summary: {
-      en: "Women’s fellowship for prayer, pastoral care and charity.",
-      ml: "പ്രാർത്ഥന, ഇടവകാ ശുശ്രൂഷ, ദാനധർമ്മം എന്നിവയ്ക്കുള്ള വനിതാ കൂട്ടായ്മ.",
+      en: "The women’s wing of the Malankara Orthodox Syrian Church, founded in 1928 for the spiritual progress of women.",
+      ml: "1928-ൽ സ്ത്രീകളുടെ ആത്മീയ പുരോഗതിക്കായി സ്ഥാപിതമായ മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ വനിതാ വിഭാഗം.",
     },
-    meeting: { en: "First Wednesday 10:00 AM", ml: "ഒന്നാം ബുധൻ 10:00 AM" },
+    meeting: { en: "Every Saturday", ml: "എല്ലാ ശനിയാഴ്ചയും" },
+    lead: {
+      en: "Martha Mariam Samajam is the women’s wing of the Malankara Orthodox Syrian Church of India. It is one of the major spiritual organisations of the Church, bringing together all the women members. The organisation was founded in 1928 for the spiritual progress of women. The founders named it “Marth Mariam Samajam” after the Blessed Virgin Mary, whom they accepted as their interceding saint. H.G. Dr. Yuhanon Mar Diascoros Metropolitan is the current president.",
+      ml: "മാർത്താ മറിയം സമാജം ഇന്ത്യയിലെ മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ വനിതാ വിഭാഗമാണ്. സഭയിലെ സ്ത്രീ അംഗങ്ങളെ ഒന്നിപ്പിക്കുന്ന പ്രധാന ആത്മീയ സംഘടനകളിലൊന്നാണിത്. സ്ത്രീകളുടെ ആത്മീയ പുരോഗതിക്കായി 1928-ൽ സ്ഥാപിതമായി. മദ്ധ്യസ്ഥയായി സ്വീകരിച്ച പരിശുദ്ധ കന്യകാമറിയത്തിന്റെ നാമത്തിൽ സ്ഥാപകർ ഇതിന് “മാർത്ത് മറിയം സമാജം” എന്ന് പേരിട്ടു. ഹി.ഗി. ഡോ. യൂഹാനോൻ മാർ ദിയസ്കോറോസ് മെത്രാപ്പോലീത്ത ഇപ്പോഴത്തെ പ്രസിഡന്റാണ്.",
+    },
+    sections: [
+      {
+        heading: { en: "Motto", ml: "മുദ്രാവാക്യം" },
+        intro: {
+          en: "Prarthikkuka, Pravarthikkuka, Prakasikkuka.",
+          ml: "പ്രാർത്ഥിക്കുക, പ്രവർത്തിക്കുക, പ്രകാശിക്കുക.",
+        },
+        points: [],
+      },
+      {
+        heading: { en: "Office Bearers — 2026–27", ml: "ഭാരവാഹികൾ — 2026–27" },
+        points: [
+          {
+            label: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
+            text: { en: "Mrs. Shibi Laji", ml: "ശ്രീമതി ഷിബി ലാജി" },
+          },
+          {
+            label: { en: "Secretary", ml: "സെക്രട്ടറി" },
+            text: { en: "Mrs. Sheenu Sunil", ml: "ശ്രീമതി ഷീനു സുനിൽ" },
+          },
+          {
+            label: { en: "Joint Secretary", ml: "ജോയിന്റ് സെക്രട്ടറി" },
+            text: { en: "Mrs. Biji Saji", ml: "ശ്രീമതി ബിജി സാജി" },
+          },
+          {
+            label: { en: "Treasurer", ml: "ട്രഷറർ" },
+            text: { en: "Mrs. Nisha Elizabeth Babu", ml: "ശ്രീമതി നിഷ എലിസബത്ത് ബാബു" },
+          },
+          {
+            label: { en: "Auditor", ml: "ഓഡിറ്റർ" },
+            text: { en: "Mrs. Achamma Shiju", ml: "ശ്രീമതി അച്ചാമ്മ ഷിജു" },
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "ocym",
-    name: { en: "Orthodox Youth Movement", ml: "ഓർത്തഡോക്സ് യുവജന പ്രസ്ഥാനം" },
-    summary: {
-      en: "Worship, study and service for the youth of Karoor Palli.",
-      ml: "കാരൂർ പള്ളിയിലെ യുവജനങ്ങൾക്ക് ആരാധന, പഠനം, സേവനം.",
+    name: { en: "Orthodox Christian Youth Movement", ml: "ഓർത്തഡോക്സ് ക്രിസ്ത്യൻ യുവജന പ്രസ്ഥാനം" },
+    title: {
+      en: "OCYM - Orthodox Christian Youth Movement",
+      ml: "ഒ.സി.വൈ.എം. - ഓർത്തഡോക്സ് ക്രിസ്ത്യൻ യുവജന പ്രസ്ഥാനം",
     },
-    meeting: { en: "Second Sunday 4:00 PM", ml: "രണ്ടാം ഞായർ 4:00 PM" },
+    summary: {
+      en: "The youth wing of the Church, shaped by worship, study and service.",
+      ml: "ആരാധന, പഠനം, സേവനം എന്നിവയിലൂടെ രൂപപ്പെടുന്ന സഭയുടെ യുവജന വിഭാഗം.",
+    },
+    meeting: { en: "Every Sunday after Holy Qurbana", ml: "വിശുദ്ധ കുർബാനയ്ക്ക് ശേഷം എല്ലാ ഞായറാഴ്ചയും" },
+    lead: {
+      en: "The Orthodox Christian Youth Movement of India (OCYM), the youth wing of the Malankara Orthodox Syrian Church, was started with the objectives of worship, study, and service. OCYM contributes to the goodness and progress of the Church and community in the three-fold path of worship, study and service. It aims at molding the minds and visions of the youth against the background of the contemporary issues. OCYM continues its spiritual journey with broader visions and effective Christian youth leadership. H.G. Dr. Geevarghese Mar Yulios Metropolitan is the current president.\n\nOur parish has a very active OCYM unit with more than 70 active members, and we conduct several activities throughout the year to engage the youth in worship, study and service. The OCYM unit meets every Sunday after Holy Qurbana.",
+      ml: "ഇന്ത്യയിലെ ഓർത്തഡോക്സ് ക്രിസ്ത്യൻ യൂത്ത് മൂവ്‌മെന്റ് (ഒ.സി.വൈ.എം.) മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ യുവജന വിഭാഗമാണ്. ആരാധന, പഠനം, സേവനം എന്ന ലക്ഷ്യങ്ങളോടെയാണ് ഇത് ആരംഭിച്ചത്. ആരാധന, പഠനം, സേവനം എന്ന ത്രിമാർഗത്തിലൂടെ സഭയുടെയും സമൂഹത്തിന്റെയും നന്മയ്ക്കും പുരോഗതിക്കും ഒ.സി.വൈ.എം. സംഭാവന ചെയ്യുന്നു. സമകാലിക വിഷയങ്ങളുടെ പശ്ചാത്തലത്തിൽ യുവജനങ്ങളുടെ ചിന്തയും കാഴ്ചപ്പാടും രൂപപ്പെടുത്തുകയാണ് ഇതിന്റെ ലക്ഷ്യം. വിശാലമായ ദർശനങ്ങളോടും ഫലപ്രദമായ ക്രൈസ്തവ യുവജന നേതൃത്വത്തോടും കൂടി ഒ.സി.വൈ.എം. ആത്മീയ യാത്ര തുടരുന്നു. ഹി.ഗി. ഡോ. ഗീവർഗീസ് മാർ യൂലിയോസ് മെത്രാപ്പോലീത്ത ഇപ്പോഴത്തെ പ്രസിഡന്റാണ്.\n\nനമ്മുടെ ഇടവകയിൽ 70-ലധികം സജീവ അംഗങ്ങളുള്ള ഒ.സി.വൈ.എം. യൂണിറ്റുണ്ട്. ആരാധന, പഠനം, സേവനം എന്നിവയിൽ യുവജനങ്ങളെ ഉൾപ്പെടുത്താൻ വർഷം മുഴുവൻ നിരവധി പ്രവർത്തനങ്ങൾ നടത്തുന്നു. യൂണിറ്റ് വിശുദ്ധ കുർബാനയ്ക്ക് ശേഷം എല്ലാ ഞായറാഴ്ചയും യോഗം ചേരുന്നു.",
+    },
+    sections: [
+      {
+        heading: { en: "Motto", ml: "മുദ്രാവാക്യം" },
+        intro: {
+          en: "Worship, Study, Service.",
+          ml: "ആരാധന, പഠനം, സേവനം.",
+        },
+        points: [],
+      },
+      {
+        heading: { en: "Office Bearers", ml: "ഭാരവാഹികൾ" },
+        points: [
+          {
+            label: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
+            text: { en: "Mr. Lainu George Mathew", ml: "ശ്രീ ലൈനു ജോർജ് മാത്യു" },
+          },
+          {
+            label: { en: "Secretary", ml: "സെക്രട്ടറി" },
+            text: { en: "Mrs. Rajitha Raj", ml: "ശ്രീമതി രജിത രാജ്" },
+          },
+          {
+            label: { en: "Joint Secretary", ml: "ജോയിന്റ് സെക്രട്ടറി" },
+            text: { en: "Mr. Varghese Joy", ml: "ശ്രീ വർഗീസ് ജോയ്" },
+          },
+          {
+            label: { en: "Treasurer", ml: "ട്രഷറർ" },
+            text: { en: "Mr. Ajish T Alex", ml: "ശ്രീ അജീഷ് ടി. അലക്സ്" },
+          },
+          {
+            label: { en: "Auditor", ml: "ഓഡിറ്റർ" },
+            text: { en: "Mr. Melwin Mathai Pothen", ml: "ശ്രീ മെൽവിൻ മത്തായി പോത്തൻ" },
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "prayer-groups",
     name: { en: "Prayer Groups", ml: "പ്രാർത്ഥനാ യൂണിറ്റുകൾ" },
     summary: {
-      en: "Area prayer fellowships that visit homes and care for neighbours.",
-      ml: "വീടുകൾ സന്ദർശിച്ച് അയൽക്കാരെ പരിപാലിക്കുന്ന പ്രാദേശിക യൂണിറ്റുകൾ.",
+      en: "Ten prayer groups, arranged by area, that worship together after Holy Qurbana.",
+      ml: "പ്രദേശം അനുസരിച്ച് ക്രമീകരിച്ച 10 പ്രാർത്ഥനാ ഗ്രൂപ്പുകൾ. വിശുദ്ധ കുർബാനയ്ക്ക് ശേഷം ഒന്നിച്ച് ആരാധിക്കുന്നു.",
     },
-    meeting: { en: "Weekly by unit", ml: "യൂണിറ്റ് അനുസരിച്ച് ആഴ്ചതോറും" },
+    meeting: { en: "After Holy Qurbana", ml: "വിശുദ്ധ കുർബാനയ്ക്ക് ശേഷം" },
+    lead: {
+      en: "There are 10 active prayer groups in our parish. These groups are classified and grouped based on the geographical location. All the respective prayer groups meet and worship God Almighty after the Holy Qurbana.",
+      ml: "നമ്മുടെ ഇടവകയിൽ 10 സജീവ പ്രാർത്ഥനാ ഗ്രൂപ്പുകളുണ്ട്. ഭൂമിശാസ്ത്രപരമായ സ്ഥാനത്തിന്റെ അടിസ്ഥാനത്തിൽ ഈ ഗ്രൂപ്പുകളെ തരംതിരിച്ച് ക്രമീകരിച്ചിരിക്കുന്നു. എല്ലാ പ്രാർത്ഥനാ ഗ്രൂപ്പുകളും വിശുദ്ധ കുർബാനയ്ക്ക് ശേഷം ഒന്നിച്ച് സർവ്വശക്തനായ ദൈവത്തെ ആരാധിക്കുന്നു.",
+    },
   },
   {
     slug: "choir",
@@ -517,23 +787,273 @@ export const organisations: Organisation[] = [
   },
   {
     slug: "altar-servers",
-    name: { en: "Altar Servers", ml: "ശുശ്രൂഷകർ" },
+    name: { en: "AMOSS", ml: "എ.എം.ഒ.എസ്.എസ്." },
     summary: {
-      en: "Boys and young men trained for reverent service at the altar.",
-      ml: "മദ്ബഹാ ശുശ്രൂഷയ്ക്ക് പരിശീലിപ്പിക്കുന്ന ബാലന്മാരും യുവാക്കളും.",
+      en: "AMOSS, the Church’s association for altar servers and lay ministers.",
+      ml: "ശുശ്രൂഷകർക്കും അല്മായ ശുശ്രൂഷകർക്കുമുള്ള സഭാ സംഘടനയായ എ.എം.ഒ.എസ്.എസ്.",
     },
-    meeting: { en: "Before Sunday Qurbana", ml: "ഞായറാഴ്ച കുർബാനയ്ക്ക് മുമ്പ്" },
+    lead: {
+      en: "AMOSS stands for the Akhila Malankara Orthodox Shusrushaka Sangham, which is the official association for altar servers (altar boys) and lay ministers within the Malankara Orthodox Syrian Church.",
+      ml: "എ.എം.ഒ.എസ്.എസ്. എന്നത് അഖില മലങ്കര ഓർത്തഡോക്സ് ശുശ്രൂഷക സംഘം എന്നതിന്റെ ചുരുക്കപ്പേരാണ്. മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയിലെ ശുശ്രൂഷകർക്കും (അൾത്താര ബോയ്സ്) അല്മായ ശുശ്രൂഷകർക്കുമുള്ള ഔദ്യോഗിക സംഘടനയാണിത്.",
+    },
+    sections: [
+      {
+        heading: { en: "Core Purpose & Identity", ml: "മുഖ്യ ലക്ഷ്യവും സ്വത്വവും" },
+        intro: {
+          en: "The primary mission of AMOSS is to standardize, unify, and elevate the liturgical service rendered by altar assistants across all parishes in the church. The organization helps young men and boys view their role at the altar not just as a mechanical duty, but as a sacred, deeply spiritual calling.",
+          ml: "സഭയിലെ എല്ലാ ഇടവകകളിലെയും മദ്ബഹാ ശുശ്രൂഷകരുടെ ആരാധനാക്രമ ശുശ്രൂഷയെ ഏകീകരിക്കുകയും ഉയർത്തുകയും ചെയ്യുകയാണ് എ.എം.ഒ.എസ്.എസിന്റെ പ്രധാന ദൗത്യം. മദ്ബഹയിലെ തങ്ങളുടെ പങ്ക് ഒരു യാന്ത്രിക കടമയായിട്ടല്ല, വിശുദ്ധവും ആഴമേറിയതുമായ ആത്മീയ വിളിയായി യുവാക്കളും ബാലന്മാരും കാണാൻ ഈ സംഘടന സഹായിക്കുന്നു.",
+        },
+        points: [],
+      },
+      {
+        heading: { en: "Key Objectives", ml: "പ്രധാന ലക്ഷ്യങ്ങൾ" },
+        points: [
+          {
+            label: { en: "Uniformity in Worship", ml: "ആരാധനയിലെ ഏകരൂപം" },
+            text: {
+              en: "It provides systematic instructions to altar servers to maintain an unaltered, uniform standard for church traditions, rituals, and vestments across different regions.",
+              ml: "വിവിധ പ്രദേശങ്ങളിലെ സഭാ പാരമ്പര്യങ്ങൾ, കർമ്മങ്ങൾ, വസ്ത്രങ്ങൾ എന്നിവയിൽ മാറ്റമില്ലാത്ത ഏകീകൃത നിലവാരം പാലിക്കാൻ ശുശ്രൂഷകർക്ക് ക്രമാനുഗതമായ നിർദ്ദേശങ്ങൾ ഇത് നൽകുന്നു.",
+            },
+          },
+          {
+            label: { en: "Spiritual Grooming", ml: "ആത്മീയ രൂപീകരണം" },
+            text: {
+              en: "It molds dedicated individuals who lead a sacramental, prayerful life, balancing their spiritual grace with practical, worldly discipline.",
+              ml: "ആത്മീയ കൃപയും പ്രായോഗികമായ ലൗകിക അച്ചടക്കവും സമന്വയിപ്പിച്ച് കൂദാശാജീവിതവും പ്രാർത്ഥനാജീവിതവും നയിക്കുന്ന സമർപ്പിതരെ ഇത് രൂപപ്പെടുത്തുന്നു.",
+            },
+          },
+          {
+            label: { en: "Preserving Tradition", ml: "പാരമ്പര്യ സംരക്ഷണം" },
+            text: {
+              en: "It trains attendants to understand the profound theological meaning and historical value behind every ritual action in the West Syriac (Malankara) Liturgy.",
+              ml: "പശ്ചിമ സുറിയാനി (മലങ്കര) ആരാധനാക്രമത്തിലെ ഓരോ കർമ്മത്തിനു പിന്നിലെയും ആഴമേറിയ ദൈവശാസ്ത്ര അർത്ഥവും ചരിത്രമൂല്യവും മനസ്സിലാക്കാൻ ശുശ്രൂഷകരെ ഇത് പരിശീലിപ്പിക്കുന്നു.",
+            },
+          },
+        ],
+      },
+    ],
   },
   {
-    slug: "seniors",
-    name: { en: "Senior Citizens Forum", ml: "മുതിർന്ന പൗര സംഘം" },
-    summary: {
-      en: "Fellowship, health visits and prayer for our elders.",
-      ml: "മുതിർന്നവർക്കുള്ള കൂട്ടായ്മ, ആരോഗ്യ സന്ദർശനം, പ്രാർത്ഥന.",
+    slug: "SDOF",
+    name: { en: "SDOF", ml: "എസ്.ഡി.ഒ.എഫ്." },
+    title: {
+      en: "SDOF - Saint Dionysius Orthodox Fellowship",
+      ml: "എസ്.ഡി.ഒ.എഫ്. - വിശുദ്ധ ദിവന്നാസിയോസ് ഓർത്തഡോക്സ് ഫെലോഷിപ്പ്",
     },
-    meeting: { en: "Third Tuesday 10:30 AM", ml: "മൂന്നാം ചൊവ്വ 10:30 AM" },
+    summary: {
+      en: "The fellowship that bridges OCYM and SJOF for members in their forties, fifties and early sixties.",
+      ml: "നാൽപ്പതുകളിലും അൻപതുകളിലും അറുപതിന്റെ തുടക്കത്തിലും ഉള്ള അംഗങ്ങൾക്കായി ഒ.സി.വൈ.എമ്മിനും എസ്.ജെ.ഒ.എഫിനും ഇടയിലുള്ള ഫെലോഷിപ്പ്.",
+    },
+    lead: {
+      en: "The SDOF acts as a bridge between the youth movement (OCYM) and the senior fellowship (SJOF). It serves church members typically falling between the ages of 40 and 60 (or 65 in some regions).",
+      ml: "എസ്.ഡി.ഒ.എഫ്. യുവജന പ്രസ്ഥാനമായ ഒ.സി.വൈ.എമ്മിനും മുതിർന്നവരുടെ ഫെലോഷിപ്പായ എസ്.ജെ.ഒ.എഫിനും ഇടയിലുള്ള പാലമാണ്. സാധാരണയായി 40 മുതൽ 60 വയസ്സുവരെ (ചില പ്രദേശങ്ങളിൽ 65 വരെ) പ്രായമുള്ള സഭാംഗങ്ങളെ ഇത് സേവിക്കുന്നു.",
+    },
+    sections: [
+      {
+        heading: { en: "Core Purpose & Identity", ml: "മുഖ്യ ലക്ഷ്യവും സ്വത്വവും" },
+        points: [
+          {
+            label: { en: "Patron Saint", ml: "മദ്ധ്യസ്ഥൻ" },
+            text: {
+              en: "Named in honor of Saint Dionysius of Vattasseril (Vattasseril Thirumeni), a revered former Metropolitan and Malankara Metropolitan celebrated as a great defender of the Orthodox faith.",
+              ml: "വട്ടശ്ശേരിൽ മാർ ദിവന്നാസിയോസ് (വട്ടശ്ശേരിൽ തിരുമേനി) എന്ന വിശുദ്ധന്റെ ബഹുമാനാർത്ഥം നാമകരണം ചെയ്തിരിക്കുന്നു. ഓർത്തഡോക്സ് വിശ്വാസത്തിന്റെ മഹത്തായ പ്രതിരോധകനായി ആഘോഷിക്കപ്പെടുന്ന മുൻ മെത്രാപ്പോലീത്തയും മലങ്കര മെത്രാപ്പോലീത്തയുമായിരുന്നു അദ്ദേഹം.",
+            },
+          },
+          {
+            label: { en: "The Need", ml: "ആവശ്യം" },
+            text: {
+              en: "It was established to keep individuals engaged in active spiritual fellowship as they navigate a hectic phase of life—balancing mature career growth, raising families, and expanding worldly responsibilities.",
+              ml: "പക്വമായ തൊഴിൽ വളർച്ച, കുടുംബ പരിപാലനം, വർധിച്ചുവരുന്ന ലൗകിക ഉത്തരവാദിത്തങ്ങൾ എന്നിവ സന്തുലിതമാക്കുന്ന തിരക്കേറിയ ജീവിതഘട്ടത്തിൽ ആത്മീയ കൂട്ടായ്മയിൽ സജീവമായി തുടരാൻ വ്യക്തികളെ സഹായിക്കുന്നതിനാണ് ഇത് സ്ഥാപിതമായത്.",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "Key Focus Areas", ml: "പ്രധാന ശ്രദ്ധാകേന്ദ്രങ്ങൾ" },
+        points: [
+          {
+            label: { en: "Spiritual Anchor", ml: "ആത്മീയ നങ്കൂരം" },
+            text: {
+              en: "Provides dedicated scriptural study, liturgical evaluation, and prayer circles to help members seek deeper theological connection with God amidst busy domestic schedules.",
+              ml: "തിരക്കേറിയ ഗാർഹിക ജീവിതത്തിനിടയിൽ ദൈവത്തോട് ആഴമേറിയ ദൈവശാസ്ത്ര ബന്ധം തേടാൻ തിരുവചന പഠനം, ആരാധനാക്രമ വിലയിരുത്തൽ, പ്രാർത്ഥനാ വൃത്തങ്ങൾ എന്നിവ നൽകുന്നു.",
+            },
+          },
+          {
+            label: { en: "Family & Parenting Guidance", ml: "കുടുംബവും രക്ഷാകർതൃ മാർഗനിർദേശവും" },
+            text: {
+              en: "Focuses heavily on Christian family values, offering forums where couples can discuss marital growth and the spiritual upbringing of children.",
+              ml: "ക്രൈസ്തവ കുടുംബ മൂല്യങ്ങളിൽ ശ്രദ്ധ കേന്ദ്രീകരിക്കുന്നു. ദാമ്പത്യ വളർച്ചയെയും കുട്ടികളുടെ ആത്മീയ വളർത്തലിനെയും കുറിച്ച് ദമ്പതികൾക്ക് ചർച്ച ചെയ്യാനുള്ള വേദികൾ ഒരുക്കുന്നു.",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "Office Bearers — 2026–27", ml: "ഭാരവാഹികൾ — 2026–27" },
+        points: [
+          {
+            label: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
+            text: { en: "Mrs. Shibi Laji", ml: "ശ്രീമതി ഷിബി ലാജി" },
+          },
+          {
+            label: { en: "Secretary", ml: "സെക്രട്ടറി" },
+            text: { en: "Mrs. Sheenu Sunil", ml: "ശ്രീമതി ഷീനു സുനിൽ" },
+          },
+          {
+            label: { en: "Joint Secretary", ml: "ജോയിന്റ് സെക്രട്ടറി" },
+            text: { en: "Mrs. Biji Saji", ml: "ശ്രീമതി ബിജി സാജി" },
+          },
+          {
+            label: { en: "Treasurer", ml: "ട്രഷറർ" },
+            text: { en: "Mrs. Nisha Elizabeth Babu", ml: "ശ്രീമതി നിഷ എലിസബത്ത് ബാബു" },
+          },
+          {
+            label: { en: "Auditor", ml: "ഓഡിറ്റർ" },
+            text: { en: "Mrs. Achamma Shiju", ml: "ശ്രീമതി അച്ചാമ്മ ഷിജു" },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "SJOF",
+    name: { en: "SJOF", ml: "എസ്.ജെ.ഒ.എഫ്." },
+    title: {
+      en: "SJOF - St. Joseph Orthodox Fellowship",
+      ml: "എസ്.ജെ.ഒ.എഫ്. - സെന്റ് ജോസഫ് ഓർത്തഡോക്സ് ഫെലോഷിപ്പ്",
+    },
+    summary: {
+      en: "The Church’s fellowship for members aged 60 and above, built on prayer, fellowship and guidance.",
+      ml: "60 വയസ്സും അതിനുമുകളിലുമുള്ള അംഗങ്ങൾക്കായി പ്രാർത്ഥന, കൂട്ടായ്മ, മാർഗനിർദേശം എന്നിവയിൽ അധിഷ്ഠിതമായ സഭാ ഫെലോഷിപ്പ്.",
+    },
+    lead: {
+      en: "SJOF stands for the St. Joseph Orthodox Fellowship, which is the official forum and spiritual organization for senior citizens within the Malankara Orthodox Syrian Church.",
+      ml: "എസ്.ജെ.ഒ.എഫ്. എന്നത് സെന്റ് ജോസഫ് ഓർത്തഡോക്സ് ഫെലോഷിപ്പ് എന്നതിന്റെ ചുരുക്കപ്പേരാണ്. മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയിലെ മുതിർന്ന പൗരന്മാർക്കുള്ള ഔദ്യോഗിക വേദിയും ആത്മീയ സംഘടനയുമാണിത്.",
+    },
+    sections: [
+      {
+        heading: { en: "Core Purpose & Identity", ml: "മുഖ്യ ലക്ഷ്യവും സ്വത്വവും" },
+        intro: {
+          en: "The SJOF is a faith-driven spiritual wing specifically dedicated to church members aged 60 and above. Its objective is to strengthen, empower, and support senior members, ensuring they remain active, valued participants in the life of the parish.",
+          ml: "എസ്.ജെ.ഒ.എഫ്. 60 വയസ്സും അതിനുമുകളിലും പ്രായമുള്ള സഭാംഗങ്ങൾക്കായി സമർപ്പിച്ച വിശ്വാസാധിഷ്ഠിത ആത്മീയ വിഭാഗമാണ്. മുതിർന്ന അംഗങ്ങളെ ശക്തിപ്പെടുത്തുകയും പിന്തുണയ്ക്കുകയും ഇടവകാ ജീവിതത്തിൽ സജീവവും വിലമതിക്കപ്പെടുന്നവരുമായി തുടരാൻ സഹായിക്കുകയും ചെയ്യുകയാണ് ഇതിന്റെ ലക്ഷ്യം.",
+        },
+        points: [
+          {
+            label: { en: "Motto", ml: "മുദ്രാവാക്യം" },
+            text: {
+              en: "“Prayer, Fellowship & Guidance”.",
+              ml: "“പ്രാർത്ഥന, കൂട്ടായ്മ, മാർഗനിർദേശം”.",
+            },
+          },
+          {
+            label: { en: "Patron Saint", ml: "മദ്ധ്യസ്ഥൻ" },
+            text: {
+              en: "Named after St. Joseph, honoring his legacy of quiet devotion, righteousness, and obedience.",
+              ml: "നിശ്ശബ്ദ ഭക്തി, നീതി, അനുസരണം എന്നിവയുടെ പാരമ്പര്യത്തെ ബഹുമാനിച്ച് വിശുദ്ധ യൗസേപ്പിന്റെ നാമത്തിലാണ് ഇത് അറിയപ്പെടുന്നത്.",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "The Three Guiding Pillars", ml: "മൂന്ന് മാർഗദർശക സ്തംഭങ്ങൾ" },
+        intro: {
+          en: "The fellowship structures its activities around its three-part motto:",
+          ml: "ത്രിമുഖ മുദ്രാവാക്യത്തെ അടിസ്ഥാനമാക്കിയാണ് ഫെലോഷിപ്പ് പ്രവർത്തനങ്ങൾ ക്രമീകരിക്കുന്നത്.",
+        },
+        points: [
+          {
+            label: { en: "Prayer", ml: "പ്രാർത്ഥന" },
+            text: {
+              en: "Encouraging seniors to transform their leisure time into intentional, selfless intercessory prayer for their families, the church, and society.",
+              ml: "കുടുംബങ്ങൾക്കും സഭയ്ക്കും സമൂഹത്തിനും വേണ്ടി ഉദ്ദേശ്യപൂർവവും നിസ്വാർത്ഥവുമായ മദ്ധ്യസ്ഥ പ്രാർത്ഥനയായി ഒഴിവുസമയം മാറ്റാൻ മുതിർന്നവരെ പ്രോത്സാഹിപ്പിക്കുന്നു.",
+            },
+          },
+          {
+            label: { en: "Fellowship", ml: "കൂട്ടായ്മ" },
+            text: {
+              en: "Providing a community space to counteract the loneliness or isolation that can come with older age, fostering a deep sense of camaraderie and belonging.",
+              ml: "പ്രായാധിക്യത്തോടൊപ്പം വരാവുന്ന ഏകാന്തതയെയും ഒറ്റപ്പെടലിനെയും നേരിടാൻ ഒരു സമൂഹ ഇടം ഒരുക്കുന്നു. ആഴമേറിയ സൗഹൃദവും ഉൾപ്പെടലും വളർത്തുന്നു.",
+            },
+          },
+          {
+            label: { en: "Guidance", ml: "മാർഗനിർദേശം" },
+            text: {
+              en: "Utilizing the vast life experiences, wisdom, and spiritual maturity of senior members to mentor and guide younger generations within the church.",
+              ml: "മുതിർന്ന അംഗങ്ങളുടെ ജീവിതാനുഭവവും ജ്ഞാനവും ആത്മീയ പക്വതയും ഉപയോഗിച്ച് സഭയിലെ യുവതലമുറയെ ഉപദേശിക്കുകയും നയിക്കുകയും ചെയ്യുന്നു.",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "Key Activities", ml: "പ്രധാന പ്രവർത്തനങ്ങൾ" },
+        points: [
+          {
+            label: { en: "Spiritual Upliftment", ml: "ആത്മീയ ഉണർവ്" },
+            text: {
+              en: "Regular meetings featuring Bible studies, prayer groups, devotional songs, and sacramental confession prep.",
+              ml: "ബൈബിൾ പഠനം, പ്രാർത്ഥനാ ഗ്രൂപ്പുകൾ, ഭക്തിഗാനങ്ങൾ, കുമ്പസാരത്തിനുള്ള ഒരുക്കം എന്നിവയുള്ള പതിവ് യോഗങ്ങൾ.",
+            },
+          },
+          {
+            label: { en: "Charity & Outreach", ml: "ദാനധർമ്മവും ഔട്ട്റീച്ചും" },
+            text: {
+              en: "Organizing and participating in parish-led community service initiatives to assist those in need.",
+              ml: "ആവശ്യമുള്ളവരെ സഹായിക്കാൻ ഇടവകാ നേതൃത്വത്തിലുള്ള സമൂഹസേവനങ്ങളിൽ പങ്കെടുക്കുകയും അവ സംഘടിപ്പിക്കുകയും ചെയ്യുന്നു.",
+            },
+          },
+          {
+            label: { en: "Health & Well-being", ml: "ആരോഗ്യവും ക്ഷേമവും" },
+            text: {
+              en: "Hosting seminars focused on senior health, mental wellness, and navigating life after retirement.",
+              ml: "മുതിർന്നവരുടെ ആരോഗ്യം, മാനസിക ക്ഷേമം, വിരമിക്കലിനു ശേഷമുള്ള ജീവിതം എന്നിവയെക്കുറിച്ചുള്ള സെമിനാറുകൾ.",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "Office Bearers — 2026–27", ml: "ഭാരവാഹികൾ — 2026–27" },
+        points: [
+          {
+            label: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
+            text: { en: "Mrs. Shibi Laji", ml: "ശ്രീമതി ഷിബി ലാജി" },
+          },
+          {
+            label: { en: "Secretary", ml: "സെക്രട്ടറി" },
+            text: { en: "Mrs. Sheenu Sunil", ml: "ശ്രീമതി ഷീനു സുനിൽ" },
+          },
+          {
+            label: { en: "Joint Secretary", ml: "ജോയിന്റ് സെക്രട്ടറി" },
+            text: { en: "Mrs. Biji Saji", ml: "ശ്രീമതി ബിജി സാജി" },
+          },
+          {
+            label: { en: "Treasurer", ml: "ട്രഷറർ" },
+            text: { en: "Mrs. Nisha Elizabeth Babu", ml: "ശ്രീമതി നിഷ എലിസബത്ത് ബാബു" },
+          },
+          {
+            label: { en: "Auditor", ml: "ഓഡിറ്റർ" },
+            text: { en: "Mrs. Achamma Shiju", ml: "ശ്രീമതി അച്ചാമ്മ ഷിജു" },
+          },
+        ],
+      },
+    ],
   },
 ];
+
+const organisationOrder = [
+  "sunday-school",
+  "balika-bala-samajam",
+  "ocym",
+  "SDOF",
+  "SJOF",
+  "martha-mariam",
+  "prayer-groups",
+  "choir",
+  "altar-servers",
+  "peters-hand",
+];
+
+organisations.sort(
+  (a, b) => organisationOrder.indexOf(a.slug) - organisationOrder.indexOf(b.slug),
+);
 
 export const galleryPreview = [
   {
@@ -591,10 +1111,10 @@ export const videos = [
 
 export const downloads: DownloadItem[] = [
   {
-    title: { en: "Parish bulletin — October 2026 (sample)", ml: "ഇടവകാ ബുള്ളറ്റിൻ — ഒക്ടോബർ 2026" },
+    title: { en: "Panjangom 2026", ml: "പഞ്ചാംഗം 2026" },
     category: { en: "Bulletin", ml: "ബുള്ളറ്റിൻ" },
-    size: "1.2 MB",
-    href: "/downloads/sample.txt",
+    size: "594 KB",
+    href: "/downloads/Panjangom2026.pdf",
   },
   {
     title: { en: "Membership form", ml: "അംഗത്വ ഫോം" },
@@ -630,19 +1150,23 @@ export const downloads: DownloadItem[] = [
 
 export const obituaries: Obituary[] = [
   {
-    slug: "sample-remembrance",
-    name: "[Name of the faithful departed]",
-    house: { en: "[House name], Karoor", ml: "[വീട്ടുപേര്], കാരൂർ" },
-    age: 78,
-    date: "2026-09-14",
-    funeral: { en: "Funeral Qurbana: 16 Sep 2026, 10:00 AM at Karoor Palli", ml: "ശവസംസ്കാര കുർബാന: 2026 സെപ് 16, 10:00 AM കാരൂർ പള്ളി" },
-    burial: { en: "Parish cemetery, Karoor", ml: "ഇടവകാ ശ്മശാനം, കാരൂർ" },
-    message: {
-      en: "The parish remembers our brother/sister in the hope of the resurrection. Kindly keep the family in prayer. This entry is a respectful sample until the Obituary Editor posts from the CMS.",
-      ml: "ഉയിർത്തെഴുന്നേൽപ്പിന്റെ പ്രത്യാശയിൽ ഇടവക ഓർക്കുന്നു. കുടുംബത്തെ പ്രാർത്ഥനയിൽ ഓർക്കുക. ഇത് സാമ്പിൾ രേഖയാണ്.",
+    slug: "omana-abraham",
+    name: { en: "Omana Abraham", ml: "ഓമന എബ്രഹാം" },
+    house: { en: "Chemmanil", ml: "ചെമ്മണ്ണിൽ" },
+    date: "19 October 2026",
+    funeral: {
+      en: "Monday, 19 October 2026. The mortal remains will be brought to Home at 10:00 AM. Service at Home: 2:15 PM. Service at the church: 3:00 PM.",
+      ml: "19/10/2026 തിങ്കളാഴ്ച. ഭൗതിക ശരീരം രാവിലെ 10 മണിക്ക് വീട്ടിൽ കൊണ്ടുവരും. വീട്ടിലെ ശുശ്രൂഷ: 2:15 PM. ദേവാലയത്തിലെ ശുശ്രൂഷ: 3:00 PM.",
     },
-    photo:
-      "https://images.unsplash.com/photo-1544006659-f0b21884ce1d?auto=format&fit=crop&w=400&q=80",
+    burial: {
+      en: "Burial will then be held at the parish cemetery.",
+      ml: "തുടർന്ന് ഇടവക സെമിത്തേരിയിൽ സംസ്കാരം നിർവ്വഹിക്കപ്പെടുന്നതാണ്.",
+    },
+    message: {
+      en: "With homage to the late Omana Abraham of Chemmanil. The parish keeps the family in prayer.",
+      ml: "ചെമ്മണ്ണിൽ പരേതയായ ഓമന എബ്രഹാമിന് ആദരാഞ്ജലികൾ. ഇടവക കുടുംബത്തെ പ്രാർത്ഥനയിൽ ഓർക്കുന്നു.",
+    },
+    photo: "/obituary/omana-abraham.jpg",
   },
 ];
 
@@ -851,10 +1375,40 @@ export const pagesCopy = {
   vision: {
     title: { en: "Vision and mission", ml: "ദർശനവും ദൗത്യവും" },
   },
+  feasts: {
+    title: {
+      en: "Parish Feast Days & Liturgical Celebrations",
+      ml: "ഇടവകാ തിരുനാളുകളും ആരാധനാക്രമ ആഘോഷങ്ങളും",
+    },
+    items: [
+      {
+        title: { en: "1. Annual Perunnal — May 15th", ml: "1. വാർഷിക പെരുന്നാൾ — മേയ് 15" },
+        subtitle: {
+          en: "Commemorating the Consecration of the Renewed Church",
+          ml: "പുതുക്കിയ ദേവാലയത്തിന്റെ കൂദാശയുടെ ഓർമ്മ",
+        },
+        body: {
+          en: "Every year on May 15th, our parish gathers with great joy and thanksgiving to celebrate the Perunnal marking the consecration of our renewed church building. This special day is a time to thank Almighty God for His abundant grace upon our parish community, honoring the physical and spiritual foundation of our church where generations gather to offer the Holy Qurbana, receive the sacraments, and grow together in faith.",
+          ml: "എല്ലാ വർഷവും മേയ് 15-ന് നമ്മുടെ ഇടവക വലിയ സന്തോഷത്തോടെയും നന്ദിയോടെയും ഒന്നിച്ചുകൂടി, പുതുക്കിയ ദേവാലയത്തിന്റെ കൂദാശയെ അനുസ്മരിക്കുന്ന പെരുന്നാൾ ആഘോഷിക്കുന്നു. നമ്മുടെ ഇടവകാ സമൂഹത്തിന്മേൽ സർവ്വശക്തനായ ദൈവത്തിന്റെ സമൃദ്ധമായ കൃപയ്ക്ക് നന്ദി പറയുന്ന ദിനമാണിത്. തലമുറകൾ വിശുദ്ധ കുർബാന അർപ്പിക്കാനും കൂദാശകൾ സ്വീകരിക്കാനും വിശ്വാസത്തിൽ ഒന്നിച്ചു വളരാനും കൂടുന്ന നമ്മുടെ ദേവാലയത്തിന്റെ ഭൗതികവും ആത്മീയവുമായ അടിത്തറയെ ഈ ദിനം ബഹുമാനിക്കുന്നു.",
+        },
+      },
+      {
+        title: { en: "2. Feast of St. Peter — June 29th", ml: "2. വിശുദ്ധ പത്രോസിന്റെ തിരുനാൾ — ജൂൺ 29" },
+        subtitle: {
+          en: "Honoring the Chief of the Apostles",
+          ml: "പ്രേഷിതരുടെ പ്രമുഖനെ ബഹുമാനിക്കുന്നു",
+        },
+        body: {
+          en: "On June 29th, we join the universal Malankara Orthodox Church in celebrating the glorious Feast of St. Peter (alongside St. Paul). Concluding the traditional Apostles' Fast (Sleeba Nombu), this feast invites us to reflect on St. Peter's profound confession of faith, his journey of repentance, and his apostolic stewardship. It stands as a powerful reminder of our church's apostolic roots and calls us all to renew our commitment to following Christ with courage and devotion.",
+          ml: "ജൂൺ 29-ന് സാർവത്രിക മലങ്കര ഓർത്തഡോക്സ് സഭയോടൊപ്പം വിശുദ്ധ പത്രോസിന്റെയും വിശുദ്ധ പൗലോസിന്റെയും മഹത്ത്വമേറിയ തിരുനാൾ ആഘോഷിക്കുന്നു. പരമ്പരാഗത ശ്ലീഹാ നോമ്പിന് സമാപനമായ ഈ തിരുനാൾ വിശുദ്ധ പത്രോസിന്റെ ആഴമേറിയ വിശ്വാസ ഏറ്റുപറച്ചിലിനെയും അനുതാപ യാത്രയെയും അപ്പോസ്തോലിക കാര്യനിർവഹണത്തെയും ധ്യാനിക്കാൻ നമ്മെ ക്ഷണിക്കുന്നു. നമ്മുടെ സഭയുടെ അപ്പോസ്തോലിക വേരുകളുടെ ശക്തമായ ഓർമ്മപ്പെടുത്തലാണിത്. ധൈര്യത്തോടെയും ഭക്തിയോടെയും ക്രിസ്തുവിനെ അനുഗമിക്കാനുള്ള പ്രതിബദ്ധത പുതുക്കാൻ നമ്മെയെല്ലാം വിളിക്കുന്നു.",
+        },
+      },
+    ],
+  },
   patron: {
     title: { en: "St. Peter the Apostle", ml: "പ്രേഷിതൻ വിശുദ്ധ പത്രോസ്" },
     body: {
-      en: "The parish is dedicated to St. Peter, the apostle who confessed Jesus as the Christ and was called to feed the flock. His feast is kept on 29 June with Holy Qurbana, procession and the gathering of families. Icons and a full synaxarion will be added when the parish supplies images.",
+      en: "The parish is dedicated to St. Peter, the apostle who confessed Jesus as the Christ and was called to feed the flock. His feast is kept on 29 June with Holy Qurbana, procession and the gathering of families.",
       ml: "ഈ ഇടവക പ്രേഷിതൻ വിശുദ്ധ പത്രോസിന് സമർപ്പിതമാണ്. തിരുനാൾ ജൂൺ 29-ന് വിശുദ്ധ കുർബാനയോടെയും പ്രദക്ഷിണത്തോടെയും ആചരിക്കുന്നു.",
     },
   },
@@ -890,6 +1444,8 @@ export const pagesCopy = {
 
 export const searchIndex = [
   { href: "/about", title: { en: "About the parish", ml: "ഇടവകയെക്കുറിച്ച്" } },
+  { href: "/about/patron", title: { en: "Patron Saint", ml: "മദ്ധ്യസ്ഥൻ" } },
+  { href: "/about/feasts", title: { en: "Feasts", ml: "തിരുനാളുകൾ" } },
   { href: "/history", title: { en: "History", ml: "ചരിത്രം" } },
   { href: "/vicar", title: { en: "Vicar", ml: "വികാരി" } },
   { href: "/news", title: { en: "News", ml: "വാർത്തകൾ" } },

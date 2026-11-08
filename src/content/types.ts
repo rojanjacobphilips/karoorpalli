@@ -51,8 +51,16 @@ export type CommitteeMember = {
 export type Organisation = {
   slug: string;
   name: Localized<string>;
+  title?: Localized<string>;
   summary: Localized<string>;
-  meeting: Localized<string>;
+  meeting?: Localized<string>;
+  lead?: Localized<string>;
+  sections?: {
+    heading: Localized<string>;
+    intro?: Localized<string>;
+    points: { label: Localized<string>; text: Localized<string> }[];
+  }[];
+  note?: Localized<string>;
 };
 
 export type DownloadItem = {
@@ -64,9 +72,9 @@ export type DownloadItem = {
 
 export type Obituary = {
   slug: string;
-  name: string;
+  name: Localized<string>;
   house: Localized<string>;
-  age: number;
+  age?: number;
   date: string;
   funeral: Localized<string>;
   burial: Localized<string>;

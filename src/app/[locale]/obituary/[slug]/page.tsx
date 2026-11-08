@@ -11,16 +11,23 @@ export default async function Page({ params }: PageProps<"/[locale]/obituary/[sl
   const item = obituaries.find((entry) => entry.slug === slug);
   if (!item) notFound();
   return (
-    <SimplePage locale={locale} title={{ en: item.name, ml: item.name }}>
+    <SimplePage locale={locale} title={item.name}>
       <div className="flex flex-col items-start gap-6 md:flex-row">
-        <Image src={item.photo} alt="" width={200} height={200} className="rounded-full object-cover grayscale" />
+        <Image
+          src={item.photo}
+          alt={item.name[locale]}
+          width={720}
+          height={1024}
+          className="h-auto w-full max-w-sm rounded-2xl"
+        />
         <div>
           <p>{item.house[locale]}</p>
           <p>
-            {locale === "ml" ? "വയസ്സ്" : "Age"} {item.age} · {item.date}
+            {item.age ? `${locale === "ml" ? "വയസ്സ്" : "Age"} ${item.age} · ` : ""}
+            {item.date}
           </p>
           <p className="mt-3">{item.funeral[locale]}</p>
-          <p>{item.burial[locale]}</p>
+          <p className="mt-2">{item.burial[locale]}</p>
           <p className="mt-4 text-muted">{item.message[locale]}</p>
         </div>
       </div>

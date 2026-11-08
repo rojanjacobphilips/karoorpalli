@@ -28,7 +28,11 @@ export default function Page({ params }: { params: Promise<{ locale: string }> }
       <ul className="mt-6 space-y-3">
         {filtered.map((item) => (
           <li key={item.title.en}>
-            <a href={item.href} className="flex items-center justify-between rounded-2xl bg-card px-4 py-3 shadow-[var(--shadow)]">
+            <a
+              href={item.href}
+              download
+              className="flex items-center justify-between rounded-2xl bg-card px-4 py-3 shadow-[var(--shadow)]"
+            >
               <span>
                 <span className="block text-xs uppercase text-gold">{item.category[locale]}</span>
                 {item.title[locale]}
