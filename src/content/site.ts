@@ -398,6 +398,17 @@ export const officers: Person[] = [
 
 export const news: NewsItem[] = [
   {
+    slug: "peters-hand-lucky-draw",
+    category: { en: "Peter's Hand", ml: "പത്രോസിന്റെ കൈ" },
+    title: { en: "Peter’s Hand lucky draw coupon", ml: "Peter’s Hand - Lucky draw coupon" },
+    excerpt: {
+      en: "As part of its fundraising efforts to expand this year’s charitable activities and extend support to more deserving individuals, Peter’s Hand has launched a lucky draw coupon.",
+      ml: "പീറ്റേഴ്സ് ഹാൻഡ്ൻ്റെ ഈ  വർഷത്തെ ജീവകാരുണ്യ പ്രവർത്തനങ്ങൾ കൂടുതൽ വിപുലമാക്കുന്നതിനും കൂടുതൽ അർഹരായ ആളുകളിലേക്ക് സഹായം എത്തിക്കുന്നതിനുമായി ഫണ്ട് സമാഹരണത്തിന്റെ ഭാഗമായി ലക്കി ഡ്രോ കൂപ്പൺ പുറത്തിറക്കി.",
+    },
+    date: "2026-11-08",
+    image: "/news/peters-hand-lucky-draw.jpg",
+  },
+  {
     slug: "parish-day-announcement",
     category: { en: "Feast", ml: "തിരുനാൾ" },
     title: { en: "Parish Day and St. Peter’s feast programme", ml: "ഇടവകാ ദിനവും പത്രോസ് തിരുനാൾ പരിപാടിയും" },
@@ -1096,6 +1107,25 @@ export const galleryPreview = [
   {
     src: "https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&w=800&q=80",
     alt: { en: "Placeholder feast table", ml: "പ്ലേസ്‌ഹോൾഡർ വിരുന്ന്" },
+  },
+];
+
+const luckyDrawAlt = {
+  en: "Peters Hand lucky draw coupon release",
+  ml: "പീറ്റേഴ്‌സ് ഹാൻഡ് ലക്കി ഡ്രോ കൂപ്പൺ റിലീസ്",
+};
+
+export const galleryAlbums = [
+  {
+    slug: "peters-hand-lucky-draw",
+    title: {
+      en: "Peters Hand Lucky Draw Coupon release",
+      ml: "പീറ്റേഴ്‌സ് ഹാൻഡ് ലക്കി ഡ്രോ കൂപ്പൺ റിലീസ്",
+    },
+    images: Array.from({ length: 12 }, (_, index) => ({
+      src: `/gallery/peters-hand-lucky-draw/${String(index + 1).padStart(2, "0")}.jpg`,
+      alt: luckyDrawAlt,
+    })),
   },
 ];
 

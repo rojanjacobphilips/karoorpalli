@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { galleryAlbums } from "@/content/site";
 import { locales } from "@/lib/i18n";
 
 const paths = [
@@ -22,6 +23,7 @@ const paths = [
   "/events",
   "/obituary",
   "/gallery",
+  ...galleryAlbums.map((album) => `/gallery/${album.slug}`),
   "/videos",
   "/downloads",
   "/sacraments",

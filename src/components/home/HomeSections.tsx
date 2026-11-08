@@ -170,8 +170,8 @@ export function HomeSections({ locale }: { locale: Locale }) {
         </div>
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="masonry lg:col-span-2">
-            {galleryPreview.map((img) => (
-              <Image key={img.src} src={img.src} alt={t(img.alt)} width={600} height={400} className="rounded-2xl" />
+            {galleryPreview.map((img, index) => (
+              <Image key={`${index}-${img.alt.en}`} src={img.src} alt={t(img.alt)} width={600} height={400} className="rounded-2xl" />
             ))}
           </div>
           <div className="overflow-hidden rounded-3xl bg-maroon-deep p-6 text-ivory shadow-[var(--shadow)]">

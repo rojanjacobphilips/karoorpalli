@@ -3,16 +3,20 @@
 import Image from "next/image";
 import { useState } from "react";
 import type { Locale } from "@/lib/i18n";
-import { galleryPreview } from "@/content/site";
 
-export function GalleryGrid({ locale }: { locale: Locale }) {
+type GalleryImage = {
+  src: string;
+  alt: { en: string; ml: string };
+};
+
+export function GalleryGrid({ locale, images }: { locale: Locale; images: GalleryImage[] }) {
   const [active, setActive] = useState<number | null>(null);
-  const current = active != null ? galleryPreview[active] : null;
+  const current = active != null ? images[active] : null;
 
   return (
     <>
       <div className="masonry mt-8">
-        {galleryPreview.map((img, index) => (
+        {images.map((img, index) => (
           <button
             key={img.src}
             type="button"
@@ -22,8 +26,8 @@ export function GalleryGrid({ locale }: { locale: Locale }) {
             <Image
               src={img.src}
               alt={img.alt[locale]}
-              width={700}
-              height={500}
+              width={1024}
+              height={768}
               loading="lazy"
               className="w-full rounded-2xl"
             />
