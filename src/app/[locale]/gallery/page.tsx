@@ -19,11 +19,22 @@ export default async function Page({ params }: PageProps<"/[locale]/gallery">) {
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         {galleryAlbums.map((album) => {
           const cover = album.images[0];
-          const count = album.images.length;
-          const countLabel =
-            locale === "ml"
-              ? `${count} ചിത്രങ്ങൾ`
-              : `${count} photograph${count === 1 ? "" : "s"}`;
+          const videos = album.images.filter((item) => item.type === "video").length;
+          const photos = album.images.length - videos;
+          const countLabel = [
+            photos
+              ? locale === "ml"
+                ? `${photos} ചിത്രങ്ങൾ`
+                : `${photos} photograph${photos === 1 ? "" : "s"}`
+              : "",
+            videos
+              ? locale === "ml"
+                ? `${videos} വീഡിയോ`
+                : `${videos} video${videos === 1 ? "" : "s"}`
+              : "",
+          ]
+            .filter(Boolean)
+            .join(", ");
           return (
             <Link
               key={album.slug}
@@ -32,7 +43,17 @@ export default async function Page({ params }: PageProps<"/[locale]/gallery">) {
             >
               <div className="ml-4 h-4 w-28 rounded-t-xl bg-maroon" />
               <div className="overflow-hidden rounded-2xl rounded-tl-md bg-card shadow-[var(--shadow)]">
-                {cover ? (
+                {cover?.type === "video" ? (
+                  <video
+                    src={cover.src}
+                    muted
+                    playsInline
+                    preload="metadata"
+                    aria-hidden
+                    tabIndex={-1}
+                    className="pointer-events-none aspect-[4/3] w-full object-cover"
+                  />
+                ) : cover ? (
                   <Image
                     src={cover.src}
                     alt={album.title[locale]}

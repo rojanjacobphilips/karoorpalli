@@ -59,7 +59,16 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
       lang={locale}
       data-scroll-behavior="smooth"
       className={`${playfair.variable} ${inter.variable} ${manjari.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{var t=localStorage.getItem('karoor-theme');if(t==='grove'||t==='vespers')document.documentElement.dataset.theme=t}catch(e){}",
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );

@@ -10,16 +10,21 @@ export default async function Page({ params }: PageProps<"/[locale]/gallery/[slu
   if (!isLocale(locale)) notFound();
   const album = galleryAlbums.find((entry) => entry.slug === slug);
   if (!album) notFound();
+  const videoOnly = album.images.every((item) => item.type === "video");
 
   return (
     <SimplePage
       locale={locale}
       title={album.title}
       kicker={{ en: "Image gallery", ml: "ചിത്രശാല" }}
-      body={{
-        en: "Tap a photograph to view it larger.",
-        ml: "ചിത്രത്തിൽ ടാപ്പ് ചെയ്ത് വലുതാക്കാം.",
-      }}
+      body={
+        videoOnly
+          ? { en: "Play the video below.", ml: "താഴെയുള്ള വീഡിയോ കാണുക." }
+          : {
+              en: "Tap a photograph to view it larger.",
+              ml: "ചിത്രത്തിൽ ടാപ്പ് ചെയ്ത് വലുതാക്കാം.",
+            }
+      }
     >
       <Link
         href={localizedPath(locale, "/gallery")}

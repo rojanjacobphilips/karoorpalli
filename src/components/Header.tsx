@@ -1,19 +1,49 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, Search, X } from "lucide-react";
 import { navigation, parish, ui } from "@/content/site";
 import { OrthodoxCross } from "@/components/OrthodoxCross";
+import { ThemeSwitch } from "@/components/ThemeSwitch";
 import type { Locale } from "@/lib/i18n";
 import { localizedPath, switchLocalePath } from "@/lib/i18n";
 
 export function Header({ locale, pathname }: { locale: Locale; pathname: string }) {
   const [open, setOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [query, setQuery] = useState("");
+  const suppressOpen = useRef(false);
   const t = (value: { en: string; ml: string }) => value[locale];
 
+  useEffect(() => {
+    setOpen(false);
+    setOpenMenu(null);
+  }, [pathname]);
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        setOpenMenu(null);
+      }
+      suppressOpen.current = false;
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  function closeDropdown() {
+    suppressOpen.current = true;
+    setOpenMenu(null);
+    if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+    requestAnimationFrame(() => {
+      suppressOpen.current = false;
+    });
+  }
+
   return (
+    <>
     <header className="sticky top-0 z-50 border-b border-maroon/10 bg-ivory/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3 lg:px-6">
         <Link
@@ -35,20 +65,40 @@ export function Header({ locale, pathname }: { locale: Locale; pathname: string 
 
         <nav className="ml-auto hidden items-center gap-1 xl:flex" aria-label="Main">
           {navigation.map((item) => (
-            <div key={item.href} className="group relative">
+            <div
+              key={item.href}
+              className="relative"
+              onMouseEnter={() => {
+                if (!suppressOpen.current) setOpenMenu(item.href);
+              }}
+              onMouseLeave={() => {
+                suppressOpen.current = false;
+                setOpenMenu((current) => (current === item.href ? null : current));
+              }}
+              onFocus={() => {
+                if (!suppressOpen.current) setOpenMenu(item.href);
+              }}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                  setOpenMenu((current) => (current === item.href ? null : current));
+                }
+              }}
+            >
               <Link
                 href={localizedPath(locale, item.href)}
                 className="whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-charcoal hover:bg-ivory-deep hover:text-maroon"
+                onClick={() => closeDropdown()}
               >
                 {t(item.label)}
               </Link>
-              {item.children ? (
-                <div className="invisible absolute left-0 top-full z-50 min-w-64 rounded-2xl border border-maroon/10 bg-card p-3 opacity-0 shadow-[var(--shadow)] transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              {item.children && openMenu === item.href ? (
+                <div className="absolute left-0 top-full z-50 min-w-64 rounded-2xl border border-maroon/10 bg-card p-3 shadow-[var(--shadow)]">
                   {item.children.map((child) => (
                     <Link
                       key={child.href}
                       href={localizedPath(locale, child.href)}
                       className="block rounded-xl px-3 py-2 text-sm text-charcoal hover:bg-ivory-deep hover:text-maroon"
+                      onClick={() => closeDropdown()}
                     >
                       {t(child.label)}
                     </Link>
@@ -74,6 +124,7 @@ export function Header({ locale, pathname }: { locale: Locale; pathname: string 
               aria-label={t(ui.search)}
             />
           </form>
+          <ThemeSwitch locale={locale} />
           <div className="flex rounded-full border border-maroon/15 bg-white p-0.5 text-xs font-semibold">
             <Link
               href={switchLocalePath(pathname, "en")}
@@ -107,12 +158,26 @@ export function Header({ locale, pathname }: { locale: Locale; pathname: string 
           </button>
         </div>
       </div>
+    </header>
 
       {open ? (
-        <div className="fixed inset-0 z-50 bg-maroon-deep/50 xl:hidden" role="dialog" aria-modal>
-          <div className="ml-auto flex h-full w-[min(100%,22rem)] flex-col overflow-y-auto bg-ivory p-4">
-            <div className="mb-4 flex items-center justify-between">
-              <span className="font-serif text-xl text-maroon">{t(parish.shortName)}</span>
+        <div
+          className="fixed inset-0 z-[60] bg-maroon-deep/50 xl:hidden"
+          role="dialog"
+          aria-modal
+          onClick={() => setOpen(false)}
+        >
+          <div
+            className="ml-auto flex h-full w-[min(100%,22rem)] flex-col overflow-y-auto bg-ivory p-4"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <div>
+                <span className="font-serif text-xl text-maroon">{t(parish.shortName)}</span>
+                <div className="mt-2">
+                  <ThemeSwitch locale={locale} />
+                </div>
+              </div>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -153,6 +218,6 @@ export function Header({ locale, pathname }: { locale: Locale; pathname: string 
           </div>
         </div>
       ) : null}
-    </header>
+    </>
   );
 }

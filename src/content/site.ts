@@ -246,11 +246,11 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: "sunday-school",
-    image: "/church/right-side-day.jpg",
-    imagePosition: "center 55%",
+    image: "/church/sunday-school.jpg",
+    imagePosition: "center 42%",
     imageAlt: {
-      en: "The parish church and bell tower in daylight",
-      ml: "പകൽ വെളിച്ചത്തിൽ ഇടവകാ ദേവാലയവും മണിമാളികയും",
+      en: "The sanctuary, altar and icon of Christ",
+      ml: "മദ്ബഹ, അൾത്താര, ക്രിസ്തുവിന്റെ ചിത്രം",
     },
     title: { en: "Sunday School", ml: "സൺഡേ സ്കൂൾ" },
     caption: {
@@ -1159,12 +1159,24 @@ const luckyDrawAlt = {
 
 export const galleryAlbums = [
   {
+    slug: "onam-2026",
+    title: { en: "Onam 2026", ml: "ഓണം 2026" },
+    images: [
+      {
+        type: "video" as const,
+        src: "/gallery/onam-2026/KaroorOnam2026.mp4",
+        alt: { en: "Onam 2026", ml: "ഓണം 2026" },
+      },
+    ],
+  },
+  {
     slug: "peters-hand-lucky-draw",
     title: {
       en: "Peters Hand Lucky Draw Coupon release",
       ml: "പീറ്റേഴ്‌സ് ഹാൻഡ് ലക്കി ഡ്രോ കൂപ്പൺ റിലീസ്",
     },
     images: Array.from({ length: 12 }, (_, index) => ({
+      type: "image" as const,
       src: `/gallery/peters-hand-lucky-draw/${String(index + 1).padStart(2, "0")}.jpg`,
       alt: luckyDrawAlt,
     })),

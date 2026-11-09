@@ -15,6 +15,49 @@
   --shadow: 0 12px 40px rgba(63, 16, 24, 0.08);
 }
 
+html[data-theme="grove"] {
+  --maroon: #1e4a38;
+  --maroon-deep: #10281f;
+  --maroon-soft: #3d6b56;
+  --gold: #c6a15a;
+  --gold-light: #e0c27a;
+  --ivory: #f6f3ec;
+  --ivory-deep: #e7e2d6;
+  --charcoal: #1c1917;
+  --muted: #5a564e;
+  --card: #fffcf7;
+  --ring: #c6a15a;
+  --shadow: 0 12px 40px rgba(16, 40, 31, 0.08);
+}
+
+html[data-theme="vespers"] {
+  --maroon: #f0c9c4;
+  --maroon-deep: #140e10;
+  --maroon-soft: #e7b0aa;
+  --gold: #e6c36a;
+  --gold-light: #f3d98a;
+  --ivory: #f6f1ea;
+  --ivory-deep: #3a312c;
+  --charcoal: #f3ece4;
+  --muted: #d4c6b8;
+  --card: #2a2320;
+  --ring: #e6c36a;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="vespers"] body {
+  background: #1a1513;
+}
+
+html[data-theme="vespers"] header,
+html[data-theme="vespers"] .bg-ivory {
+  background-color: #1a1513 !important;
+}
+
+html[data-theme="vespers"] .bg-maroon {
+  background-color: #6e2432 !important;
+}
+
 @theme inline {
   --color-maroon: var(--maroon);
   --color-maroon-deep: var(--maroon-deep);
