@@ -35,14 +35,41 @@ export default function Page({ params }: { params: Promise<{ locale: string }> }
         </select>
       </label>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {committee.map((member) => (
-          <article key={member.name} className="rounded-3xl bg-card p-4 text-center shadow-[var(--shadow)]">
-            <Image src={member.photo} alt={member.name} width={280} height={280} className="mx-auto h-40 w-40 rounded-full object-cover" />
-            <h2 className="mt-3 font-serif text-xl text-maroon">{member.name}</h2>
-            <p className="text-sm text-gold">{member.role[locale]}</p>
-            <p className="text-xs text-muted">{year}</p>
-          </article>
-        ))}
+        {committee
+          .filter((member) => member.role.en !== "Auditor")
+          .map((member) => (
+            <article key={member.name.en} className="rounded-3xl bg-card p-4 text-center shadow-[var(--shadow)]">
+              <Image
+                src={member.photo}
+                alt={member.name[locale]}
+                width={280}
+                height={280}
+                className="mx-auto h-40 w-40 rounded-full object-cover"
+              />
+              <h2 className="mt-3 font-serif text-xl text-maroon">{member.name[locale]}</h2>
+              <p className="text-sm text-gold">{member.role[locale]}</p>
+              <p className="text-xs text-muted">{year}</p>
+            </article>
+          ))}
+      </div>
+      <h2 className="mt-10 font-serif text-3xl text-maroon">{locale === "ml" ? "ഓഡിറ്റർമാർ" : "Auditors"}</h2>
+      <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {committee
+          .filter((member) => member.role.en === "Auditor")
+          .map((member) => (
+            <article key={member.name.en} className="rounded-3xl bg-card p-4 text-center shadow-[var(--shadow)]">
+              <Image
+                src={member.photo}
+                alt={member.name[locale]}
+                width={280}
+                height={280}
+                className="mx-auto h-40 w-40 rounded-full object-cover"
+              />
+              <h2 className="mt-3 font-serif text-xl text-maroon">{member.name[locale]}</h2>
+              <p className="text-sm text-gold">{member.role[locale]}</p>
+              <p className="text-xs text-muted">{year}</p>
+            </article>
+          ))}
       </div>
     </SimplePage>
   );

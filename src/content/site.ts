@@ -276,6 +276,22 @@ export const heroSlides: HeroSlide[] = [
     cta: { en: "Parishioners corner", ml: "ഇടവകാംഗങ്ങളുടെ ഇടം" },
     href: "/parishioners",
   },
+  {
+    id: "patron",
+    image: "/church/st-peter.jpg",
+    imagePosition: "center 22%",
+    imageAlt: {
+      en: "Icon of St. Peter the Apostle, with the keys",
+      ml: "താക്കോലുകളോടുകൂടിയ പ്രേഷിതൻ വിശുദ്ധ പത്രോസിന്റെ ചിത്രം",
+    },
+    title: { en: "St. Peter, our patron", ml: "നമ്മുടെ മദ്ധ്യസ്ഥൻ വിശുദ്ധ പത്രോസ്" },
+    caption: {
+      en: "The parish is dedicated to the apostle who confessed Jesus as the Christ and was entrusted with the keys.",
+      ml: "യേശുവിനെ ക്രിസ്തുവെന്ന് ഏറ്റുപറഞ്ഞ് താക്കോലുകൾ ഏൽപ്പിക്കപ്പെട്ട പ്രേഷിതന് സമർപ്പിതമായ ഇടവക.",
+    },
+    cta: { en: "Patron saint", ml: "മദ്ധ്യസ്ഥൻ" },
+    href: "/about/patron",
+  },
 ];
 
 export const announcements: Localized<string>[] = [
@@ -383,15 +399,19 @@ export const catholicos: Person = {
 
 export const officers: Person[] = [
   {
-    name: "Mr. Biju Thomas",
+    name: "Mr. Biju M Thomas",
     role: { en: "Parish Trustee", ml: "ഇടവകാ ട്രസ്റ്റി" },
     photo: "/people/biju-thomas.jpg",
+    phone: "94468 12130",
+    email: "trustee@karoorpally.com",
     bio: { en: "Parish Trustee of St. Peter's Orthodox Church, Karoor.", ml: "സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ ഇടവകാ ട്രസ്റ്റി." },
   },
   {
-    name: "Mr. Jinu Thomas",
+    name: "Mr. Joseph T Eapen",
     role: { en: "Secretary", ml: "സെക്രട്ടറി" },
-    photo: "/people/jinu-thomas.jpg",
+    photo: "",
+    phone: "92072 46186",
+    email: "secretary@karoorpally.com",
     bio: { en: "Secretary of St. Peter's Orthodox Church, Karoor.", ml: "സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ സെക്രട്ടറി." },
   },
 ];
@@ -758,24 +778,41 @@ export const organisations: Organisation[] = [
         heading: { en: "Office Bearers — 2026–27", ml: "ഭാരവാഹികൾ — 2026–27" },
         points: [
           {
-            label: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
-            text: { en: "Mrs. Shibi Laji", ml: "ശ്രീമതി ഷിബി ലാജി" },
-          },
-          {
-            label: { en: "Secretary", ml: "സെക്രട്ടറി" },
-            text: { en: "Mrs. Sheenu Sunil", ml: "ശ്രീമതി ഷീനു സുനിൽ" },
+            label: { en: "General Secretary", ml: "ജനറൽ സെക്രട്ടറി" },
+            text: { en: "Mrs. Lovely Thomas, Valiathuparampil", ml: "ശ്രീമതി ലവ്ലി തോമസ്, വലിയതുപറമ്പിൽ" },
           },
           {
             label: { en: "Joint Secretary", ml: "ജോയിന്റ് സെക്രട്ടറി" },
-            text: { en: "Mrs. Biji Saji", ml: "ശ്രീമതി ബിജി സാജി" },
+            text: { en: "Mrs. Annamma Thomas, Alunilkunnathil", ml: "ശ്രീമതി അന്നമ്മ തോമസ്, ആലുനിൽക്കുന്നത്തിൽ" },
+          },
+        ],
+      },
+      {
+        heading: { en: "Group secretaries", ml: "ഗ്രൂപ്പ് സെക്രട്ടറിമാർ" },
+        points: [
+          {
+            label: { en: "Senai samajam", ml: "സേനായ് സമാജം" },
+            text: { en: "Mrs. Annamma Juby, Pulpreth", ml: "ശ്രീമതി അന്നമ്മ ജൂബി, പുൽപ്രേത്ത്" },
           },
           {
-            label: { en: "Treasurer", ml: "ട്രഷറർ" },
-            text: { en: "Mrs. Nisha Elizabeth Babu", ml: "ശ്രീമതി നിഷ എലിസബത്ത് ബാബു" },
+            label: { en: "Bethel samajam", ml: "ബേഥേൽ സമാജം" },
+            text: { en: "Mrs. Jiji James, Valiakochethu", ml: "ശ്രീമതി ജിജി ജെയിംസ്, വലിയകൊച്ചേത്ത്" },
           },
           {
-            label: { en: "Auditor", ml: "ഓഡിറ്റർ" },
-            text: { en: "Mrs. Achamma Shiju", ml: "ശ്രീമതി അച്ചാമ്മ ഷിജു" },
+            label: { en: "Gilayad samajam", ml: "ഗിലയാദ് സമാജം" },
+            text: { en: "Mrs. Mariamma K.G, Plavunilkunnathil", ml: "ശ്രീമതി മറിയാമ്മ കെ.ജി., പ്ലാവുനിൽക്കുന്നത്തിൽ" },
+          },
+          {
+            label: { en: "Bethlehem samajam", ml: "ബെത്‌ലഹേം സമാജം" },
+            text: { en: "Mrs. Mariamma Thomas, Poovappallil", ml: "ശ്രീമതി മറിയാമ്മ തോമസ്, പൂവപ്പള്ളിൽ" },
+          },
+          {
+            label: { en: "Carmel samajam", ml: "കർമ്മൽ സമാജം" },
+            text: { en: "Mrs. Selin Anil, Cherukunnathu", ml: "ശ്രീമതി സെലിൻ അനിൽ, ചെറുകുന്നത്ത്" },
+          },
+          {
+            label: { en: "Thabor samajam", ml: "താബോർ സമാജം" },
+            text: { en: "Mrs. Rosamma Sunny, Pullonal", ml: "ശ്രീമതി റോസമ്മ സണ്ണി, പുള്ളോനാൽ" },
           },
         ],
       },
@@ -1084,23 +1121,19 @@ export const organisations: Organisation[] = [
         points: [
           {
             label: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
-            text: { en: "Mrs. Shibi Laji", ml: "ശ്രീമതി ഷിബി ലാജി" },
+            text: { en: "Mr. Simon George", ml: "ശ്രീ.സൈമൺ ജോർജ്ജ്" },
           },
           {
             label: { en: "Secretary", ml: "സെക്രട്ടറി" },
-            text: { en: "Mrs. Sheenu Sunil", ml: "ശ്രീമതി ഷീനു സുനിൽ" },
+            text: { en: "Mr. Abraham Kurian", ml: "ശ്രീ.ഏബ്രഹാം കുര്യൻ" },
           },
           {
             label: { en: "Joint Secretary", ml: "ജോയിന്റ് സെക്രട്ടറി" },
-            text: { en: "Mrs. Biji Saji", ml: "ശ്രീമതി ബിജി സാജി" },
+            text: { en: "Mr. Abraham Varghese", ml: "ശ്രീ.ഏബ്രഹാം വർഗീസ്" },
           },
           {
             label: { en: "Treasurer", ml: "ട്രഷറർ" },
-            text: { en: "Mrs. Nisha Elizabeth Babu", ml: "ശ്രീമതി നിഷ എലിസബത്ത് ബാബു" },
-          },
-          {
-            label: { en: "Auditor", ml: "ഓഡിറ്റർ" },
-            text: { en: "Mrs. Achamma Shiju", ml: "ശ്രീമതി അച്ചാമ്മ ഷിജു" },
+            text: { en: "Mr. Saramma Alexander", ml: "ശ്രീ.സാരമ്മ അലക്സാണ്ടർ" },
           },
         ],
       },
@@ -1157,7 +1190,21 @@ const luckyDrawAlt = {
   ml: "പീറ്റേഴ്‌സ് ഹാൻഡ് ലക്കി ഡ്രോ കൂപ്പൺ റിലീസ്",
 };
 
+const chapelAlt = {
+  en: "St. George Chapel Consecration",
+  ml: "വിശുദ്ധ ഗീവർഗീസ് ചാപ്പൽ കൂദാശ",
+};
+
 export const galleryAlbums = [
+  {
+    slug: "st-george-chapel-consecration",
+    title: chapelAlt,
+    images: Array.from({ length: 22 }, (_, index) => ({
+      type: "image" as const,
+      src: `/gallery/st-george-chapel-consecration/${String(index + 1).padStart(2, "0")}.jpg`,
+      alt: chapelAlt,
+    })),
+  },
   {
     slug: "onam-2026",
     title: { en: "Onam 2026", ml: "ഓണം 2026" },
@@ -1192,8 +1239,29 @@ export const videos = [
   },
   {
     id: "feast",
-    title: { en: "Feast day highlights (add YouTube ID in Sanity)", ml: "തിരുനാൾ ദൃശ്യങ്ങൾ" },
-    youtube: "",
+    title: { en: "Perunnal 15/05/2026", ml: "പെരുന്നാൾ 15/05/2026" },
+    youtube: "QmSs5T-FQlE",
+    category: { en: "Feasts", ml: "തിരുനാളുകൾ" },
+  },
+  {
+    id: "flag-hoisting-2026",
+    title: {
+      en: "Flag Hoisting ceremony - Perunnal 2026",
+      ml: "കൊടിയേറ്റ ചടങ്ങ് - പെരുന്നാൾ 2026",
+    },
+    facebook: "https://www.facebook.com/reel/1462917741986674/",
+    category: { en: "Feasts", ml: "തിരുനാളുകൾ" },
+  },
+  {
+    id: "good-friday-2026",
+    title: { en: "Good Friday 2026", ml: "ദുഃഖവെള്ളി 2026" },
+    facebook: "https://www.facebook.com/reel/1962027101076209/",
+    category: { en: "Feasts", ml: "തിരുനാളുകൾ" },
+  },
+  {
+    id: "palm-sunday-2026",
+    title: { en: "Palm Sunday 2026", ml: "ഓശാന ഞായർ 2026" },
+    facebook: "https://www.facebook.com/reel/813628971208088/",
     category: { en: "Feasts", ml: "തിരുനാളുകൾ" },
   },
   {
@@ -1290,36 +1358,38 @@ export const timeline: TimelineEntry[] = [
   },
 ];
 
-export const committee: CommitteeMember[] = [
-  {
-    name: "[Member 1]",
-    role: { en: "Trustee", ml: "ട്രസ്റ്റി" },
-    term: "2025–2026",
-    photo:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
-  },
-  {
-    name: "[Member 2]",
-    role: { en: "Secretary", ml: "സെക്രട്ടറി" },
-    term: "2025–2026",
-    photo:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80",
-  },
-  {
-    name: "[Member 3]",
-    role: { en: "Treasurer", ml: "ട്രഷറർ" },
-    term: "2025–2026",
-    photo:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
-  },
-  {
-    name: "[Member 4]",
-    role: { en: "Committee member", ml: "സമിതി അംഗം" },
-    term: "2025–2026",
-    photo:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
-  },
+const committeePhotos = [
+  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80",
+  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
 ];
+
+const committeeNames: { en: string; ml: string; auditor?: boolean }[] = [
+  { en: "Mr. Jacob Mathew", ml: "ശ്രീ.ജേക്കബ് മാത്യു" },
+  { en: "Mr. Alex C. Mathew", ml: "ശ്രീ.അലക്സ് സി മാത്യു" },
+  { en: "Mr. Mathew Thomas", ml: "ശ്രീ.മാത്യു തോമസ്" },
+  { en: "Mr. Jacob John", ml: "ശ്രീ.ജേക്കബ് ജോൺ" },
+  { en: "Mr. Thomas Mathew", ml: "ശ്രീ.തോമസ് മാത്യു" },
+  { en: "Mr. Rajan N. V.", ml: "ശ്രീ.രാജൻ എൻ. വി." },
+  { en: "Mr. Abraham Kurian", ml: "ശ്രീ.ഏബ്രഹാം കുര്യൻ" },
+  { en: "Mr. O. J. John", ml: "ശ്രീ.ഒ. ജെ. ജോൺ" },
+  { en: "Mr. Simon George", ml: "ശ്രീ.സൈമൺ ജോർജ്ജ്" },
+  { en: "Mr. K. A. Alexander", ml: "ശ്രീ.കെ. എ.അലക്സാണ്ടർ" },
+  { en: "Mr. Sibu Sam Mathew", ml: "ശ്രീ.സിബു സാം മാത്യു" },
+  { en: "Mrs. Mariamma Thomas", ml: "ശ്രീമതി. മറിയാമ്മ തോമസ്" },
+  { en: "Mr. Sam Ninan", ml: "ശ്രീ.സാം നൈനാൻ", auditor: true },
+  { en: "Mr. Binoy Abraham", ml: "ശ്രീ.ബിനോയി ഏബ്രഹാം", auditor: true },
+];
+
+export const committee: CommitteeMember[] = committeeNames.map((person, index) => ({
+  name: { en: person.en, ml: person.ml },
+  role: person.auditor
+    ? { en: "Auditor", ml: "ഓഡിറ്റർ" }
+    : { en: "Committee member", ml: "സമിതി അംഗം" },
+  term: "2025–2026",
+  photo: committeePhotos[index % committeePhotos.length],
+}));
 
 export const sacraments = [
   {

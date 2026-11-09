@@ -16,13 +16,24 @@ export default async function Page({ params }: PageProps<"/[locale]/videos">) {
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         {videos.map((video) => (
           <figure key={video.id} className="overflow-hidden rounded-3xl bg-card shadow-[var(--shadow)]">
-            {video.youtube ? (
+            {"youtube" in video && video.youtube ? (
               <iframe
                 title={video.title[locale]}
                 src={`https://www.youtube.com/embed/${video.youtube}`}
                 className="aspect-video w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
+            ) : "facebook" in video && video.facebook ? (
+              <div className="flex aspect-video items-center justify-center bg-maroon-deep">
+                <iframe
+                  title={video.title[locale]}
+                  src={`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(video.facebook)}&show_text=false&width=280`}
+                  className="aspect-[9/16] h-full w-auto max-w-full"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
             ) : (
               <div className="grid aspect-video place-items-center bg-maroon-deep px-6 text-center text-ivory">
                 <p>

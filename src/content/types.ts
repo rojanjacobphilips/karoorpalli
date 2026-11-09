@@ -44,7 +44,7 @@ export type ParishEvent = {
 };
 
 export type CommitteeMember = {
-  name: string;
+  name: Localized<string>;
   role: Localized<string>;
   term: string;
   photo: string;
