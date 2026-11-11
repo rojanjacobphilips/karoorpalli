@@ -24,6 +24,15 @@ export default async function Page({ params }: PageProps<"/[locale]/videos">) {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
+            ) : "src" in video && video.src ? (
+              <video
+                src={video.src}
+                controls
+                playsInline
+                preload="metadata"
+                aria-label={video.title[locale]}
+                className="aspect-video w-full bg-maroon-deep object-contain"
+              />
             ) : "facebook" in video && video.facebook ? (
               <div className="flex aspect-video items-center justify-center bg-maroon-deep">
                 <iframe

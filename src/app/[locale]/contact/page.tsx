@@ -17,7 +17,7 @@ export default async function Page({ params }: PageProps<"/[locale]/contact">) {
       <div className="mt-8 grid gap-6 lg:grid-cols-2">
         <div className="rounded-3xl bg-card p-6 shadow-[var(--shadow)]">
           <h2 className="font-serif text-2xl text-maroon">
-            {locale === "ml" ? "വിലാസം" : "Address and hours"}
+            {locale === "ml" ? "വിലാസം" : "Address"}
           </h2>
           <address className="mt-4 not-italic leading-7 text-muted">
             {parish.addressLines[locale].map((line) => (
@@ -29,7 +29,6 @@ export default async function Page({ params }: PageProps<"/[locale]/contact">) {
             <div>
               <a href={`mailto:${parish.email}`}>{parish.email}</a>
             </div>
-            <div className="mt-3">{parish.officeHours[locale]}</div>
           </address>
           <div className="mt-5 flex flex-wrap gap-3">
             <a

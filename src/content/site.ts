@@ -40,9 +40,9 @@ export const parish = {
     en: ["St. Peter's Orthodox Church", "Karoor, Elanthoor P.O.", "Pathanamthitta, Kerala 689643"],
     ml: ["സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി", "കാരൂർ, ഇലന്തൂർ പി.ഒ.", "പത്തനംതിട്ട, കേരളം 689643"],
   } satisfies Localized<string[]>,
-  phone: "+91 46XX XXX XXX",
+  phone: "+91 94005 62009",
   email: "office@karoorpalli.com",
-  whatsapp: "919999999999",
+  whatsapp: "919400562009",
   mapsQuery: "Karoor Elanthoor Pathanamthitta Orthodox Church",
   mapsEmbed:
     "https://maps.google.com/maps?q=Elanthoor%2C%20Pathanamthitta%2C%20Kerala&t=&z=14&ie=UTF8&iwloc=&output=embed",
@@ -50,16 +50,12 @@ export const parish = {
     facebook: "https://facebook.com",
     youtube: "https://youtube.com",
     instagram: "https://instagram.com",
-    whatsapp: "https://wa.me/919999999999",
+    whatsapp: "https://wa.me/919400562009",
   },
   links: {
     church: "https://mosc.in",
     diocese: "https://thumpamondiocese.org",
   },
-  officeHours: {
-    en: "Tue–Sat 9:30 AM – 1:00 PM · Sunday after Holy Qurbana",
-    ml: "ചൊവ്വ–ശനി 9:30 AM – 1:00 PM · ഞായറാഴ്ച വിശുദ്ധ കുർബാനയ്ക്കു ശേഷം",
-  } satisfies Localized<string>,
   stats: [
     { value: "320+", label: { en: "Families", ml: "കുടുംബങ്ങൾ" } },
     { value: "8", label: { en: "Organisations", ml: "സംഘടനകൾ" } },
@@ -1386,6 +1382,21 @@ export const galleryAlbums = [
 ];
 
 export const videos = [
+  {
+    id: "hh-bava-at-karoor",
+    title: { en: "HH Bava at Karoor Palli", ml: "കാരൂർ പള്ളിയിൽ പരിശുദ്ധ ബാവാ" },
+    src: "/videos/hh-bava-at-karoor.mp4",
+    category: { en: "Church", ml: "സഭ" },
+  },
+  {
+    id: "relic-at-karoor",
+    title: {
+      en: "Relic of St. Gregorios of Parumala at Karoor Palli",
+      ml: "കാരൂർ പള്ളിയിൽ പരുമല വിശുദ്ധ ഗ്രീഗോറിയോസിന്റെ തിരുശേഷിപ്പ്",
+    },
+    src: "/videos/relic-at-karoor.mp4",
+    category: { en: "Church", ml: "സഭ" },
+  },
   {
     id: "live",
     title: { en: "Holy Qurbana live", ml: "വിശുദ്ധ കുർബാന തത്സമയം" },

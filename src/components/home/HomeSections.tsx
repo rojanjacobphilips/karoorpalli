@@ -253,7 +253,6 @@ export function HomeSections({ locale }: { locale: Locale }) {
         <div className="rounded-3xl bg-card p-6 shadow-[var(--shadow)]">
           <h2 className="font-serif text-3xl text-maroon">{t({ en: "Visit us", ml: "സന്ദർശിക്കുക" })}</h2>
           <p className="mt-3">{t(parish.location)}</p>
-          <p className="mt-2">{t(parish.officeHours)}</p>
           <p className="mt-2">
             {parish.phone}
             <br />
