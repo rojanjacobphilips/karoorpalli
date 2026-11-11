@@ -4,7 +4,7 @@ import { requireLocale } from "@/lib/locale-page";
 
 export default async function Page({ params }: PageProps<"/[locale]/administration/reports">) {
   const locale = await requireLocale(params);
-  const reports = downloads.filter((item) => item.category.en === "Reports" || item.category.en === "Bulletin");
+  const reports = downloads.filter((item) => item.category.en === "Reports");
   return (
     <SimplePage
       locale={locale}
