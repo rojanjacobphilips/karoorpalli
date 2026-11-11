@@ -214,11 +214,11 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: "feast",
-    image: "/church/front-night.jpg",
-    imagePosition: "center 62%",
+    image: "/church/feast-st-peter.jpg",
+    imagePosition: "center 42%",
     imageAlt: {
-      en: "The illuminated front of the church at night",
-      ml: "രാത്രിയിൽ പ്രകാശിതമായ പള്ളിയുടെ മുൻഭാഗം",
+      en: "The church facade in daylight, with palms and the entrance",
+      ml: "പകൽ വെളിച്ചത്തിൽ ഈന്തപ്പനകളോടുകൂടിയ പള്ളിയുടെ മുൻഭാഗം",
     },
     title: { en: "Feast of St. Peter", ml: "വിശുദ്ധ പത്രോസിന്റെ തിരുനാൾ" },
     caption: {
