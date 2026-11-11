@@ -16,6 +16,8 @@ const paths = [
   "/administration/officers",
   "/administration/past-vicars",
   "/administration/reports",
+  "/administration/malankara-association",
+  "/administration/diocesan-council",
   "/vicar",
   "/committee",
   "/organisations",

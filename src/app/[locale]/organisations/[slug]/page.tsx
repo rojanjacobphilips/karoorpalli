@@ -19,7 +19,7 @@ export default async function Page({
           {section.points.length > 0 ? (
             <ul className="mt-4 space-y-4">
               {section.points.map((point) => (
-                <li key={point.label.en}>
+                <li key={`${point.label.en}-${point.text.en}`}>
                   <span className="font-semibold text-charcoal">{point.label[locale]}: </span>
                   <span className="text-muted">{point.text[locale]}</span>
                 </li>

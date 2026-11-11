@@ -52,7 +52,17 @@ export default function Page({ params }: { params: Promise<{ locale: string }> }
             href={localizedPath(locale, `/news/${item.slug}`)}
             className="overflow-hidden rounded-3xl bg-card shadow-[var(--shadow)]"
           >
-            <Image src={item.image} alt="" width={640} height={360} className="h-44 w-full object-cover" />
+            {item.image ? (
+              <Image src={item.image} alt="" width={640} height={360} className="h-44 w-full object-cover" />
+            ) : item.videos?.[0] ? (
+              <video
+                src={item.videos[0]}
+                muted
+                playsInline
+                preload="metadata"
+                className="pointer-events-none h-44 w-full object-cover"
+              />
+            ) : null}
             <div className="p-4">
               <p className="text-xs uppercase text-gold">{item.category[locale]}</p>
               <h2 className="font-serif text-xl text-maroon">{item.title[locale]}</h2>

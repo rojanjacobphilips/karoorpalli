@@ -111,7 +111,17 @@ export function HomeSections({ locale }: { locale: Locale }) {
                 href={localizedPath(locale, `/news/${item.slug}`)}
                 className="flex gap-4 rounded-3xl bg-card p-3 shadow-[var(--shadow)]"
               >
-                <Image src={item.image} alt="" width={120} height={90} className="h-24 w-28 rounded-2xl object-cover" />
+                {item.image ? (
+                  <Image src={item.image} alt="" width={120} height={90} className="h-24 w-28 rounded-2xl object-cover" />
+                ) : item.videos?.[0] ? (
+                  <video
+                    src={item.videos[0]}
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="pointer-events-none h-24 w-28 rounded-2xl object-cover"
+                  />
+                ) : null}
                 <div>
                   <div className="text-xs uppercase text-gold">{t(item.category)}</div>
                   <h3 className="font-serif text-xl text-maroon">{t(item.title)}</h3>

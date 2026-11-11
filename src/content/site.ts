@@ -92,6 +92,14 @@ export const navigation: NavItem[] = [
       { href: "/vicar", label: { en: "Vicar", ml: "വികാരി" } },
       { href: "/administration/officers", label: { en: "Trustee & Secretary", ml: "ട്രസ്റ്റിയും സെക്രട്ടറിയും" } },
       { href: "/committee", label: { en: "Managing Committee", ml: "ഭരണസമിതി" } },
+      {
+        href: "/administration/malankara-association",
+        label: { en: "Malankara Association Members", ml: "മലങ്കര അസോസിയേഷൻ അംഗങ്ങൾ" },
+      },
+      {
+        href: "/administration/diocesan-council",
+        label: { en: "Diocesan Council Members", ml: "ഭദ്രാസന കൗൺസിൽ അംഗങ്ങൾ" },
+      },
       { href: "/administration/past-vicars", label: { en: "Former Vicars", ml: "മുൻ വികാരിമാർ" } },
       { href: "/administration/reports", label: { en: "Annual Reports", ml: "വാർഷിക റിപ്പോർട്ടുകൾ" } },
     ],
@@ -113,6 +121,7 @@ export const navigation: NavItem[] = [
       { href: "/organisations/choir", label: { en: "Choir", ml: "ഗായകസംഘം" } },
       { href: "/organisations/altar-servers", label: { en: "AMOSS", ml: "എ.എം.ഒ.എസ്.എസ്." } },
       { href: "/organisations/peters-hand", label: { en: "Peter's Hand", ml: "പത്രോസിന്റെ കൈ" } },
+      { href: "/organisations/suvishesha-sangham", label: { en: "Suvishesha Sangham", ml: "സുവിശേഷ സംഘം" } },
     ],
   },
   {
@@ -418,6 +427,48 @@ export const officers: Person[] = [
 
 export const news: NewsItem[] = [
   {
+    slug: "varyapuram-relic",
+    category: { en: "Church", ml: "സഭ" },
+    title: {
+      en: "Relic of Parumala Kochu Thirumeni installed",
+      ml: "തിരുശേഷിപ്പ് സ്ഥാപിച്ചു",
+    },
+    excerpt: {
+      en: "The relic of Parumala Kochu Thirumeni, a canonized saint of the Malankara Church, was installed at St. Gregorios Orthodox Church, Varyapuram, under the celebrancy of His Holiness Baselios Marthoma Mathews III, Catholicos, His Grace Kuriakose Mar Clemis, the senior Metropolitan, and His Grace Dr. Abraham Mar Seraphim, the diocesan Metropolitan.",
+      ml: "മലങ്കര സഭയുടെ പ്രഖ്യാപിത പരിശുദ്ധനായ പരുമല കൊച്ചുതിരുമേനിയുടെ തിരുശേഷിപ്പ് വാര്യാപുരം St. ഗ്രീഗോറിയോസ് ഓർത്തഡോക്സ് ദേവാലയത്തിൽ പരി. ബസേലിയോസ് മാർത്തോമാ മാത്യൂസ് തൃതീയൻ കാതോലിക്കാബാവയുടെയും, വലിയ മെത്രാപോലിത്ത അഭി. കുര്യാക്കോസ് മാർ ക്ലിമീസ് മെത്രാപ്പോലീത്തയുടെയും ഇടവക മെത്രാപോലിത്ത അഭി. ഡോ. എബ്രഹാം മാർ സെറാഫിം മെത്രാപ്പോലീത്തയുടെയും കാർമികത്വത്തിൽ സ്ഥാപിച്ചു.",
+    },
+    date: "2026-11-11",
+    videos: ["/news/varyapuram.mp4", "/news/at-varyapuram.mp4"],
+  },
+  {
+    slug: "ramban-elevation",
+    category: { en: "Church", ml: "സഭ" },
+    title: {
+      en: "Bishops-elect elevated to the rank of Ramban",
+      ml: "നിയുക്ത മെത്രാൻമാരെ റമ്പാൻ സ്ഥാനത്തേക്ക് ഉയർത്തി",
+    },
+    excerpt: {
+      en: "The service elevating three priests, appointed as Metropolitans of the Malankara Orthodox Church, to the rank of Ramban was solemnly completed at Parumala Seminary. His Holiness Baselios Marthoma Mathews III, Catholicos, was the chief celebrant, with the other bishops concelebrating.",
+      ml: "മലങ്കര ഓർത്തഡോക്സ് സഭയുടെ മെത്രാപ്പോലീത്താ പദവിയിലേക്ക് നിയോഗിതരായ മൂന്ന് വൈദികരുടെ റമ്പാൻ സ്ഥാനാരോഹണ ശുശ്രൂഷ പരുമല സെമിനാരിയിൽ പരിശുദ്ധ ബസേലിയോസ് മാർത്തോമ്മാ മാത്യൂസ് തൃതീയൻ കാതോലിക്കാ ബാവയുടെ പ്രധാന കാർമികത്വത്തിലും അഭിവന്ദ്യ പിതാക്കന്മാരുടെ സഹകാർമികത്വത്തിലും അനുഗ്രഹകരമായി പൂർത്തീകരിച്ചു.",
+    },
+    date: "2026-11-11",
+    image: "/news/ramban-elevation.jpg",
+  },
+  {
+    slug: "abouna-lucas",
+    category: { en: "Church", ml: "സഭ" },
+    title: {
+      en: "His Grace Abouna Lucas has passed away",
+      ml: "അഭിവന്ദ്യ ആബൂനാ ലൂക്കാസ് കാലം ചെയ്തു",
+    },
+    excerpt: {
+      en: "His Grace Abouna Lucas, Archbishop of the Eritrean Orthodox Tewahedo Church, has passed away. He was 94 years old. Accepting the invitation of the Church, he participated as the representative of the Eritrean Orthodox Church in the 11th Holy Murron Consecration of the Malankara Church, held at the Devalokam Catholicos Aramana on March 27, 2026. A fond farewell to the Holy Father, who maintained a deep bond of love with the Malankara Church.",
+      ml: "എറിട്രിയൻ ഓർത്തഡോക്സ് തെവാഹെദോ സഭയുടെ ആർച്ച്ബിഷപ്പ് അഭിവന്ദ്യ ആബൂനാ ലൂക്കാസ് കാലം ചെയ്തു. 94 വയസായിരുന്നു. 2026 മാർച്ച് 27-ന് ദേവലോകം കാതോലിക്കേറ്റ് അരമനയിൽ നടന്ന മലങ്കരസഭയിലെ 11-ാം വിശുദ്ധ മൂറോൻ കൂദാശയിൽ സഭയുടെ ക്ഷണം സ്വീകരിച്ച് എറിട്രിയൻ ഓർത്തഡോക്സ് സഭയുടെ പ്രതിനിധിയായി പങ്കെടുത്തിട്ടുണ്ട്. മലങ്കരസഭയുമായി ആഴത്തിലുള്ള സ്നേഹബന്ധം കാത്തുസൂക്ഷിച്ചിരുന്ന അഭിവന്ദ്യ പിതാവിന് യാത്രാമൊഴി",
+    },
+    date: "2026-11-11",
+    image: "/news/abouna-lucas.jpg",
+  },
+  {
     slug: "peters-hand-lucky-draw",
     category: { en: "Peter's Hand", ml: "പത്രോസിന്റെ കൈ" },
     title: { en: "Peter’s Hand lucky draw coupon", ml: "Peter’s Hand - Lucky draw coupon" },
@@ -712,6 +763,19 @@ export const organisations: Organisation[] = [
           },
         ],
       },
+      {
+        heading: { en: "Office Bearers — 2026–27", ml: "ഭാരവാഹികൾ — 2026–27" },
+        points: [
+          {
+            label: { en: "Secretary", ml: "സെക്രട്ടറി" },
+            text: { en: "Ayin Vargeshe Thomas", ml: "ആയിൻ വർഗേശെ തോമസ്" },
+          },
+          {
+            label: { en: "Secretary", ml: "സെക്രട്ടറി" },
+            text: { en: "Jiya Sara Juby", ml: "ജിയ സാറ ജൂബി" },
+          },
+        ],
+      },
     ],
   },
   {
@@ -731,23 +795,19 @@ export const organisations: Organisation[] = [
         points: [
           {
             label: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
-            text: { en: "Mrs. Shibi Laji", ml: "ശ്രീമതി ഷിബി ലാജി" },
+            text: { en: "Mr. Binoy Abraham, Mr. Anil Mathew", ml: "ശ്രീ.ബിനോയി ഏബ്രഹാം, ശ്രീ.അനിൽ മാത്യു" },
           },
           {
             label: { en: "Secretary", ml: "സെക്രട്ടറി" },
-            text: { en: "Mrs. Sheenu Sunil", ml: "ശ്രീമതി ഷീനു സുനിൽ" },
-          },
-          {
-            label: { en: "Joint Secretary", ml: "ജോയിന്റ് സെക്രട്ടറി" },
-            text: { en: "Mrs. Biji Saji", ml: "ശ്രീമതി ബിജി സാജി" },
+            text: { en: "Mr. Ajith john", ml: "ശ്രീ.അജിത്ത് ജോൺ" },
           },
           {
             label: { en: "Treasurer", ml: "ട്രഷറർ" },
-            text: { en: "Mrs. Nisha Elizabeth Babu", ml: "ശ്രീമതി നിഷ എലിസബത്ത് ബാബു" },
+            text: { en: "Mr. Robin Mathew mellali", ml: "ശ്രീ.റോബിൻ മാത്യു മെല്ലാലി" },
           },
           {
             label: { en: "Auditor", ml: "ഓഡിറ്റർ" },
-            text: { en: "Mrs. Achamma Shiju", ml: "ശ്രീമതി അച്ചാമ്മ ഷിജു" },
+            text: { en: "Mr. Liju john", ml: "ശ്രീ.ലിജു ജോൺ" },
           },
         ],
       },
@@ -848,23 +908,34 @@ export const organisations: Organisation[] = [
         points: [
           {
             label: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
-            text: { en: "Mr. Lainu George Mathew", ml: "ശ്രീ ലൈനു ജോർജ് മാത്യു" },
+            text: { en: "Mr. Jeffin Sam James", ml: "ശ്രീ.ജെഫിൻ സാം ജെയിംസ്" },
           },
           {
             label: { en: "Secretary", ml: "സെക്രട്ടറി" },
-            text: { en: "Mrs. Rajitha Raj", ml: "ശ്രീമതി രജിത രാജ്" },
+            text: { en: "Mr. Abin S Ninan", ml: "ശ്രീ.അബിൻ എസ്. നിനാൻ" },
           },
           {
             label: { en: "Joint Secretary", ml: "ജോയിന്റ് സെക്രട്ടറി" },
-            text: { en: "Mr. Varghese Joy", ml: "ശ്രീ വർഗീസ് ജോയ്" },
+            text: { en: "Mr. Jeswin", ml: "ശ്രീ.ജെസ്വിൻ" },
           },
           {
             label: { en: "Treasurer", ml: "ട്രഷറർ" },
-            text: { en: "Mr. Ajish T Alex", ml: "ശ്രീ അജീഷ് ടി. അലക്സ്" },
+            text: { en: "Mr. Slomo M Mathew", ml: "ശ്രീ.സ്ലോമോ എം. മാത്യു" },
+          },
+          {
+            label: { en: "Committee Members", ml: "സമിതി അംഗങ്ങൾ" },
+            text: {
+              en: "Mr. Cinjo v Johnson, Mr. Christin Varghese Anu, Mr. Ephraim mathew Shawn, Mr. Christo, Mr. Alphonse",
+              ml: "ശ്രീ.സിഞ്ജോ വി. ജോൺസൺ, ശ്രീ.ക്രിസ്റ്റിൻ വർഗീസ് അനു, ശ്രീ.എഫ്രയീം മാത്യു ഷോൺ, ശ്രീ.ക്രിസ്റ്റോ, ശ്രീ.അൽഫോൻസ്",
+            },
           },
           {
             label: { en: "Auditor", ml: "ഓഡിറ്റർ" },
-            text: { en: "Mr. Melwin Mathai Pothen", ml: "ശ്രീ മെൽവിൻ മത്തായി പോത്തൻ" },
+            text: { en: "Mr. Liju John", ml: "ശ്രീ.ലിജു ജോൺ" },
+          },
+          {
+            label: { en: "Church committee representative", ml: "ഭരണസമിതി പ്രതിനിധി" },
+            text: { en: "Mr. Sibu Sam Mathew", ml: "ശ്രീ.സിബു സാം മാത്യു" },
           },
         ],
       },
@@ -999,19 +1070,19 @@ export const organisations: Organisation[] = [
         points: [
           {
             label: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
-            text: { en: "Mrs. Shibi Laji", ml: "ശ്രീമതി ഷിബി ലാജി" },
+            text: { en: "Mr. Saji Ninan", ml: "ശ്രീ.സാജി നിനാൻ" },
           },
           {
             label: { en: "Secretary", ml: "സെക്രട്ടറി" },
-            text: { en: "Mrs. Sheenu Sunil", ml: "ശ്രീമതി ഷീനു സുനിൽ" },
+            text: { en: "Mr. Saju P George", ml: "ശ്രീ.സാജു പി. ജോർജ്" },
           },
           {
             label: { en: "Joint Secretary", ml: "ജോയിന്റ് സെക്രട്ടറി" },
-            text: { en: "Mrs. Biji Saji", ml: "ശ്രീമതി ബിജി സാജി" },
+            text: { en: "Mr. Manu Joseph", ml: "ശ്രീ.മനു ജോസഫ്" },
           },
           {
             label: { en: "Treasurer", ml: "ട്രഷറർ" },
-            text: { en: "Mrs. Nisha Elizabeth Babu", ml: "ശ്രീമതി നിഷ എലിസബത്ത് ബാബു" },
+            text: { en: "Mr. Annamma Thomas", ml: "ശ്രീ.അന്നമ്മ തോമസ്" },
           },
           {
             label: { en: "Auditor", ml: "ഓഡിറ്റർ" },
@@ -1139,6 +1210,89 @@ export const organisations: Organisation[] = [
       },
     ],
   },
+  {
+    slug: "suvishesha-sangham",
+    name: { en: "Suvishesha Sangham", ml: "സുവിശേഷ സംഘം" },
+    summary: {
+      en: "The official mission and evangelism organisation of the Malankara Orthodox Syrian Church.",
+      ml: "മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ ഔദ്യോഗിക മിഷൻ-സുവിശേഷ സംഘടന.",
+    },
+    lead: {
+      en: "The St. Paul’s & St. Thomas Suvishesha Sangam is the official mission and evangelism organization of the Malankara Orthodox Syrian Church (MOSC), dedicated to spreading the gospel, supporting mission fields, and deepening spiritual life.",
+      ml: "മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭയുടെ ഔദ്യോഗിക മിഷൻ-സുവിശേഷ പ്രവർത്തന സംഘടനയാണ് സെന്റ് പോൾസ് & സെന്റ് തോമസ് സുവിശേഷ സംഘം. സുവിശേഷ പ്രചരണം, മിഷൻ മേഖലകളുടെ പിന്തുണ, ആത്മീയ ജീവിതത്തിന്റെ ആഴം എന്നിവയ്ക്കായി അത് പ്രവർത്തിക്കുന്നു.",
+    },
+    sections: [
+      {
+        heading: { en: "Overview & Structure", ml: "അവലോകനവും ഘടനയും" },
+        points: [
+          {
+            label: { en: "Full Name", ml: "പൂർണ നാമം" },
+            text: {
+              en: "St. Paul’s & St. Thomas Suvishesha Sangam (National Association for Mission Studies)",
+              ml: "സെന്റ് പോൾസ് & സെന്റ് തോമസ് സുവിശേഷ സംഘം (നാഷണൽ അസോസിയേഷൻ ഫോർ മിഷൻ സ്റ്റഡീസ്)",
+            },
+          },
+          {
+            label: { en: "Leadership", ml: "നേതൃത്വം" },
+            text: {
+              en: "Headed by a Presidential Metropolitan (such as H.G. Dr. Yuhanon Mar Thevodoros).",
+              ml: "ഒരു പ്രസിഡൻഷ്യൽ മെത്രാപ്പോലീത്തയുടെ നേതൃത്വത്തിൽ (ഉദാഹരണം: അഭി. ഡോ. യൂഹാനോൻ മാർ തെയോഡോറോസ്).",
+            },
+          },
+          {
+            label: { en: "National Office", ml: "ദേശീയ കാര്യാലയം" },
+            text: {
+              en: "St. Paul’s M.T.C., Mavelikara, Kerala, India.",
+              ml: "സെന്റ് പോൾസ് എം.ടി.സി., മാവേലിക്കര, കേരളം, ഇന്ത്യ.",
+            },
+          },
+          {
+            label: { en: "Purpose", ml: "ലക്ഷ്യം" },
+            text: {
+              en: "Coordinates evangelism, outreach programs, home missions, and scriptural studies across parishes and dioceses.",
+              ml: "ഇടവകകളിലും ഭദ്രാസനങ്ങളിലും സുവിശേഷ പ്രവർത്തനം, ഔട്ട്‌റീച്ച് പരിപാടികൾ, ഹോം മിഷനുകൾ, വേദപഠനം എന്നിവ ഏകോപിപ്പിക്കുന്നു.",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "Key Activities & Objectives", ml: "പ്രധാന പ്രവർത്തനങ്ങളും ലക്ഷ്യങ്ങളും" },
+        points: [
+          {
+            label: { en: "Mission Work", ml: "മിഷൻ പ്രവർത്തനം" },
+            text: {
+              en: "Supports internal and external mission fields, evangelists, and outreach projects in different parts of India.",
+              ml: "ഇന്ത്യയുടെ വിവിധ ഭാഗങ്ങളിലെ ആഭ്യന്തരവും ബാഹ്യവുമായ മിഷൻ മേഖലകൾ, സുവിശേഷകർ, ഔട്ട്‌റീച്ച് പദ്ധതികൾ എന്നിവയെ പിന്തുണയ്ക്കുന്നു.",
+            },
+          },
+          {
+            label: { en: "Spiritual Formation", ml: "ആത്മീയ രൂപീകരണം" },
+            text: {
+              en: "Encourages Bible reading, prayer groups, and the active participation of laity in church ministry.",
+              ml: "ബൈബിൾ വായന, പ്രാർത്ഥനാ ഗ്രൂപ്പുകൾ, സഭാ ശുശ്രൂഷയിൽ അൽമായരുടെ സജീവ പങ്കാളിത്തം എന്നിവ പ്രോത്സാഹിപ്പിക്കുന്നു.",
+            },
+          },
+        ],
+      },
+      {
+        heading: { en: "Office Bearers", ml: "ഭാരവാഹികൾ" },
+        points: [
+          {
+            label: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
+            text: { en: "Mr. Koshy Thomas, Poovappallil", ml: "ശ്രീ.കോശി തോമസ്, പൂവപ്പള്ളിൽ" },
+          },
+          {
+            label: { en: "Secretary", ml: "സെക്രട്ടറി" },
+            text: { en: "Mr. Alex C Mathew, Cherukunnathu", ml: "ശ്രീ.അലക്സ് സി മാത്യു, ചെറുകുന്നത്ത്" },
+          },
+          {
+            label: { en: "Treasurer", ml: "ട്രഷറർ" },
+            text: { en: "Mr. C. P. Abraham, Chemmannil", ml: "ശ്രീ.സി. പി. ഏബ്രഹാം, ചെമ്മണ്ണിൽ" },
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 const organisationOrder = [
@@ -1152,6 +1306,7 @@ const organisationOrder = [
   "choir",
   "altar-servers",
   "peters-hand",
+  "suvishesha-sangham",
 ];
 
 organisations.sort(
@@ -1380,6 +1535,54 @@ const committeeNames: { en: string; ml: string; auditor?: boolean }[] = [
   { en: "Mrs. Mariamma Thomas", ml: "ശ്രീമതി. മറിയാമ്മ തോമസ്" },
   { en: "Mr. Sam Ninan", ml: "ശ്രീ.സാം നൈനാൻ", auditor: true },
   { en: "Mr. Binoy Abraham", ml: "ശ്രീ.ബിനോയി ഏബ്രഹാം", auditor: true },
+];
+
+export const associationMembers: CommitteeMember[] = [
+  {
+    name: { en: "Mr. Shijin k Mathew", ml: "ശ്രീ.ഷിജിൻ കെ. മാത്യു" },
+    role: { en: "Member", ml: "അംഗം" },
+    term: "",
+    photo:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+  },
+  {
+    name: { en: "Mr. Saju p George", ml: "ശ്രീ.സാജു പി. ജോർജ്" },
+    role: { en: "Member", ml: "അംഗം" },
+    term: "",
+    photo:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+  },
+  {
+    name: { en: "Mr. Mathew Abraham", ml: "ശ്രീ.മാത്യു ഏബ്രഹാം" },
+    role: { en: "Member", ml: "അംഗം" },
+    term: "",
+    photo:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+  },
+];
+
+export const diocesanCouncilMembers: CommitteeMember[] = [
+  {
+    name: { en: "Mr. Sibu sam mathew", ml: "ശ്രീ.സിബു സാം മാത്യു" },
+    role: { en: "Member", ml: "അംഗം" },
+    term: "",
+    photo:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+  },
+  {
+    name: { en: "Mr. Biju M Thomas", ml: "ശ്രീ.ബിജു എം. തോമസ്" },
+    role: { en: "Member", ml: "അംഗം" },
+    term: "",
+    photo:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+  },
+  {
+    name: { en: "Mr. Saji Nianan", ml: "ശ്രീ.സാജി നിയാനൻ" },
+    role: { en: "Member", ml: "അംഗം" },
+    term: "",
+    photo:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+  },
 ];
 
 export const committee: CommitteeMember[] = committeeNames.map((person, index) => ({
@@ -1725,6 +1928,14 @@ export const searchIndex = [
   { href: "/about/feasts", title: { en: "Feasts", ml: "തിരുനാളുകൾ" } },
   { href: "/history", title: { en: "History", ml: "ചരിത്രം" } },
   { href: "/vicar", title: { en: "Vicar", ml: "വികാരി" } },
+  {
+    href: "/administration/malankara-association",
+    title: { en: "Malankara Association Members", ml: "മലങ്കര അസോസിയേഷൻ അംഗങ്ങൾ" },
+  },
+  {
+    href: "/administration/diocesan-council",
+    title: { en: "Diocesan Council Members", ml: "ഭദ്രാസന കൗൺസിൽ അംഗങ്ങൾ" },
+  },
   { href: "/news", title: { en: "News", ml: "വാർത്തകൾ" } },
   { href: "/events", title: { en: "Events", ml: "പരിപാടികൾ" } },
   { href: "/obituary", title: { en: "Obituary", ml: "അനുസ്മരണം" } },

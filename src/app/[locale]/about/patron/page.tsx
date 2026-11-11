@@ -49,24 +49,44 @@ function PatronEssay({ locale }: { locale: Locale }) {
           <p className="mt-4 text-lg text-muted">{renderInline(essay.lead)}</p>
         </div>
       </div>
-      {essay.sections.map((section) => (
-        <section key={section.heading} className="mt-8">
-          <h3 className="font-serif text-2xl text-maroon">{section.heading}</h3>
-          {section.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 48)} className="mt-4 text-lg text-muted">
-              {renderInline(paragraph)}
-            </p>
-          ))}
-          {section.list ? (
-            <ul className="mt-4 list-disc space-y-3 pl-6 text-lg text-muted">
-              {section.list.map((item) => (
-                <li key={item.slice(0, 48)}>{renderInline(item)}</li>
+      <div className="mt-8 flex flex-col gap-8 md:grid md:grid-cols-[minmax(0,1fr)_17rem] md:items-start md:gap-10">
+        <div className="order-2 md:order-1">
+          {essay.sections.map((section) => (
+            <section key={section.heading} className="mt-8 first:mt-0">
+              <h3 className="font-serif text-2xl text-maroon">{section.heading}</h3>
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)} className="mt-4 text-lg text-muted">
+                  {renderInline(paragraph)}
+                </p>
               ))}
-            </ul>
-          ) : null}
-        </section>
-      ))}
-      <p className="mt-8 text-lg text-muted">{renderInline(essay.closing)}</p>
+              {section.list ? (
+                <ul className="mt-4 list-disc space-y-3 pl-6 text-lg text-muted">
+                  {section.list.map((item) => (
+                    <li key={item.slice(0, 48)}>{renderInline(item)}</li>
+                  ))}
+                </ul>
+              ) : null}
+            </section>
+          ))}
+          <p className="mt-8 text-lg text-muted">{renderInline(essay.closing)}</p>
+        </div>
+        <figure className="order-1 mx-auto w-full max-w-xs md:order-2 md:sticky md:top-24">
+          <Image
+            src="/people/st-peter-keys.jpg"
+            alt={
+              locale === "ml"
+                ? "താക്കോലുകളോടെ പ്രാർത്ഥിക്കുന്ന പ്രേഷിതൻ വിശുദ്ധ പത്രോസ്"
+                : "St. Peter the Apostle in prayer, with the keys"
+            }
+            width={725}
+            height={1024}
+            className="h-auto w-full rounded-2xl shadow-[var(--shadow)]"
+          />
+          <figcaption className="mt-3 text-center text-sm text-muted">
+            {locale === "ml" ? "പ്രാർത്ഥനയിൽ വിശുദ്ധ പത്രോസ്" : "St. Peter in prayer"}
+          </figcaption>
+        </figure>
+      </div>
     </div>
   );
 }

@@ -30,7 +30,8 @@ export type NewsItem = {
   title: Localized<string>;
   excerpt: Localized<string>;
   date: string;
-  image: string;
+  image?: string;
+  videos?: string[];
 };
 
 export type ParishEvent = {
