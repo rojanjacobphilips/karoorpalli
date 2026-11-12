@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { ParishForm } from "@/components/ParishForm";
 import { SimplePage } from "@/components/SimplePage";
+import { localizedPath } from "@/lib/i18n";
 import { requireLocale } from "@/lib/locale-page";
 
 export default async function Page({ params }: PageProps<"/[locale]/charity">) {
@@ -16,16 +18,36 @@ export default async function Page({ params }: PageProps<"/[locale]/charity">) {
       <div className="mt-8 grid gap-6 md:grid-cols-3">
         {[
           {
-            en: "Onam and Christmas kits",
-            ml: "ഓണം, ക്രിസ്മസ് കിറ്റുകൾ",
+            en: "Peter's Hand",
+            ml: "പത്രോസിന്റെ കൈ",
+            href: "/organisations/peters-hand",
           },
           { en: "Medical assistance", ml: "ചികിത്സാ സഹായം" },
           { en: "Education support", ml: "വിദ്യാഭ്യാസ പിന്തുണ" },
-        ].map((item) => (
-          <div key={item.en} className="rounded-3xl bg-card p-5 shadow-[var(--shadow)]">
-            <h2 className="font-serif text-2xl text-maroon">{item[locale]}</h2>
-          </div>
-        ))}
+        ].map((item) => {
+          const card = (
+            <>
+              <h2 className="font-serif text-2xl text-maroon">{item[locale]}</h2>
+            </>
+          );
+          const className = "rounded-3xl bg-card p-5 shadow-[var(--shadow)]";
+          if ("href" in item) {
+            return (
+              <Link
+                key={item.en}
+                href={localizedPath(locale, item.href)}
+                className={`${className} block transition hover:bg-ivory-deep`}
+              >
+                {card}
+              </Link>
+            );
+          }
+          return (
+            <div key={item.en} className={className}>
+              {card}
+            </div>
+          );
+        })}
       </div>
       <div className="mt-8 max-w-xl rounded-3xl bg-card p-6 shadow-[var(--shadow)]">
         <h2 className="mb-4 font-serif text-2xl text-maroon">

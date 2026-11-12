@@ -1986,10 +1986,21 @@ export const obituaries: Obituary[] = [
 export const timeline: TimelineEntry[] = [
   {
     year: "1072 ME",
-    title: { en: "The Early Days", ml: "ആദ്യകാലം" },
+    title: {
+      en: "The Early Days: Founding of the Parish",
+      ml: "ആദ്യകാലം: ഇടവകയുടെ സ്ഥാപനം",
+    },
     body: {
-      en: "On the 9th of Meenam, Kollavarsha 1072, St. Gregorios of Parumala laid the foundation stone in the name of St. Peter, consecrated the parish cross and offered the first Holy Qurbana. Known then as Pariyaram Puthen Palli, the sanctuary was of bamboo and grass, with woven bamboo-mat walls, serving 65 founding families.",
-      ml: "കൊല്ലവർഷം 1072 മീനം 9-ന് പരുമല തിരുമേനി വിശുദ്ധ പത്രോസിന്റെ നാമത്തിൽ തറക്കല്ലിടുകയും ഇടവകാ കുരിശ് കൂദാശ ചെയ്യുകയും ആദ്യ വിശുദ്ധ കുർബാന അർപ്പിക്കുകയും ചെയ്തു. പരിയാരം പുത്തൻപള്ളി എന്നറിയപ്പെട്ട ആദ്യ ദേവാലയം മുളയും പുല്ലും കൊണ്ട് നിർമിച്ചതായിരുന്നു; മതിലുകൾ മുളമെത്തിയായിരുന്നു. 65 കുടുംബങ്ങളായിരുന്നു ആദ്യ അംഗങ്ങൾ.",
+      en: "In the late 19th century, the Orthodox Christian families residing in the region faced significant hardship, as there was no nearby church where they could gather for regular worship and spiritual fellowship. Driven by deep faith and a shared longing for a house of prayer of their own, 65 founding families came together to establish a local sanctuary.\n\nTheir prayers were answered on 21st March 1897 (9th of Meenam, Kollavarsha 1072), when His Grace Geevarghese Mar Gregorios—reverently known as Saint Gregorios of Parumala or Parumala Thirumeni—visited the place. On this blessed day, he laid the foundation stone in the name of St. Peter, consecrated the parish cross, and offered the very first Holy Qurbana for the faithful.\n\nOriginally known as Pariyaram Puthen Palli, the earliest church structure was built with humble, locally available materials—featuring a thatched roof of bamboo and grass, enclosed by woven bamboo-mat walls. Despite its modest appearance, this sacred space stood as a beacon of hope, unity, and unwavering devotion for the 65 founding families, laying the spiritual foundation for generations to come.",
+      ml: "പത്തൊൻപതാം നൂറ്റാണ്ടിന്റെ അവസാനം ഈ പ്രദേശത്തെ ഓർത്തഡോക്സ് കുടുംബങ്ങൾക്ക് സമീപത്ത് ഒരു പള്ളിയില്ലാത്തതിനാൽ പതിവ് ആരാധനയ്ക്കും ആത്മീയ കൂട്ടായ്മയ്ക്കും വലിയ ബുദ്ധിമുട്ടുണ്ടായിരുന്നു. ആഴമായ വിശ്വാസത്തോടും സ്വന്തം പ്രാർത്ഥനാലയത്തിനുള്ള ആഗ്രഹത്തോടും 65 സ്ഥാപക കുടുംബങ്ങൾ ഒരു പ്രാദേശിക ദേവാലയം സ്ഥാപിക്കാൻ ഒന്നിച്ചു.\n\nഅവരുടെ പ്രാർത്ഥനയ്ക്ക് ഉത്തരം ലഭിച്ചത് 1897 മാർച്ച് 21-ന് (കൊല്ലവർഷം 1072 മീനം 9) അഭിവന്ദ്യ ഗീവർഗീസ് മാർ ഗ്രീഗോറിയോസ് — പരുമല വിശുദ്ധ ഗ്രീഗോറിയോസ് അഥവാ പരുമല തിരുമേനി — ഇവിടെ എത്തിയപ്പോഴാണ്. ആ അനുഗ്രഹ ദിനത്തിൽ അദ്ദേഹം വിശുദ്ധ പത്രോസിന്റെ നാമത്തിൽ തറക്കല്ലിടുകയും ഇടവകാ കുരിശ് കൂദാശ ചെയ്യുകയും വിശ്വാസികൾക്കായി ആദ്യ വിശുദ്ധ കുർബാന അർപ്പിക്കുകയും ചെയ്തു.\n\nപരിയാരം പുത്തൻപള്ളി എന്നറിയപ്പെട്ട ആദ്യ ദേവാലയം മുളയും പുല്ലും കൊണ്ടുള്ള മേൽക്കൂരയും മുളമെത്തി മതിലുകളുമായി, ലഭ്യമായ ലളിത വസ്തുക്കൾ കൊണ്ട് നിർമിച്ചതായിരുന്നു. ലളിതമായ രൂപത്തിലും ഈ പുണ്യസ്ഥലം 65 സ്ഥാപക കുടുംബങ്ങൾക്ക് പ്രത്യാശയുടെയും ഐക്യത്തിന്റെയും അചഞ്ചല ഭക്തിയുടെയും വിളക്കായി നിന്നു; തലമുറകൾക്കുള്ള ആത്മീയ അടിത്തറയായി അത് മാറി.",
+    },
+  },
+  {
+    year: "1958",
+    title: { en: "First Renovation and Consecration", ml: "ആദ്യ നവീകരണവും കൂദാശയും" },
+    body: {
+      en: "Years later, the church was rebuilt and consecrated in May 1958 by H.H. Moran Mar Baselios Geevarghese II, Catholicos of the East, with the assistance of Metropolitans H.G. Augen Mar Thimotheos and H.G. Daniel Mar Philoxenos, under the vicarship of Fr. P.T. Mathews Naranganam.",
+      ml: "വർഷങ്ങൾക്ക് ശേഷം ദേവാലയം പുനർനിർമിച്ച് 1958 മെയ് മാസത്തിൽ പൗരസ്ത്യ കാതോലിക്കോസ് ഹി.ഹി. മോറാൻ മാർ ബസേലിയോസ് ഗീവർഗീസ് ദ്വിതീയൻ കൂദാശ ചെയ്തു. മെത്രാപ്പോലീത്തമാരായ ഹി.ഗി. ഔഗേൻ മാർ തിമോത്തിയോസും ഹി.ഗി. ഡാനിയേൽ മാർ ഫിലക്സിനോസും സഹായിച്ചു. വികാരി ഫാ. പി. ടി. മാത്യൂസ് നാരങ്ങാനം.",
     },
   },
   {
@@ -1998,6 +2009,17 @@ export const timeline: TimelineEntry[] = [
     body: {
       en: "To accommodate the growing spiritual family, a new church was built — 120 feet long, 45 feet wide and 113 feet high (Kotta). It was solemnly consecrated on 14 and 15 May 1999 by H.H. Baselios Marthoma Mathews II, Catholicos of the East and Malankara Metropolitan. Rev. Fr. Titus George served as Parish Vicar. The consecration took place in the presence of:",
       ml: "വളരുന്ന ഇടവകയ്ക്കായി 120 അടി നീളം, 45 അടി വീതി, 113 അടി ഉയരം (കോട്ട) ഉള്ള പുതിയ ദേവാലയം നിർമിച്ചു. 1999 മെയ് 14-നും 15-നും പൂർവ്വദിക്ക് കാതോലിക്കോസും മലങ്കര മെത്രാപ്പോലീത്തയുമായ ബസേലിയോസ് മാർത്തോമ്മ മാത്യൂസ് ദ്വിതീയൻ കൂദാശ ചെയ്തു. വികാരി റവ. ഫാ. ടൈറ്റസ് ജോർജ്. സന്നിഹിതരായ മെത്രാന്മാർ:",
+    },
+  },
+  {
+    year: "2018",
+    title: {
+      en: "Church Renovation & 121st Perunnal",
+      ml: "ദേവാലയ നവീകരണവും 121-ാം പെരുന്നാളും",
+    },
+    body: {
+      en: "A monumental chapter in our parish's history took place in 2018 with the grand renovation of the church interior and the Madbaha (sanctuary). This sacred restoration was marked alongside the joyous celebration of the church's 121st Perunnal (feast).\n\nThe spiritual leadership for this auspicious milestone was graced by Their Eminences H.G. Dr. Thomas Mar Athanasios and H.G. Geevarghese Mar Yuliose, who served as the main celebrants of the holy services. The spiritual and administrative stewardship of the parish during this landmark event was led by our vicar, Very Rev. P.T. Mathews Puthuparambil Corepiscopa.\n\nThis beautiful renewal blended our deep-rooted heritage with a renewed sanctuary space, welcoming the faithful to gather in prayer and worship for generations to come.",
+      ml: "2018-ൽ ദേവാലയത്തിന്റെ അകത്തളവും മദ്ബഹയും (ശുദ്ധാലയം) നവീകരിച്ചതോടെ ഇടവകയുടെ ചരിത്രത്തിൽ ഒരു സുപ്രധാന അധ്യായം ആരംഭിച്ചു. ഈ പുനരുദ്ധാരണം ദേവാലയത്തിന്റെ 121-ാം പെരുന്നാൾ ആഘോഷവുമായി ഒത്തുചേർന്നു.\n\nഈ മംഗള സന്ദർഭത്തിന്റെ ആത്മീയ നേതൃത്വം അഭി. ഡോ. തോമസ് മാർ അത്താനാസിയോസും അഭി. ഗീവർഗീസ് മാർ യൂലിയോസും നിർവഹിച്ചു; അവർ വിശുദ്ധ ശുശ്രൂഷകളുടെ മുഖ്യ കാർമികരായിരുന്നു. ഈ നാഴികക്കല്ല് കാലത്തെ ആത്മീയവും ഭരണപരവുമായ നേതൃത്വം വികാരി വെരി. റവ. പി. ടി. മാത്യൂസ് പുതുപറമ്പിൽ കോർ എപ്പിസ്കോപ്പ ആയിരുന്നു.\n\nഈ നവീകരണം നമ്മുടെ അഗാധ പൈതൃകവും പുതുക്കിയ ശുദ്ധാലയവും ഒന്നിച്ച് നിർത്തി, തലമുറകളായി വിശ്വാസികൾ പ്രാർത്ഥനയിലും ആരാധനയിലും ഒത്തുകൂടാൻ സ്വാഗതം ചെയ്യുന്നു.",
     },
   },
 ];

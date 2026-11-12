@@ -11,19 +11,37 @@ export default async function Page({ params }: PageProps<"/[locale]/about">) {
 
   return (
     <SimplePage locale={locale} title={title}>
-      <div className="flex flex-col gap-8 md:flex-row md:items-start">
-        <Image
-          src="/church/karoor-front.jpg"
-          alt={
-            locale === "ml"
-              ? "രാത്രിയിൽ പ്രകാശിതമായ കാരൂർ പള്ളിയുടെ മുൻഭാഗം"
-              : "St. Peter's Orthodox Church, Karoor, illuminated at night"
-          }
-          width={900}
-          height={1200}
-          priority
-          className="h-auto w-full max-w-sm shrink-0 self-center rounded-2xl shadow-[var(--shadow)] md:self-start"
-        />
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
+        <div className="grid w-full shrink-0 grid-cols-2 items-start gap-4 self-center sm:max-w-xl lg:max-w-lg lg:self-start">
+          <Image
+            src="/church/karoor-front.jpg"
+            alt={
+              locale === "ml"
+                ? "രാത്രിയിൽ പ്രകാശിതമായ കാരൂർ പള്ളിയുടെ മുൻഭാഗം"
+                : "St. Peter's Orthodox Church, Karoor, illuminated at night"
+            }
+            width={900}
+            height={1200}
+            priority
+            className="h-auto w-full rounded-2xl shadow-[var(--shadow)]"
+          />
+          <figure>
+            <Image
+              src="/people/st-peter-keys.jpg"
+              alt={
+                locale === "ml"
+                  ? "താക്കോലുകളോടെ പ്രാർത്ഥിക്കുന്ന പ്രേഷിതൻ വിശുദ്ധ പത്രോസ്"
+                  : "St. Peter the Apostle in prayer, with the keys"
+              }
+              width={725}
+              height={1024}
+              className="h-auto w-full rounded-2xl shadow-[var(--shadow)]"
+            />
+            <figcaption className="mt-3 text-center text-sm text-muted">
+              {locale === "ml" ? "നമ്മുടെ മദ്ധ്യസ്ഥൻ വിശുദ്ധ പത്രോസ്" : "St. Peter, our patron"}
+            </figcaption>
+          </figure>
+        </div>
         <div>
           {lead[locale].split("\n\n").map((paragraph) => (
             <p key={paragraph.slice(0, 48)} className="mt-4 text-lg text-muted first:mt-0">
