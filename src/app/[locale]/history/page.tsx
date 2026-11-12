@@ -135,8 +135,8 @@ export default async function Page({ params }: PageProps<"/[locale]/history">) {
                               ? "നവീകരിച്ച മദ്ബഹയും ആർച്ചുകളും"
                               : "The renovated Madbaha and sanctuary arches"
                           }
-                          width={768}
-                          height={1024}
+                          width={1024}
+                          height={682}
                           className="h-auto w-full rounded-2xl shadow-[var(--shadow)]"
                         />
                         <figcaption className="mt-2 text-center text-sm text-muted">

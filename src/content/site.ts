@@ -125,6 +125,7 @@ export const navigation: NavItem[] = [
     label: { en: "Parish life", ml: "ഇടവകാ ജീവിതം" },
     children: [
       { href: "/news", label: { en: "News", ml: "വാർത്തകൾ" } },
+      { href: "/our-priests", label: { en: "Our Priests", ml: "നമ്മുടെ വൈദികർ" } },
       { href: "/events", label: { en: "Events", ml: "പരിപാടികൾ" } },
       { href: "/gallery", label: { en: "Image Gallery", ml: "ചിത്രശാല" } },
       { href: "/videos", label: { en: "Video Gallery", ml: "വീഡിയോ" } },
@@ -418,6 +419,88 @@ export const officers: Person[] = [
     phone: "92072 46186",
     email: "secretary@karoorpally.com",
     bio: { en: "Secretary of St. Peter's Orthodox Church, Karoor.", ml: "സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ സെക്രട്ടറി." },
+  },
+];
+
+const priestSamplePhotos = [
+  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
+  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
+];
+
+const sisterSamplePhotos = [
+  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80",
+  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+];
+
+export type ParishClergy = {
+  name: Localized<string>;
+  photo: string;
+  late?: boolean;
+};
+
+export const ourPriests: ParishClergy[] = [
+  {
+    name: {
+      en: "Very Rev. C V John Corepiscopa",
+      ml: "വെരി. റവ. സി. വി. ജോൺ കോർഎപ്പിസ്കോപ്പ",
+    },
+    photo: "/people/cv-john-corepiscopa.jpg",
+    late: true,
+  },
+  {
+    name: { en: "Rev. Fr. P T Thomas", ml: "റവ. ഫാ. പി. ടി. തോമസ്" },
+    photo: priestSamplePhotos[1],
+    late: true,
+  },
+  {
+    name: { en: "Rev. Fr. Roy P Thomas", ml: "റവ. ഫാ. റോയ് പി. തോമസ്" },
+    photo: priestSamplePhotos[2],
+  },
+  {
+    name: { en: "Rev. Fr. Scariah Mathew", ml: "റവ. ഫാ. സ്കറിയ മാത്യു" },
+    photo: priestSamplePhotos[3],
+  },
+  {
+    name: { en: "Rev. Fr. Roy M Philip", ml: "റവ. ഫാ. റോയ് എം. ഫിലിപ്പ്" },
+    photo: "/people/roy-m-philip.jpg",
+  },
+  {
+    name: { en: "Rev. Fr. Abey T Samuel", ml: "റവ. ഫാ. അബി ടി. സാമുവൽ" },
+    photo: "/people/abey-t-samuel.jpg",
+  },
+  {
+    name: { en: "Rev. Fr. Ajin T Thomas", ml: "റവ. ഫാ. അജിൻ ടി. തോമസ്" },
+    photo: priestSamplePhotos[1],
+  },
+  {
+    name: { en: "Rev. Fr. Rijo Sunny", ml: "റവ. ഫാ. റിജോ സണ്ണി" },
+    photo: priestSamplePhotos[2],
+  },
+  {
+    name: { en: "Rev. Fr. Geevarghese Mathew", ml: "റവ. ഫാ. ഗീവർഗീസ് മാത്യു" },
+    photo: priestSamplePhotos[3],
+  },
+  {
+    name: { en: "Rev. Fr. Renny Rajan", ml: "റവ. ഫാ. റെന്നി രാജൻ" },
+    photo: "/people/renny-rajan.jpg",
+  },
+  {
+    name: { en: "Rev. Fr. Cyril Thomas Roy", ml: "റവ. ഫാ. സിറിൽ തോമസ് റോയ്" },
+    photo: priestSamplePhotos[0],
+  },
+];
+
+export const ourSisters: ParishClergy[] = [
+  {
+    name: { en: "Sister. Annamma", ml: "സിസ്റ്റർ. അന്നമ്മ" },
+    photo: sisterSamplePhotos[0],
+  },
+  {
+    name: { en: "Sister. Annamma Mathew", ml: "സിസ്റ്റർ. അന്നമ്മ മാത്യു" },
+    photo: sisterSamplePhotos[1],
   },
 ];
 
@@ -2448,6 +2531,7 @@ export const searchIndex = [
     title: { en: "Diocesan Council Members", ml: "ഭദ്രാസന കൗൺസിൽ അംഗങ്ങൾ" },
   },
   { href: "/news", title: { en: "News", ml: "വാർത്തകൾ" } },
+  { href: "/our-priests", title: { en: "Our Priests", ml: "നമ്മുടെ വൈദികർ" } },
   { href: "/events", title: { en: "Events", ml: "പരിപാടികൾ" } },
   { href: "/obituary", title: { en: "Obituary", ml: "അനുസ്മരണം" } },
   { href: "/offerings", title: { en: "Online offerings", ml: "ഓൺലൈൻ വഴിപാട്" } },

@@ -22,6 +22,7 @@ const paths = [
   "/committee",
   "/organisations",
   "/news",
+  "/our-priests",
   "/events",
   "/obituary",
   "/gallery",
