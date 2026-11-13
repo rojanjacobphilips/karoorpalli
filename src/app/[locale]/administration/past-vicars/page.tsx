@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SimplePage } from "@/components/SimplePage";
 import { requireLocale } from "@/lib/locale-page";
 
@@ -13,7 +14,6 @@ const past: { name: { en: string; ml: string }; role: keyof typeof roles; years?
       ml: "വെരി. റവ. ഫാ. കൊച്ചിറ്റി ഗീവർഗീസ് കോർ-എപ്പിസ്കോപ്പ തെങ്ങുംതറയിൽ",
     },
     role: "vicar",
-    years: "2018–19",
   },
   {
     name: {
@@ -150,7 +150,7 @@ const past: { name: { en: string; ml: string }; role: keyof typeof roles; years?
       ml: "റവ. ഫാ. എബ്രഹാം ജോർജ് അനക്കല്ലിൽ",
     },
     role: "vicar",
-    years: "1992–",
+    years: "1992–1992",
   },
   {
     name: {
@@ -170,11 +170,11 @@ const past: { name: { en: string; ml: string }; role: keyof typeof roles; years?
   },
   {
     name: {
-      en: "Rev. Fr. Mathew Samuel Acher Veettil",
-      ml: "റവ. ഫാ. മാത്യു സാമുവൽ അച്ചർ വീട്ടിൽ",
+      en: "Rev. Fr. Mathew Samuel Achen Veettil",
+      ml: "റവ. ഫാ. മാത്യു സാമുവൽ അച്ചൻ വീട്ടിൽ",
     },
     role: "assistant",
-    years: "1999–",
+    years: "1999–1999",
   },
   {
     name: {
@@ -271,7 +271,28 @@ export default async function Page({ params }: PageProps<"/[locale]/administrati
         ml: "ഇടവകയിൽ സേവനം അനുഷ്ഠിച്ച വികാരിമാരും അസിസ്റ്റന്റുമാരും.",
       }}
     >
-      <ul className="mt-6 divide-y divide-maroon/10 rounded-3xl bg-card shadow-[var(--shadow)]">
+      <figure className="mt-6 overflow-hidden rounded-3xl bg-card shadow-[var(--shadow)]">
+        <Image
+          src="/church/former-vicars-poster.jpg"
+          alt={
+            locale === "ml"
+              ? "മുൻ വികാരിമാരുടെ സ്മാരക ചിത്രം"
+              : "Commemorative poster of former vicars of Karoor Palli"
+          }
+          width={730}
+          height={1024}
+          className="mx-auto h-auto w-full max-w-3xl object-contain"
+          priority
+        />
+        <figcaption className="border-t border-maroon/10 px-5 py-3 text-center text-sm text-muted">
+          {locale === "ml" ? "മുൻവികാരിമാർ — ഇടവകാ സ്മാരക പോസ്റ്റർ" : "Former Vicars — parish commemorative poster"}
+        </figcaption>
+      </figure>
+
+      <h2 className="mt-10 font-serif text-2xl text-maroon">
+        {locale === "ml" ? "പേരുകളുടെ പട്ടിക" : "Names"}
+      </h2>
+      <ul className="mt-4 divide-y divide-maroon/10 rounded-3xl bg-card shadow-[var(--shadow)]">
         {past.map((item) => (
           <li key={item.name.en} className="flex items-start justify-between gap-4 px-5 py-4">
             <span>

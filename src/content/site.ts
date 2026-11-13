@@ -439,6 +439,8 @@ export type ParishClergy = {
   name: Localized<string>;
   photo: string;
   late?: boolean;
+  /** Tailwind object-position class, e.g. object-[center_30%] */
+  photoPosition?: string;
 };
 
 export const ourPriests: ParishClergy[] = [
@@ -452,16 +454,16 @@ export const ourPriests: ParishClergy[] = [
   },
   {
     name: { en: "Rev. Fr. P T Thomas", ml: "റവ. ഫാ. പി. ടി. തോമസ്" },
-    photo: priestSamplePhotos[1],
+    photo: "/people/p-t-thomas.jpg",
     late: true,
   },
   {
     name: { en: "Rev. Fr. Roy P Thomas", ml: "റവ. ഫാ. റോയ് പി. തോമസ്" },
-    photo: priestSamplePhotos[2],
+    photo: "/people/roy-p-thomas-v6.jpg",
   },
   {
     name: { en: "Rev. Fr. Scariah Mathew", ml: "റവ. ഫാ. സ്കറിയ മാത്യു" },
-    photo: priestSamplePhotos[3],
+    photo: "/people/scariah-mathew.jpg",
   },
   {
     name: { en: "Rev. Fr. Roy M Philip", ml: "റവ. ഫാ. റോയ് എം. ഫിലിപ്പ്" },
@@ -473,15 +475,15 @@ export const ourPriests: ParishClergy[] = [
   },
   {
     name: { en: "Rev. Fr. Ajin T Thomas", ml: "റവ. ഫാ. അജിൻ ടി. തോമസ്" },
-    photo: priestSamplePhotos[1],
+    photo: "/people/ajin-t-thomas.jpg",
   },
   {
     name: { en: "Rev. Fr. Rijo Sunny", ml: "റവ. ഫാ. റിജോ സണ്ണി" },
-    photo: priestSamplePhotos[2],
+    photo: "/people/rijo-sunny.jpg",
   },
   {
     name: { en: "Rev. Fr. Geevarghese Mathew", ml: "റവ. ഫാ. ഗീവർഗീസ് മാത്യു" },
-    photo: priestSamplePhotos[3],
+    photo: "/people/geevarghese-mathew.jpg",
   },
   {
     name: { en: "Rev. Fr. Renny Rajan", ml: "റവ. ഫാ. റെന്നി രാജൻ" },
@@ -489,18 +491,18 @@ export const ourPriests: ParishClergy[] = [
   },
   {
     name: { en: "Rev. Fr. Cyril Thomas Roy", ml: "റവ. ഫാ. സിറിൽ തോമസ് റോയ്" },
-    photo: priestSamplePhotos[0],
+    photo: "/people/cyril-thomas-roy.jpg",
   },
 ];
 
 export const ourSisters: ParishClergy[] = [
   {
     name: { en: "Sister. Annamma", ml: "സിസ്റ്റർ. അന്നമ്മ" },
-    photo: sisterSamplePhotos[0],
+    photo: "/people/sister-annamma.jpg",
   },
   {
     name: { en: "Sister. Annamma Mathew", ml: "സിസ്റ്റർ. അന്നമ്മ മാത്യു" },
-    photo: sisterSamplePhotos[1],
+    photo: "/people/sister-annamma-mathew-v2.jpg",
   },
 ];
 
@@ -1429,7 +1431,35 @@ const chapelAlt = {
   ml: "വിശുദ്ധ ഗീവർഗീസ് ചാപ്പൽ കൂദാശ",
 };
 
+const afterRenovationAlt = {
+  en: "After Renovation",
+  ml: "നവീകരണത്തിന് ശേഷം",
+};
+
+const newChurch1999Alt = {
+  en: "New Church - 1999",
+  ml: "പുതിയ പള്ളി - 1999",
+};
+
 export const galleryAlbums = [
+  {
+    slug: "after-renovation",
+    title: afterRenovationAlt,
+    images: Array.from({ length: 22 }, (_, index) => ({
+      type: "image" as const,
+      src: `/gallery/after-renovation/${String(index + 1).padStart(2, "0")}.jpg`,
+      alt: afterRenovationAlt,
+    })),
+  },
+  {
+    slug: "new-church-1999",
+    title: newChurch1999Alt,
+    images: Array.from({ length: 8 }, (_, index) => ({
+      type: "image" as const,
+      src: `/gallery/new-church-1999/${String(index + 1).padStart(2, "0")}.jpg`,
+      alt: newChurch1999Alt,
+    })),
+  },
   {
     slug: "st-george-chapel-consecration",
     title: chapelAlt,

@@ -13,7 +13,7 @@ function ClergyCard({ person, locale }: { person: ParishClergy; locale: Locale }
           alt={person.name[locale]}
           width={280}
           height={280}
-          className="mx-auto h-40 w-40 rounded-full object-cover object-top"
+          className={`mx-auto h-40 w-40 rounded-full object-cover ${person.photoPosition ?? "object-center"}`}
         />
       ) : (
         <div className="mx-auto grid h-40 w-40 place-items-center rounded-full bg-maroon text-ivory">
