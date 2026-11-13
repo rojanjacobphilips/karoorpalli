@@ -19,7 +19,7 @@ export default async function Page({ params }: PageProps<"/[locale]/administrati
                 alt={person.name}
                 width={480}
                 height={600}
-                className="h-80 w-full rounded-2xl object-cover object-top"
+                className="h-80 w-full rounded-2xl bg-ivory-deep object-contain object-center"
               />
             ) : (
               <div className="grid h-80 w-full place-items-center rounded-2xl bg-maroon text-ivory">

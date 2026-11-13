@@ -407,7 +407,7 @@ export const officers: Person[] = [
   {
     name: "Mr. Biju M Thomas",
     role: { en: "Parish Trustee", ml: "ഇടവകാ ട്രസ്റ്റി" },
-    photo: "/people/biju-thomas.jpg",
+    photo: "/people/biju-m-thomas-officers.jpg",
     phone: "94468 12130",
     email: "trustee@karoorpally.com",
     bio: { en: "Parish Trustee of St. Peter's Orthodox Church, Karoor.", ml: "സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ ഇടവകാ ട്രസ്റ്റി." },
@@ -415,7 +415,7 @@ export const officers: Person[] = [
   {
     name: "Mr. Joseph T Eapen",
     role: { en: "Secretary", ml: "സെക്രട്ടറി" },
-    photo: "",
+    photo: "/people/joseph-t-eapen.jpg",
     phone: "92072 46186",
     email: "secretary@karoorpally.com",
     bio: { en: "Secretary of St. Peter's Orthodox Church, Karoor.", ml: "സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ സെക്രട്ടറി." },
@@ -2166,22 +2166,19 @@ export const associationMembers: CommitteeMember[] = [
     name: { en: "Mr. Shijin k Mathew", ml: "ശ്രീ.ഷിജിൻ കെ. മാത്യു" },
     role: { en: "Member", ml: "അംഗം" },
     term: "",
-    photo:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    photo: "/people/shijin-k-mathew.jpg",
   },
   {
     name: { en: "Mr. Saju p George", ml: "ശ്രീ.സാജു പി. ജോർജ്" },
     role: { en: "Member", ml: "അംഗം" },
     term: "",
-    photo:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    photo: "/people/saju-p-george.jpg",
   },
   {
     name: { en: "Mr. Mathew Abraham", ml: "ശ്രീ.മാത്യു ഏബ്രഹാം" },
     role: { en: "Member", ml: "അംഗം" },
     term: "",
-    photo:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+    photo: "/people/mathew-abraham.jpg",
   },
 ];
 
@@ -2197,15 +2194,13 @@ export const diocesanCouncilMembers: CommitteeMember[] = [
     name: { en: "Mr. Biju M Thomas", ml: "ശ്രീ.ബിജു എം. തോമസ്" },
     role: { en: "Member", ml: "അംഗം" },
     term: "",
-    photo:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    photo: "/people/biju-m-thomas.jpg",
   },
   {
     name: { en: "Mr. Saji Nianan", ml: "ശ്രീ.സാജി നിയാനൻ" },
     role: { en: "Member", ml: "അംഗം" },
     term: "",
-    photo:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    photo: "/people/saji-nianan.jpg",
   },
 ];
 
