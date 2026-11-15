@@ -19,7 +19,7 @@ function ClergyCard({ person, locale }: { person: ParishClergy; locale: Locale }
         <div className="mx-auto grid h-40 w-40 place-items-center rounded-full bg-maroon text-ivory">
           <span className="font-serif text-3xl">
             {person.name.en
-              .replace(/Very Rev\.|Rev\. Fr\.|Sister\.|Corepiscopa|\(late\)/gi, "")
+              .replace(/Very Rev\.|Rev\. Fr\.|Rev\. Sister\.?|Sister\.|Corepiscopa|\(late\)/gi, "")
               .trim()
               .split(/\s+/)
               .filter(Boolean)

@@ -497,12 +497,12 @@ export const ourPriests: ParishClergy[] = [
 
 export const ourSisters: ParishClergy[] = [
   {
-    name: { en: "Sister. Annamma", ml: "സിസ്റ്റർ. അന്നമ്മ" },
-    photo: "/people/sister-annamma.jpg",
+    name: { en: "Rev. Sister Agusteena", ml: "റവ. സിസ്റ്റർ അഗസ്റ്റീന" },
+    photo: "/people/rev-sister-agusteena.jpg",
   },
   {
-    name: { en: "Sister. Annamma Mathew", ml: "സിസ്റ്റർ. അന്നമ്മ മാത്യു" },
-    photo: "/people/sister-annamma-mathew-v2.jpg",
+    name: { en: "Rev. Sister Hanna", ml: "റവ. സിസ്റ്റർ ഹന്ന" },
+    photo: "/people/rev-sister-hanna.jpg",
   },
 ];
 
