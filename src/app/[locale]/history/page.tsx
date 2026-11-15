@@ -108,22 +108,40 @@ export default async function Page({ params }: PageProps<"/[locale]/history">) {
                     </figure>
                   ) : null}
                   {item.year === "1999" ? (
-                    <figure className="mx-auto w-full max-w-sm shrink-0 sm:mx-0">
-                      <Image
-                        src="/church/new-sanctuary.jpg"
-                        alt={
-                          locale === "ml"
-                            ? "താഴികക്കുടവും മണിഗോപുരവുമുള്ള കാരൂരിലെ പുതിയ ദേവാലയം"
-                            : "The new sanctuary at Karoor, with its dome and bell tower"
-                        }
-                        width={1024}
-                        height={768}
-                        className="h-auto w-full rounded-2xl shadow-[var(--shadow)]"
-                      />
-                      <figcaption className="mt-3 text-center text-sm text-muted">
-                        {locale === "ml" ? "പുതിയ ദേവാലയം" : "The new sanctuary"}
-                      </figcaption>
-                    </figure>
+                    <div className="mx-auto flex w-full max-w-sm shrink-0 flex-col gap-4 sm:mx-0">
+                      <figure className="min-w-0">
+                        <Image
+                          src="/church/new-sanctuary.jpg"
+                          alt={
+                            locale === "ml"
+                              ? "താഴികക്കുടവും മണിഗോപുരവുമുള്ള കാരൂരിലെ പുതിയ ദേവാലയം"
+                              : "The new sanctuary at Karoor, with its dome and bell tower"
+                          }
+                          width={1024}
+                          height={768}
+                          className="h-auto max-h-56 w-full rounded-2xl object-cover shadow-[var(--shadow)]"
+                        />
+                        <figcaption className="mt-2 text-center text-sm text-muted">
+                          {locale === "ml" ? "പുതിയ ദേവാലയം" : "The new sanctuary"}
+                        </figcaption>
+                      </figure>
+                      <figure className="mx-auto w-full max-w-[14rem]">
+                        <Image
+                          src="/church/new-sanctuary-consecration.jpg"
+                          alt={
+                            locale === "ml"
+                              ? "1999-ലെ പുതിയ ദേവാലയ കൂദാശ"
+                              : "Consecration of the new sanctuary, 1999"
+                          }
+                          width={642}
+                          height={1024}
+                          className="h-auto w-full rounded-2xl shadow-[var(--shadow)]"
+                        />
+                        <figcaption className="mt-2 text-center text-sm text-muted">
+                          {locale === "ml" ? "കൂദാശ" : "Consecration"}
+                        </figcaption>
+                      </figure>
+                    </div>
                   ) : null}
                   {item.year === "2018" ? (
                     <div className="mx-auto grid w-full max-w-md shrink-0 grid-cols-2 gap-3 sm:mx-0">

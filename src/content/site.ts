@@ -1441,6 +1441,11 @@ const newChurch1999Alt = {
   ml: "പുതിയ പള്ളി - 1999",
 };
 
+const theNewChurch1999Alt = {
+  en: "1999 - The new church",
+  ml: "1999 - പുതിയ പള്ളി",
+};
+
 export const galleryAlbums = [
   {
     slug: "after-renovation",
@@ -1449,6 +1454,15 @@ export const galleryAlbums = [
       type: "image" as const,
       src: `/gallery/after-renovation/${String(index + 1).padStart(2, "0")}.jpg`,
       alt: afterRenovationAlt,
+    })),
+  },
+  {
+    slug: "1999-the-new-church",
+    title: theNewChurch1999Alt,
+    images: Array.from({ length: 26 }, (_, index) => ({
+      type: "image" as const,
+      src: `/gallery/1999-the-new-church/${String(index + 1).padStart(2, "0")}.jpg`,
+      alt: theNewChurch1999Alt,
     })),
   },
   {
