@@ -74,7 +74,13 @@ export function ParishForm({
       </button>
       {status === "ok" ? (
         <p className="text-sm text-maroon">
-          {locale === "ml" ? "നന്ദി. ഓഫീസ് ബന്ധപ്പെടും." : "Thank you. The parish office will be in touch."}
+          {type === "prayer"
+            ? locale === "ml"
+              ? "നന്ദി. അപേക്ഷ വികാരിക്ക് അയച്ചു."
+              : "Thank you. Your prayer request has been sent to the Vicar."
+            : locale === "ml"
+              ? "നന്ദി. ഓഫീസ് ബന്ധപ്പെടും."
+              : "Thank you. The parish office will be in touch."}
         </p>
       ) : null}
       {status === "error" ? (

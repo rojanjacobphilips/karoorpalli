@@ -14,7 +14,23 @@ Point the domain in Vercel → Project → Settings → Domains. SSL is automati
 
 ## Email
 
-Create `office@karoorpalli.com` and `vicar@karoorpalli.com` on the same domain. Forms currently log on the server; add Resend or SMTP in `src/app/api/forms/route.ts` before launch.
+Create `office@karoorpalli.com` and `vicar@karoorpalli.com` on the same domain.
+
+Forms post to `/api/forms` and are emailed via [Resend](https://resend.com):
+
+1. Create a Resend account and verify `karoorpalli.com` (DNS).
+2. Set env (Vercel + `.env.local`):
+
+| Variable | Value |
+| --- | --- |
+| `RESEND_API_KEY` | from Resend dashboard |
+| `FORM_FROM_EMAIL` | `Karoor Palli <forms@karoorpalli.com>` |
+| `FORM_NOTIFY_EMAIL` | `office@karoorpalli.com` |
+| `PRAYER_NOTIFY_EMAIL` | `vicar@karoorpalli.com` |
+
+`forms@karoorpalli.com` must be allowed as a sender on the verified Resend domain (it does not need a full mailbox).
+
+Prayer requests (`type=prayer`) go only to the Vicar and are never shown on the site.
 
 ## Environment
 

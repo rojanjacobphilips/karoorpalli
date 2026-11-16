@@ -22,7 +22,7 @@ Ask the developer to create these as Sanity roles. Do not give Obituary Editor r
 
 ## Forms
 
-Contact, prayer requests, appointments, event registration, condolences, offerings notices and newsletter signups go to `/api/forms`. Prayer requests are **not** shown on the website. Connect Resend/email in production so `office@karoorpalli.com` and the Vicar receive them.
+Contact, prayer requests, appointments, event registration, condolences, offerings notices and newsletter signups go to `/api/forms`. Prayer requests are emailed privately to `vicar@karoorpalli.com` (or `PRAYER_NOTIFY_EMAIL`) and are **not** shown on the website. Other forms go to `office@karoorpalli.com`. Requires `RESEND_API_KEY` in production.
 
 ## Photographs
 
