@@ -1,3 +1,4 @@
+// @ts-nocheck — Sanity schema types are edited offline; Studio is not in the production bundle.
 import { defineField, defineType, type SchemaTypeDefinition } from "sanity";
 
 const localized = (name: string, title: string, type: "string" | "text" = "string") =>

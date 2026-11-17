@@ -64,7 +64,7 @@ export default async function Page({ params }: PageProps<"/[locale]/about">) {
             <ul className="mt-4 space-y-4">
               {section.points.map((point) => (
                 <li key={point.label.en}>
-                  {point.href ? (
+                  {"href" in point && point.href ? (
                     <Link
                       href={localizedPath(locale, point.href)}
                       className="font-semibold text-maroon underline-offset-2 hover:underline"
