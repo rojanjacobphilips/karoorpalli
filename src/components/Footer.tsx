@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { navigation, parish, ui } from "@/content/site";
+import { NewsletterForm } from "@/components/NewsletterForm";
 import { OrthodoxCross } from "@/components/OrthodoxCross";
 import type { Locale } from "@/lib/i18n";
 import { localizedPath } from "@/lib/i18n";
@@ -84,29 +85,7 @@ export function Footer({ locale }: { locale: Locale }) {
         <div>
           <h2 className="mb-3 font-serif text-xl text-gold">{t(ui.newsletter)}</h2>
           <p className="mb-3 text-sm text-ivory/80">{t(ui.newsletterHint)}</p>
-          <form action="/api/forms" method="post" className="space-y-2">
-            <input type="hidden" name="type" value="newsletter" />
-            <label className="sr-only" htmlFor="newsletter-email">
-              Email
-            </label>
-            <input
-              id="newsletter-email"
-              name="email"
-              type="email"
-              required
-              placeholder="you@email.com"
-              className="w-full rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm"
-            />
-            <p className="hidden" aria-hidden>
-              <label>
-                Company
-                <input name="company" tabIndex={-1} autoComplete="off" />
-              </label>
-            </p>
-            <button type="submit" className="w-full rounded-full bg-gold py-2 text-sm font-semibold text-maroon-deep">
-              {t(ui.subscribe)}
-            </button>
-          </form>
+          <NewsletterForm locale={locale} />
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-4 text-center text-xs text-ivory/70">

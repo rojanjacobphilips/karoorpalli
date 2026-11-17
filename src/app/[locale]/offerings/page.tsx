@@ -39,7 +39,27 @@ export default async function Page({ params }: PageProps<"/[locale]/offerings">)
             fields={[
               { name: "name", label: locale === "ml" ? "പേര്" : "Name", required: true },
               { name: "email", label: "Email", type: "email", required: true },
-              { name: "message", label: locale === "ml" ? "വിഭാഗവും തുകയും" : "Category and amount", textarea: true, required: true },
+              {
+                name: "phone",
+                label: locale === "ml" ? "മൊബൈൽ" : "Mobile",
+                type: "tel",
+              },
+              {
+                name: "whatsapp",
+                label: locale === "ml" ? "വാട്ട്‌സ്ആപ്പ്" : "WhatsApp",
+                type: "tel",
+              },
+              {
+                name: "particulars",
+                label: locale === "ml" ? "വഴിപാട് വിവരങ്ങൾ" : "Particulars of the offering",
+                required: true,
+              },
+              {
+                name: "message",
+                label: locale === "ml" ? "സംഭാവന വിവരങ്ങളും തുകയും" : "Donation details and Amount",
+                textarea: true,
+                required: true,
+              },
             ]}
           />
         </div>

@@ -14,23 +14,31 @@ Point the domain in Vercel → Project → Settings → Domains. SSL is automati
 
 ## Email
 
-Create `office@karoorpalli.com` and `vicar@karoorpalli.com` on the same domain.
+Forms post to `/api/forms` and are sent via Hostinger SMTP (`prayers@karoorpalli.com`).
 
-Forms post to `/api/forms` and are emailed via [Resend](https://resend.com):
-
-1. Create a Resend account and verify `karoorpalli.com` (DNS).
-2. Set env (Vercel + `.env.local`):
+Set env (Vercel + `.env.local`):
 
 | Variable | Value |
 | --- | --- |
-| `RESEND_API_KEY` | from Resend dashboard |
-| `FORM_FROM_EMAIL` | `Karoor Palli <forms@karoorpalli.com>` |
-| `FORM_NOTIFY_EMAIL` | `office@karoorpalli.com` |
+| `SMTP_HOST` | `smtp.hostinger.com` |
+| `SMTP_PORT` | `465` |
+| `SMTP_USER` | `prayers@karoorpalli.com` |
+| `SMTP_PASS` | mailbox password (never commit) |
+| `FORM_FROM_EMAIL` | `Karoor Palli <prayers@karoorpalli.com>` |
+| `FORM_NOTIFY_EMAIL` | `secretary@karoorpalli.com` |
 | `PRAYER_NOTIFY_EMAIL` | `vicar@karoorpalli.com` |
 
-`forms@karoorpalli.com` must be allowed as a sender on the verified Resend domain (it does not need a full mailbox).
+IMAP (optional, for reading mail in a client): `imap.hostinger.com` port `993`.
 
-Prayer requests (`type=prayer`) go only to the Vicar and are never shown on the site.
+Prayer requests (`type=prayer`) go to `PRAYER_NOTIFY_EMAIL` and are never shown on the site. Other forms go to `FORM_NOTIFY_EMAIL`. Offering notices go to `TRUSTEE_NOTIFY_EMAIL`.
+
+## CAPTCHA (Cloudflare Turnstile)
+
+All form emails require Turnstile when keys are set:
+
+1. Create a widget at [Cloudflare Turnstile](https://dash.cloudflare.com/?to=/:account/turnstile) for `karoorpalli.com` (and `localhost` for local testing).
+2. Set `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` in Vercel / `.env.local`.
+3. Restart the app. The widget appears on parish forms and the newsletter signup.
 
 ## Environment
 

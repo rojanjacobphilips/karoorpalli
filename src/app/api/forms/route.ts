@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
+import { createMailTransport, MAIL } from "@/lib/mail";
+import { turnstileEnabled, verifyTurnstileToken } from "@/lib/turnstile";
 
 type FormPayload = Record<string, unknown>;
 
@@ -7,21 +8,21 @@ function asString(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
 }
 
-/** Parish mail defaults — override with env in production. */
-const MAIL = {
-  from: process.env.FORM_FROM_EMAIL || "Karoor Palli <forms@karoorpalli.com>",
-  office: process.env.FORM_NOTIFY_EMAIL || "office@karoorpalli.com",
-  vicar: process.env.PRAYER_NOTIFY_EMAIL || "vicar@karoorpalli.com",
-} as const;
-
 function recipientFor(type: string) {
-  if (type === "prayer") return MAIL.vicar;
+  if (type === "prayer" || type === "appointment") return MAIL.vicar;
+  if (type === "offering") return MAIL.trustee;
   return MAIL.office;
 }
 
 function subjectFor(type: string, name: string) {
   if (type === "prayer") {
     return name ? `Prayer request from ${name}` : "Prayer request";
+  }
+  if (type === "appointment") {
+    return name ? `Appointment request from ${name}` : "Appointment request";
+  }
+  if (type === "offering") {
+    return name ? `Offering notification from ${name}` : "Offering notification";
   }
   if (type === "newsletter") {
     return "Newsletter signup";
@@ -34,12 +35,32 @@ function buildEmailBody(type: string, payload: FormPayload) {
     `Form type: ${type || "unknown"}`,
     `Name: ${asString(payload.name) || "—"}`,
     `Email: ${asString(payload.email) || "—"}`,
-    `Phone: ${asString(payload.phone) || "—"}`,
-    "",
-    asString(payload.message) || "(No message)",
+    `Telephone: ${asString(payload.phone) || "—"}`,
+    `WhatsApp: ${asString(payload.whatsapp) || "—"}`,
   ];
 
-  const skip = new Set(["type", "name", "email", "phone", "message", "company"]);
+  if (asString(payload.particulars)) {
+    lines.push("", "Particulars of the offering:", asString(payload.particulars));
+  }
+
+  lines.push(
+    "",
+    type === "offering" ? "Donation details and Amount:" : "Message:",
+    asString(payload.message) || "(No message)",
+  );
+
+  const skip = new Set([
+    "type",
+    "name",
+    "email",
+    "phone",
+    "whatsapp",
+    "particulars",
+    "message",
+    "company",
+    "captchaToken",
+    "cf-turnstile-response",
+  ]);
   for (const [key, value] of Object.entries(payload)) {
     if (skip.has(key) || value == null || value === "") continue;
     lines.push(`${key}: ${String(value)}`);
@@ -64,6 +85,8 @@ export async function POST(request: Request) {
   const email = asString(payload.email);
   const phone = asString(payload.phone);
   const type = asString(payload.type) || "message";
+  const captchaToken =
+    asString(payload.captchaToken) || asString(payload["cf-turnstile-response"]);
 
   if (!email && !name && !phone) {
     return NextResponse.json({ ok: false }, { status: 400 });
@@ -73,37 +96,41 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "message_required" }, { status: 400 });
   }
 
+  if (turnstileEnabled()) {
+    const ip =
+      request.headers.get("cf-connecting-ip") ||
+      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
+    const ok = await verifyTurnstileToken(captchaToken, ip);
+    if (!ok) {
+      return NextResponse.json({ ok: false, error: "captcha_failed" }, { status: 400 });
+    }
+  } else if (process.env.NODE_ENV === "production" && process.env.TURNSTILE_SECRET_KEY) {
+    return NextResponse.json({ ok: false, error: "captcha_failed" }, { status: 400 });
+  }
+
   const to = recipientFor(type);
   const subject = subjectFor(type, name);
   const text = buildEmailBody(type, payload);
 
   console.info("[karoorpalli form]", type, { name, email, to });
 
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
+  const transport = createMailTransport();
+  if (!transport) {
     if (process.env.NODE_ENV === "production") {
-      console.error("[karoorpalli form] RESEND_API_KEY is not set");
+      console.error("[karoorpalli form] SMTP_PASS is not set");
       return NextResponse.json({ ok: false, error: "mail_not_configured" }, { status: 503 });
     }
-    // Local/dev: accept without sending so the form flow can be tested.
     return NextResponse.json({ ok: true, delivered: false });
   }
 
-  const resend = new Resend(apiKey);
-
   try {
-    const { error } = await resend.emails.send({
+    await transport.sendMail({
       from: MAIL.from,
-      to: [to],
+      to,
       replyTo: email || undefined,
       subject,
       text,
     });
-
-    if (error) {
-      console.error("[karoorpalli form] resend error", error);
-      return NextResponse.json({ ok: false }, { status: 502 });
-    }
   } catch (err) {
     console.error("[karoorpalli form] send failed", err);
     return NextResponse.json({ ok: false }, { status: 502 });

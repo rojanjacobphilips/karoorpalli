@@ -41,7 +41,7 @@ export const parish = {
     ml: ["സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി", "കാരൂർ, ഇലന്തൂർ പി.ഒ.", "പത്തനംതിട്ട, കേരളം 689643"],
   } satisfies Localized<string[]>,
   phone: "+91 94005 62009",
-  email: "office@karoorpalli.com",
+  email: "secretary@karoorpalli.com",
   whatsapp: "919400562009",
   mapsQuery: "Karoor Elanthoor Pathanamthitta Orthodox Church",
   mapsEmbed:
@@ -409,7 +409,7 @@ export const officers: Person[] = [
     role: { en: "Parish Trustee", ml: "ഇടവകാ ട്രസ്റ്റി" },
     photo: "/people/biju-m-thomas-officers.jpg",
     phone: "94468 12130",
-    email: "trustee@karoorpally.com",
+    email: "trustee@karoorpalli.com",
     bio: { en: "Parish Trustee of St. Peter's Orthodox Church, Karoor.", ml: "സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ ഇടവകാ ട്രസ്റ്റി." },
   },
   {
@@ -417,7 +417,7 @@ export const officers: Person[] = [
     role: { en: "Secretary", ml: "സെക്രട്ടറി" },
     photo: "/people/joseph-t-eapen.jpg",
     phone: "92072 46186",
-    email: "secretary@karoorpally.com",
+    email: "secretary@karoorpalli.com",
     bio: { en: "Secretary of St. Peter's Orthodox Church, Karoor.", ml: "സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ സെക്രട്ടറി." },
   },
 ];
@@ -2542,7 +2542,7 @@ export const pagesCopy = {
   privacy: {
     title: { en: "Privacy policy", ml: "സ്വകാര്യതാ നയം" },
     body: {
-      en: "Karoor Palli collects only what is needed to answer forms, process offerings and send newsletters you requested. Prayer requests are visible only to the Vicar and authorised clergy. We do not sell personal data. Analytics, if accepted via the cookie banner, is anonymised (Google Analytics 4). You may email office@karoorpalli.com to access or delete your data.",
+      en: "Karoor Palli collects only what is needed to answer forms, process offerings and send newsletters you requested. Prayer requests are visible only to the Vicar and authorised clergy. We do not sell personal data. Analytics, if accepted via the cookie banner, is anonymised (Google Analytics 4). You may email secretary@karoorpalli.com to access or delete your data.",
       ml: "ഫോമുകൾക്കും വഴിപാടുകൾക്കും നിങ്ങൾ ആവശ്യപ്പെട്ട വാർത്താപത്രത്തിനും വേണ്ടി മാത്രമേ വിവരങ്ങൾ ശേഖരിക്കൂ. പ്രാർത്ഥനാ അപേക്ഷകൾ വികാരിക്ക് മാത്രം ദൃശ്യമാണ്.",
     },
   },

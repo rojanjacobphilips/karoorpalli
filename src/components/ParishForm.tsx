@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import type { Locale } from "@/lib/i18n";
 import { ui } from "@/content/site";
+import { Captcha, resetCaptcha } from "@/components/Captcha";
 
 type Field = {
   name: string;
@@ -21,22 +22,40 @@ export function ParishForm({
   type: string;
   fields: Field[];
 }) {
-  const [status, setStatus] = useState<"idle" | "ok" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "ok" | "error" | "captcha">("idle");
+  const [captchaToken, setCaptchaToken] = useState("");
+  const captchaRequired = Boolean(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY);
+  const onToken = useCallback((token: string) => setCaptchaToken(token), []);
 
   return (
     <form
       className="space-y-4"
       onSubmit={async (e) => {
         e.preventDefault();
+        if (captchaRequired && !captchaToken) {
+          setStatus("captcha");
+          return;
+        }
         const form = e.currentTarget;
         const data = Object.fromEntries(new FormData(form).entries());
         const res = await fetch("/api/forms", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ type, ...data }),
+          body: JSON.stringify({
+            type,
+            ...data,
+            captchaToken,
+          }),
         });
         setStatus(res.ok ? "ok" : "error");
-        if (res.ok) form.reset();
+        if (res.ok) {
+          form.reset();
+          setCaptchaToken("");
+          resetCaptcha();
+        } else {
+          resetCaptcha();
+          setCaptchaToken("");
+        }
       }}
     >
       <input type="hidden" name="type" value={type} />
@@ -66,6 +85,7 @@ export function ParishForm({
           )}
         </label>
       ))}
+      <Captcha onToken={onToken} />
       <button
         type="submit"
         className="rounded-full bg-maroon px-6 py-3 font-semibold text-ivory"
@@ -81,6 +101,13 @@ export function ParishForm({
             : locale === "ml"
               ? "നന്ദി. ഓഫീസ് ബന്ധപ്പെടും."
               : "Thank you. The parish office will be in touch."}
+        </p>
+      ) : null}
+      {status === "captcha" ? (
+        <p className="text-sm text-maroon-soft">
+          {locale === "ml"
+            ? "ദയവായി ക്യാപ്‌ച പൂർത്തിയാക്കുക."
+            : "Please complete the captcha before sending."}
         </p>
       ) : null}
       {status === "error" ? (

@@ -50,6 +50,11 @@ export default async function Page({ params }: PageProps<"/[locale]/vicar">) {
               { name: "email", label: "Email", type: "email", required: true },
               { name: "phone", label: locale === "ml" ? "ഫോൺ" : "Phone", required: true },
               {
+                name: "whatsapp",
+                label: locale === "ml" ? "വാട്ട്‌സ്ആപ്പ്" : "WhatsApp",
+                type: "tel",
+              },
+              {
                 name: "message",
                 label: locale === "ml" ? "ആവശ്യം" : "Reason for visit",
                 textarea: true,

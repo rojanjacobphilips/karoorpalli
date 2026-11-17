@@ -21,6 +21,16 @@ export default async function Page({ params }: PageProps<"/[locale]/prayer-reque
             { name: "name", label: locale === "ml" ? "പേര്" : "Name", required: true },
             { name: "email", label: "Email", type: "email" },
             {
+              name: "phone",
+              label: locale === "ml" ? "ടെലിഫോൺ" : "Telephone",
+              type: "tel",
+            },
+            {
+              name: "whatsapp",
+              label: locale === "ml" ? "വാട്ട്‌സ്ആപ്പ്" : "WhatsApp",
+              type: "tel",
+            },
+            {
               name: "message",
               label: locale === "ml" ? "പ്രാർത്ഥനാ ഉദ്ദേശ്യം" : "Prayer intention",
               textarea: true,
