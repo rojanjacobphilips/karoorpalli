@@ -126,6 +126,10 @@ export const navigation: NavItem[] = [
     children: [
       { href: "/news", label: { en: "News", ml: "വാർത്തകൾ" } },
       { href: "/our-priests", label: { en: "Our Priests", ml: "നമ്മുടെ വൈദികർ" } },
+      {
+        href: "/chapels-and-shrines",
+        label: { en: "Chapels and shrines", ml: "കപ്പേളകളും പുണ്യസ്ഥലങ്ങളും" },
+      },
       { href: "/events", label: { en: "Events", ml: "പരിപാടികൾ" } },
       { href: "/gallery", label: { en: "Image Gallery", ml: "ചിത്രശാല" } },
       { href: "/videos", label: { en: "Video Gallery", ml: "വീഡിയോ" } },
@@ -2539,6 +2543,13 @@ export const pagesCopy = {
       ml: "ഇടവകാ ശ്മശാനം ഭരണസമിതിയുടെ മേൽനോട്ടത്തിലാണ്. സംസ്കാരം ഭദ്രാസന-സിവിൽ നിയമങ്ങൾക്ക് വിധേയം. വികാരിയെയും ട്രസ്റ്റിയെയും ബന്ധപ്പെടുക.",
     },
   },
+  chapelsAndShrines: {
+    title: { en: "Chapels and shrines", ml: "കപ്പേളകളും പുണ്യസ്ഥലങ്ങളും" },
+    body: {
+      en: "Details of chapels and shrines connected with Karoor Palli will be shared here — including St. George Chapel and other prayer places under the parish. Photographs, feast days and visiting notes will follow as they are confirmed by the parish office.",
+      ml: "കാരൂർ പള്ളിയുമായി ബന്ധപ്പെട്ട കപ്പേളകളുടെയും പുണ്യസ്ഥലങ്ങളുടെയും വിവരങ്ങൾ ഇവിടെ ലഭ്യമാകും — വിശുദ്ധ ഗീവർഗീസ് കപ്പേളയും ഇടവകയുടെ മറ്റ് പ്രാർത്ഥനാ സ്ഥലങ്ങളും ഉൾപ്പെടെ. ഫോട്ടോകളും തിരുനാൾ ദിനങ്ങളും സന്ദർശന കുറിപ്പുകളും ഇടവകാ ഓഫീസ് സ്ഥിരീകരിച്ചതിന് ശേഷം ചേർക്കും.",
+    },
+  },
   privacy: {
     title: { en: "Privacy policy", ml: "സ്വകാര്യതാ നയം" },
     body: {
@@ -2571,6 +2582,10 @@ export const searchIndex = [
   },
   { href: "/news", title: { en: "News", ml: "വാർത്തകൾ" } },
   { href: "/our-priests", title: { en: "Our Priests", ml: "നമ്മുടെ വൈദികർ" } },
+  {
+    href: "/chapels-and-shrines",
+    title: { en: "Chapels and shrines", ml: "കപ്പേളകളും പുണ്യസ്ഥലങ്ങളും" },
+  },
   { href: "/events", title: { en: "Events", ml: "പരിപാടികൾ" } },
   { href: "/obituary", title: { en: "Obituary", ml: "അനുസ്മരണം" } },
   { href: "/offerings", title: { en: "Online offerings", ml: "ഓൺലൈൻ വഴിപാട്" } },

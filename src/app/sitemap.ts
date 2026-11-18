@@ -23,6 +23,7 @@ const paths = [
   "/organisations",
   "/news",
   "/our-priests",
+  "/chapels-and-shrines",
   "/events",
   "/obituary",
   "/gallery",
