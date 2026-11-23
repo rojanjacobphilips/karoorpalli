@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { logoutAction } from "@/app/admin/actions";
 import { isAdminAuthenticated } from "@/lib/admin-auth";
 
 const nav = [
@@ -21,7 +20,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             <h1 className="font-serif text-2xl text-maroon">Parish admin</h1>
           </div>
           {signedIn ? (
-            <form action={logoutAction}>
+            <form action="/api/admin/logout" method="post">
               <button type="submit" className="rounded-full border border-maroon px-4 py-2 text-sm text-maroon">
                 Sign out
               </button>

@@ -16,9 +16,10 @@ export function signAdminSession() {
 }
 
 export function verifyAdminPassword(password: string) {
-  const expected = process.env.ADMIN_PASSWORD;
+  const expected = process.env.ADMIN_PASSWORD?.trim();
   if (!expected) return false;
-  const a = Buffer.from(password);
+  const provided = password.trim();
+  const a = Buffer.from(provided);
   const b = Buffer.from(expected);
   if (a.length !== b.length) return false;
   return timingSafeEqual(a, b);

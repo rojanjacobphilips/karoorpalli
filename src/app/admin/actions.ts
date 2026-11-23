@@ -1,14 +1,8 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import {
-  ADMIN_COOKIE,
-  isAdminAuthenticated,
-  signAdminSession,
-  verifyAdminPassword,
-} from "@/lib/admin-auth";
+import { isAdminAuthenticated } from "@/lib/admin-auth";
 import { getWriteClient, slugify } from "@/sanity/lib/write-client";
 
 async function requireAdmin() {
@@ -19,28 +13,6 @@ async function requireAdmin() {
 
 function localized(en: string, ml: string) {
   return { en: en.trim(), ml: (ml.trim() || en).trim() };
-}
-
-export async function loginAction(formData: FormData) {
-  const password = String(formData.get("password") || "");
-  if (!verifyAdminPassword(password)) {
-    redirect("/admin/login?error=1");
-  }
-  const jar = await cookies();
-  jar.set(ADMIN_COOKIE, signAdminSession(), {
-    httpOnly: true,
-    sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
-    path: "/",
-    maxAge: 60 * 60 * 12,
-  });
-  redirect("/admin");
-}
-
-export async function logoutAction() {
-  const jar = await cookies();
-  jar.delete(ADMIN_COOKIE);
-  redirect("/admin/login");
 }
 
 export async function saveEventAction(formData: FormData) {
