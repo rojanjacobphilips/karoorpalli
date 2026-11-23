@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: "*", allow: "/", disallow: ["/studio", "/api"] },
+    rules: { userAgent: "*", allow: "/", disallow: ["/studio", "/admin", "/api"] },
     sitemap: "https://karoorpalli.com/sitemap.xml",
   };
 }

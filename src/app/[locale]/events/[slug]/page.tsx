@@ -2,13 +2,14 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ParishForm } from "@/components/ParishForm";
 import { SimplePage } from "@/components/SimplePage";
-import { events, parish, ui } from "@/content/site";
+import { getEventBySlug } from "@/content/cms";
+import { parish, ui } from "@/content/site";
 import { isLocale } from "@/lib/i18n";
 
 export default async function Page({ params }: PageProps<"/[locale]/events/[slug]">) {
   const { locale, slug } = await params;
   if (!isLocale(locale)) notFound();
-  const item = events.find((entry) => entry.slug === slug);
+  const item = await getEventBySlug(slug);
   if (!item) notFound();
   const start = item.date.replace(/-/g, "");
   const calendar = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(item.title.en)}&dates=${start}/${start}&details=${encodeURIComponent(item.excerpt.en)}&location=${encodeURIComponent(parish.location.en)}`;

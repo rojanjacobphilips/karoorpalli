@@ -2,13 +2,13 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ParishForm } from "@/components/ParishForm";
 import { SimplePage } from "@/components/SimplePage";
-import { obituaries } from "@/content/site";
+import { getObituaryBySlug } from "@/content/cms";
 import { isLocale } from "@/lib/i18n";
 
 export default async function Page({ params }: PageProps<"/[locale]/obituary/[slug]">) {
   const { locale, slug } = await params;
   if (!isLocale(locale)) notFound();
-  const item = obituaries.find((entry) => entry.slug === slug);
+  const item = await getObituaryBySlug(slug);
   if (!item) notFound();
   return (
     <SimplePage locale={locale} title={item.name}>

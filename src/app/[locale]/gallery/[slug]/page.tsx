@@ -2,13 +2,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { SimplePage } from "@/components/SimplePage";
-import { galleryAlbums } from "@/content/site";
+import { getGalleryAlbumBySlug } from "@/content/cms";
 import { isLocale, localizedPath } from "@/lib/i18n";
 
 export default async function Page({ params }: PageProps<"/[locale]/gallery/[slug]">) {
   const { locale, slug } = await params;
   if (!isLocale(locale)) notFound();
-  const album = galleryAlbums.find((entry) => entry.slug === slug);
+  const album = await getGalleryAlbumBySlug(slug);
   if (!album) notFound();
   const videoOnly = album.images.every((item) => item.type === "video");
 

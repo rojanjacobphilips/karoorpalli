@@ -1,9 +1,10 @@
 import { SimplePage } from "@/components/SimplePage";
-import { videos } from "@/content/site";
+import { getVideos } from "@/content/cms";
 import { requireLocale } from "@/lib/locale-page";
 
 export default async function Page({ params }: PageProps<"/[locale]/videos">) {
   const locale = await requireLocale(params);
+  const videos = await getVideos();
   return (
     <SimplePage
       locale={locale}
@@ -16,7 +17,7 @@ export default async function Page({ params }: PageProps<"/[locale]/videos">) {
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         {videos.map((video) => (
           <figure key={video.id} className="overflow-hidden rounded-3xl bg-card shadow-[var(--shadow)]">
-            {"youtube" in video && video.youtube ? (
+            {video.youtube ? (
               <iframe
                 title={video.title[locale]}
                 src={`https://www.youtube.com/embed/${video.youtube}`}
@@ -24,7 +25,7 @@ export default async function Page({ params }: PageProps<"/[locale]/videos">) {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
-            ) : "src" in video && video.src ? (
+            ) : video.src ? (
               <video
                 src={video.src}
                 controls
@@ -33,7 +34,7 @@ export default async function Page({ params }: PageProps<"/[locale]/videos">) {
                 aria-label={video.title[locale]}
                 className="aspect-video w-full bg-maroon-deep object-contain"
               />
-            ) : "facebook" in video && video.facebook ? (
+            ) : video.facebook ? (
               <div className="flex aspect-video items-center justify-center bg-maroon-deep">
                 <iframe
                   title={video.title[locale]}

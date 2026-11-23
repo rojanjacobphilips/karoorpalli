@@ -1,6 +1,7 @@
+"use client";
+
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
-import { visionTool } from "@sanity/vision";
 import { schemaTypes } from "./src/sanity/schemaTypes";
 import { dataset, projectId } from "./src/sanity/env";
 
@@ -31,7 +32,6 @@ export default defineConfig({
             S.documentTypeListItem("organisation").title("Organisations"),
           ]),
     }),
-    visionTool(),
   ],
   schema: { types: schemaTypes },
 });

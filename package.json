@@ -13,7 +13,10 @@
     "@sanity/vision": "^6.21.0",
     "clsx": "^2.1.1",
     "dequal": "^2.0.3",
+    "emoji-regex": "^11.0.0",
+    "exif-component": "^1.0.1",
     "lucide-react": "^1.64.0",
+    "motion": "^14.14.0",
     "next": "^16.4.6",
     "next-sanity": "^13.4.0",
     "nodemailer": "^10.6.0",
@@ -21,6 +24,7 @@
     "react-dom": "^19.3.1",
     "reselect": "^5.3.0",
     "sanity": "^6.21.0",
+    "styled-components": "^6.6.0",
     "zustand": "^5.1.0"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { galleryAlbums } from "@/content/site";
+import { getGalleryAlbums } from "@/content/cms";
 import { locales } from "@/lib/i18n";
 
 const paths = [
@@ -27,7 +27,6 @@ const paths = [
   "/events",
   "/obituary",
   "/gallery",
-  ...galleryAlbums.map((album) => `/gallery/${album.slug}`),
   "/videos",
   "/downloads",
   "/sacraments",
@@ -42,10 +41,12 @@ const paths = [
   "/terms",
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = "https://karoorpalli.com";
+  const albums = await getGalleryAlbums();
+  const allPaths = [...paths, ...albums.map((album) => `/gallery/${album.slug}`)];
   return locales.flatMap((locale) =>
-    paths.map((path) => ({
+    allPaths.map((path) => ({
       url: `${base}/${locale}${path}`,
       changeFrequency: path === "" ? "daily" : "weekly",
       priority: path === "" ? 1 : 0.7,

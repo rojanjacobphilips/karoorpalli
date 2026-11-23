@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SimplePage } from "@/components/SimplePage";
-import { galleryAlbums } from "@/content/site";
+import { getGalleryAlbums } from "@/content/cms";
 import { localizedPath } from "@/lib/i18n";
 import { requireLocale } from "@/lib/locale-page";
 
 export default async function Page({ params }: PageProps<"/[locale]/gallery">) {
   const locale = await requireLocale(params);
+  const galleryAlbums = await getGalleryAlbums();
   return (
     <SimplePage
       locale={locale}

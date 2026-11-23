@@ -1,6 +1,27 @@
 # Admin guide for church staff
 
-The public website is edited in **Sanity Studio** at `https://karoorpalli.com/studio` (after the developer connects a Sanity project). Until then, a developer updates `src/content/site.ts`.
+Parish staff edit **Events, Gallery, Videos, and Obituaries** in the in-app admin at `/admin` (local: `http://localhost:3000/admin`, live: `https://karoorpalli.com/admin`).
+
+Sign in with `ADMIN_PASSWORD`. Saving content also needs `SANITY_API_WRITE_TOKEN` (Sanity → API → Tokens → Editor). Schemas live in `src/sanity/schemaTypes`.
+
+Until the project ID is set, those pages keep using the bilingual fallback in `src/content/site.ts`.
+
+## Connect Sanity (one-time, developer)
+
+1. Create a free project at [sanity.io/manage](https://www.sanity.io/manage) named **Karoor Palli**, dataset `production`.
+2. Copy the project ID into `.env.local` and Hostinger Node env:
+
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=yourProjectId
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2024-10-01
+```
+
+3. In Sanity manage → API → CORS origins, allow `http://localhost:3000` and `https://karoorpalli.com` (Allow credentials).
+4. Deploy or sync the schema from this repo (`sanity schema deploy` / Studio with this `sanity.config.ts`), then invite editors.
+5. Restart the app after env changes.
+
+When a content type has **at least one published document** in Sanity, that type’s page uses CMS data. Empty types keep the site.ts fallback so the live site never goes blank.
 
 ## Roles
 
