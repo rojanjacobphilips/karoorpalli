@@ -2546,8 +2546,8 @@ export const pagesCopy = {
   chapelsAndShrines: {
     title: { en: "Chapels and shrines", ml: "കപ്പേളകളും പുണ്യസ്ഥലങ്ങളും" },
     body: {
-      en: "Details of chapels and shrines connected with Karoor Palli will be shared here — including St. George Chapel and other prayer places under the parish. Photographs, feast days and visiting notes will follow as they are confirmed by the parish office.",
-      ml: "കാരൂർ പള്ളിയുമായി ബന്ധപ്പെട്ട കപ്പേളകളുടെയും പുണ്യസ്ഥലങ്ങളുടെയും വിവരങ്ങൾ ഇവിടെ ലഭ്യമാകും — വിശുദ്ധ ഗീവർഗീസ് കപ്പേളയും ഇടവകയുടെ മറ്റ് പ്രാർത്ഥനാ സ്ഥലങ്ങളും ഉൾപ്പെടെ. ഫോട്ടോകളും തിരുനാൾ ദിനങ്ങളും സന്ദർശന കുറിപ്പുകളും ഇടവകാ ഓഫീസ് സ്ഥിരീകരിച്ചതിന് ശേഷം ചേർക്കും.",
+      en: "Prayer places under the care of St. Peter's Orthodox Church, Karoor.",
+      ml: "സെന്റ് പീറ്റേഴ്‌സ് ഓർത്തഡോക്സ് പള്ളി, കാരൂരിന്റെ കീഴിലുള്ള പ്രാർത്ഥനാ സ്ഥലങ്ങൾ.",
     },
   },
   privacy: {
@@ -2565,6 +2565,69 @@ export const pagesCopy = {
     },
   },
 };
+
+export const parishChapels = [
+  {
+    name: { en: "St. George Chapel, Pariyaram", ml: "വിശുദ്ധ ഗീവർഗീസ് കപ്പേള, പരിയാരം" },
+    place: { en: "Pariyaram", ml: "പരിയാരം" },
+    image: "/chapels/st-george-pariyaram.jpg",
+    imageAlt: {
+      en: "St. George Chapel, Pariyaram — consecration",
+      ml: "വിശുദ്ധ ഗീവർഗീസ് കപ്പേള, പരിയാരം — കൂദാശ",
+    },
+  },
+];
+
+export const formerChapels = [
+  {
+    name: {
+      en: "St. Gregorios Chapel, Variyapuram",
+      ml: "വിശുദ്ധ ഗ്രീഗോറിയോസ് കപ്പേള, വരിയാപുരം",
+    },
+    place: { en: "Variyapuram", ml: "വരിയാപുരം" },
+    note: {
+      en: "Formerly a chapel of Karoor Palli. It is now an independent church — St. Gregorios Orthodox Syrian Church, Variyapuram.",
+      ml: "മുമ്പ് കാരൂർ പള്ളിയുടെ കപ്പേളയായിരുന്നു. ഇപ്പോൾ സ്വതന്ത്ര ദേവാലയമാണ് — വിശുദ്ധ ഗ്രീഗോറിയോസ് ഓർത്തഡോക്സ് സുറിയാനി പള്ളി, വരിയാപുരം.",
+    },
+    oldImage: "/chapels/st-gregorios-variyapuram-old.jpg",
+    oldImageAlt: {
+      en: "St. Gregorios Chapel, Variyapuram — earlier view",
+      ml: "വിശുദ്ധ ഗ്രീഗോറിയോസ് കപ്പേള, വരിയാപുരം — പഴയ ദൃശ്യം",
+    },
+    // Replace this file when a current photo is ready
+    currentImage: "" as string,
+    currentImageAlt: {
+      en: "St. Gregorios Orthodox Syrian Church, Variyapuram — today",
+      ml: "വിശുദ്ധ ഗ്രീഗോറിയോസ് ഓർത്തഡോക്സ് സുറിയാനി പള്ളി, വരിയാപുരം — ഇന്ന്",
+    },
+  },
+];
+
+export const parishShrines = [
+  {
+    name: { en: "Palli bhagam", ml: "പള്ളി ഭാഗം" },
+    image: "/shrines/palli-bhagam.jpg",
+  },
+  {
+    name: { en: "St. Gregorios Shrine, Areekkal", ml: "വിശുദ്ധ ഗ്രീഗോറിയോസ് ശ്രൈൻ, അരീക്കൽ" },
+    image: "/shrines/st-gregorios-areekkal.jpg",
+  },
+  {
+    name: {
+      en: "St. Gregorios Shrine, Market Junction",
+      ml: "വിശുദ്ധ ഗ്രീഗോറിയോസ് ശ്രൈൻ, മാർക്കറ്റ് ജംഗ്ഷൻ",
+    },
+    image: "/shrines/st-gregorios-market-junction.jpg",
+  },
+  {
+    name: { en: "St. Mary's Shrine, Vadakke bhagam", ml: "വിശുദ്ധ മറിയത്തിന്റെ ശ്രൈൻ, വടക്കേ ഭാഗം" },
+    image: "/shrines/st-marys-vadakke-bhagam.jpg",
+  },
+  {
+    name: { en: "St. Thomas Shrine, Kochethu Bhagam", ml: "വിശുദ്ധ തോമസ് ശ്രൈൻ, കൊച്ചേത്ത് ഭാഗം" },
+    image: "/shrines/st-thomas-kochethu-bhagam.jpg",
+  },
+];
 
 export const searchIndex = [
   { href: "/about", title: { en: "About the parish", ml: "ഇടവകയെക്കുറിച്ച്" } },
