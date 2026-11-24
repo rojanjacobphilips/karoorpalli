@@ -59,31 +59,40 @@ export default async function Page({ params }: PageProps<"/[locale]/chapels-and-
               <p className="mt-1 text-sm text-gold">{chapel.place[locale]}</p>
               <p className="mt-3 text-muted">{chapel.note[locale]}</p>
 
-              <div className="mt-6 grid gap-6 sm:grid-cols-2">
-                <div>
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold">
-                    {locale === "ml" ? "പഴയ ചിത്രം" : "Old photo"}
-                  </p>
+              <div className="mt-6">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold">
+                  {locale === "ml" ? "പഴയ ചിത്രം" : "Old photo"}
+                </p>
+                <div className="max-w-xl">
                   <PhotoFrame
                     src={chapel.oldImage}
                     alt={chapel.oldImageAlt[locale]}
                     emptyLabel={photoSoon}
                   />
                 </div>
-                <div>
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold">
-                    {locale === "ml" ? "ഇപ്പോഴത്തെ ചിത്രം" : "Current photo"}
-                  </p>
+              </div>
+
+              <div className="mt-8">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold">
+                  {locale === "ml" ? "ഇപ്പോഴത്തെ ചിത്രങ്ങൾ" : "Current photos"}
+                </p>
+                {chapel.currentImages.length ? (
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {chapel.currentImages.map((photo) => (
+                      <PhotoFrame key={photo.src} src={photo.src} alt={photo.alt[locale]} emptyLabel={photoSoon} />
+                    ))}
+                  </div>
+                ) : (
                   <PhotoFrame
-                    src={chapel.currentImage || undefined}
-                    alt={chapel.currentImageAlt[locale]}
+                    src={undefined}
+                    alt=""
                     emptyLabel={
                       locale === "ml"
                         ? "ഇപ്പോഴത്തെ ദേവാലയ ചിത്രം ചേർക്കുക"
                         : "Add current church photo"
                     }
                   />
-                </div>
+                )}
               </div>
             </article>
           ))}

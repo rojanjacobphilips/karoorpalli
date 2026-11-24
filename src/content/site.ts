@@ -2594,12 +2594,36 @@ export const formerChapels = [
       en: "St. Gregorios Chapel, Variyapuram — earlier view",
       ml: "വിശുദ്ധ ഗ്രീഗോറിയോസ് കപ്പേള, വരിയാപുരം — പഴയ ദൃശ്യം",
     },
-    // Replace this file when a current photo is ready
-    currentImage: "" as string,
-    currentImageAlt: {
-      en: "St. Gregorios Orthodox Syrian Church, Variyapuram — today",
-      ml: "വിശുദ്ധ ഗ്രീഗോറിയോസ് ഓർത്തഡോക്സ് സുറിയാനി പള്ളി, വരിയാപുരം — ഇന്ന്",
-    },
+    currentImages: [
+      {
+        src: "/chapels/st-gregorios-variyapuram-current.jpg",
+        alt: {
+          en: "St. Gregorios Orthodox Syrian Church, Variyapuram — today",
+          ml: "വിശുദ്ധ ഗ്രീഗോറിയോസ് ഓർത്തഡോക്സ് സുറിയാനി പള്ളി, വരിയാപുരം — ഇന്ന്",
+        },
+      },
+      {
+        src: "/chapels/st-gregorios-variyapuram-current-2.jpg",
+        alt: {
+          en: "St. Gregorios Orthodox Syrian Church, Variyapuram — front view",
+          ml: "വിശുദ്ധ ഗ്രീഗോറിയോസ് ഓർത്തഡോക്സ് സുറിയാനി പള്ളി, വരിയാപുരം — മുൻവശം",
+        },
+      },
+      {
+        src: "/chapels/st-gregorios-variyapuram-current-3.jpg",
+        alt: {
+          en: "Variyapuram — shrine and church grounds today",
+          ml: "വരിയാപുരം — ശ്രൈനും ദേവാലയ മുറ്റവും ഇന്ന്",
+        },
+      },
+      {
+        src: "/chapels/st-gregorios-variyapuram-current-4.jpg",
+        alt: {
+          en: "St. Gregorios Orthodox Church, Pallipad, Variyapuram",
+          ml: "വിശുദ്ധ ഗ്രീഗോറിയോസ് ഓർത്തഡോക്സ് പള്ളി, പള്ളിപ്പാട്, വരിയാപുരം",
+        },
+      },
+    ],
   },
 ];
 
