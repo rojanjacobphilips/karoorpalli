@@ -4,6 +4,18 @@ Parish staff edit **Events, Gallery, Videos, and Obituaries** in the in-app admi
 
 Sign in with `ADMIN_PASSWORD`. Saving content also needs `SANITY_API_WRITE_TOKEN` (Sanity → API → Tokens → Editor). Schemas live in `src/sanity/schemaTypes`.
 
+On Hostinger, set at least:
+
+```
+ADMIN_PASSWORD=your-password
+NEXT_PUBLIC_SITE_URL=https://karoorpalli.com
+SANITY_API_WRITE_TOKEN=...
+NEXT_PUBLIC_SANITY_PROJECT_ID=ho1o1388
+NEXT_PUBLIC_SANITY_DATASET=production
+```
+
+Then rebuild/restart the Node app. Without `ADMIN_PASSWORD`, login shows a config error; without `NEXT_PUBLIC_SITE_URL`, redirects can break behind the proxy.
+
 Until the project ID is set, those pages keep using the bilingual fallback in `src/content/site.ts`.
 
 ## Connect Sanity (one-time, developer)
