@@ -306,16 +306,16 @@ export const heroSlides: HeroSlide[] = [
 
 export const announcements: Localized<string>[] = [
   {
-    en: "Next feast: St. Peter the Apostle — 29 June · Holy Qurbana 7:00 AM",
-    ml: "അടുത്ത തിരുനാൾ: വിശുദ്ധ പത്രോസ് — ജൂൺ 29 · വിശുദ്ധ കുർബാന 7:00 AM",
+    en: "Evening Prayers at 6:30 PM every day.",
+    ml: "എല്ലാ ദിവസവും വൈകിട്ട് 6:30-ന് സന്ധ്യാ പ്രാർത്ഥന.",
   },
   {
-    en: "Special Evening Prayer this Friday at 6:30 PM in memory of the faithful departed.",
-    ml: "ഈ വെള്ളിയാഴ്ച 6:30 PM-ന് മരിച്ചവർക്കുവേണ്ടി പ്രത്യേക സന്ധ്യാ പ്രാർത്ഥന.",
+    en: "Evening Prayer and Intercessory Prayer to St. Mary every Tuesday at 6:30 PM.",
+    ml: "ഓരോ ചൊവ്വാഴ്ചയും വൈകിട്ട് 6:30-ന് സന്ധ്യാ പ്രാർത്ഥനയും വിശുദ്ധ മറിയത്തോടുള്ള മദ്ധ്യസ്ഥ പ്രാർത്ഥനയും.",
   },
   {
-    en: "Sunday School reopens after the monsoon break — registration forms in Downloads.",
-    ml: "മഴക്കാല അവധിക്കുശേഷം സൺഡേ സ്കൂൾ ആരംഭിക്കുന്നു — ഫോമുകൾ ഡൗൺലോഡുകളിൽ.",
+    en: "Morning Prayers at 7:00 am and Holy Qurbana at 8:00 am on every Sunday.",
+    ml: "ഓരോ ഞായറാഴ്ചയും രാവിലെ 7:00-ന് പ്രഭാത പ്രാർത്ഥനയും 8:00-ന് വിശുദ്ധ കുർബാനയും.",
   },
 ];
 
@@ -328,11 +328,17 @@ export const timings = {
   items: [
     {
       title: { en: "Holy Qurbana", ml: "വിശുദ്ധ കുർബാന" },
-      detail: { en: "Sundays 7:00 AM · Feast days as announced", ml: "ഞായറാഴ്ച 7:00 AM · തിരുനാളുകൾ പ്രഖ്യാപനം അനുസരിച്ച്" },
+      detail: {
+        en: "Sundays: Morning Prayers 7:00 AM · Holy Qurbana 8:00 AM · Feast days as announced",
+        ml: "ഞായറാഴ്ച: പ്രഭാത പ്രാർത്ഥന 7:00 AM · വിശുദ്ധ കുർബാന 8:00 AM · തിരുനാളുകൾ പ്രഖ്യാപനം അനുസരിച്ച്",
+      },
     },
     {
       title: { en: "Evening Prayer", ml: "സന്ധ്യാ പ്രാർത്ഥന" },
-      detail: { en: "Saturdays 6:30 PM", ml: "ശനിയാഴ്ച 6:30 PM" },
+      detail: {
+        en: "Every day 6:30 PM · Tuesdays with Intercessory Prayer to St. Mary",
+        ml: "എല്ലാ ദിവസവും 6:30 PM · ചൊവ്വാഴ്ച വിശുദ്ധ മറിയ മദ്ധ്യസ്ഥ പ്രാർത്ഥനയോടെ",
+      },
     },
     {
       title: { en: "Sunday School", ml: "സൺഡേ സ്കൂൾ" },
@@ -341,8 +347,8 @@ export const timings = {
     {
       title: { en: "This week", ml: "ഈ ആഴ്ച" },
       detail: {
-        en: "Friday 6:30 PM memorial prayer · Saturday choir practice 5:00 PM",
-        ml: "വെള്ളി 6:30 PM അനുസ്മരണ പ്രാർത്ഥന · ശനി 5:00 PM ഗായകസംഘ പരിശീലനം",
+        en: "Tuesday 6:30 PM Evening Prayer & Intercessory Prayer to St. Mary · Saturday choir practice 5:00 PM",
+        ml: "ചൊവ്വ 6:30 PM സന്ധ്യാ പ്രാർത്ഥനയും വിശുദ്ധ മറിയ മദ്ധ്യസ്ഥ പ്രാർത്ഥനയും · ശനി 5:00 PM ഗായകസംഘ പരിശീലനം",
       },
     },
   ],
@@ -563,42 +569,6 @@ export const news: NewsItem[] = [
     },
     date: "2026-11-08",
     image: "/news/peters-hand-lucky-draw.jpg",
-  },
-  {
-    slug: "parish-day-announcement",
-    category: { en: "Feast", ml: "തിരുനാൾ" },
-    title: { en: "Parish Day and St. Peter’s feast programme", ml: "ഇടവകാ ദിനവും പത്രോസ് തിരുനാൾ പരിപാടിയും" },
-    excerpt: {
-      en: "Holy Qurbana, procession and a community meal. Volunteers may register with the Secretary.",
-      ml: "വിശുദ്ധ കുർബാന, പ്രദക്ഷിണം, സ്നേഹവിരുന്ന്. സന്നദ്ധപ്രവർത്തകർ സെക്രട്ടറിയെ ബന്ധപ്പെടുക.",
-    },
-    date: "2026-06-12",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    slug: "sunday-school-exam",
-    category: { en: "Sunday School", ml: "സൺഡേ സ്കൂൾ" },
-    title: { en: "OVBS and annual examination dates", ml: "ഒ.വി.ബി.എസ്.യും വാർഷിക പരീക്ഷയും" },
-    excerpt: {
-      en: "Parents are requested to collect the circular from Downloads.",
-      ml: "രക്ഷിതാക്കൾ ഡൗൺലോഡുകളിൽ നിന്ന് കൽപ്പന ശേഖരിക്കുക.",
-    },
-    date: "2026-04-02",
-    image:
-      "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    slug: "charity-drive",
-    category: { en: "Charity", ml: "ദാനധർമ്മം" },
-    title: { en: "Onam kit distribution for neighbouring families", ml: "അയൽക്കാർക്ക് ഓണക്കിറ്റ് വിതരണം" },
-    excerpt: {
-      en: "Martha Mariam Samajam leads the collection. NRI families may give through Online Offerings.",
-      ml: "മാർത്താ മറിയം സമാജമാണ് ശേഖരണം നയിക്കുന്നത്. എൻ.ആർ.ഐ. കുടുംബങ്ങൾക്ക് ഓൺലൈൻ വഴിപാട് ഉപയോഗിക്കാം.",
-    },
-    date: "2026-08-18",
-    image:
-      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
@@ -2630,7 +2600,7 @@ export const formerChapels = [
 export const parishShrines = [
   {
     name: { en: "Palli bhagam", ml: "പള്ളി ഭാഗം" },
-    image: "/shrines/palli-bhagam.jpg",
+    image: "/shrines/palli-bhagam-2026.jpg",
   },
   {
     name: { en: "St. Gregorios Shrine, Areekkal", ml: "വിശുദ്ധ ഗ്രീഗോറിയോസ് ശ്രൈൻ, അരീക്കൽ" },
